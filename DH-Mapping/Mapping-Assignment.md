@@ -7,3 +7,9 @@ I did assignment one using a dataset I created by web scraping all the Airbnb re
 I then wanted to see the regions with the most Airbnb rentals by adding a layer of clusters. 
 
 ![kepler gl_clustered_rentals_ss](https://github.com/valarbonies/is578-intro-to-DH/assets/109615094/190169e1-4935-4191-88e5-1e2a780df435)
+
+Whe I activate both layers it looks like this:
+
+![kepler gl_multilayer_ss](https://github.com/valarbonies/is578-intro-to-DH/assets/109615094/7579d4f2-e2c2-4dc1-b616-a4ba577d7b9a)
+
+I uploaded the same dataset to geojson 
