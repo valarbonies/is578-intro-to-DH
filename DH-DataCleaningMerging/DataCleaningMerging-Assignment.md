@@ -12,4 +12,4 @@ Here are the links to both datasets:
 
 Experiment 1: https://github.com/valarbonies/is578-intro-to-DH/blob/a6ecb9672a4069d348fe5985e898a64044962492/DH-DataCleaningMerging/dh-conferences-works-exp1.csv
 
-Experiment 2: https://github.com/valarbonies/is578-intro-to-DH/blob/a6ecb9672a4069d348fe5985e898a64044962492/DH-DataCleaningMerging/dh-conferences-works-exp2.csv
+Experiment 2: https://github.com/valarbonies/is578-intro-to-DH/blob/92e2a0b81bb58470564cf9c5d9d02bae237b75c8/DH-DataCleaningMerging/dh-conferences-works-exp2.csv
