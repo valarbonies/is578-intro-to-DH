@@ -1,0 +1,906 @@
+Column 1,Column 2,Column 3,Column 4,Column 5,Column 6,Column 7,Column 8,Column 9,Column 10,Column 11,Column 12,Column 13,Column 14,Column 15,Column 16,Column 17,Column 18,Column 19,Column 20,Column 21,Column 22,Column 23
+6411,2018 - Mexico City,Mexico City,Puentes/Bridges,2018-01-01T00:00:00Z,ADHO,ADHO;EHD,El Colegio de México;Universidad Nacional Autónoma de México (UNAM) (National Autonomous University of Mexico),Mexico City,,Mexico,https://dh2018.adho.org/,"Milpaís: Una Wiki Semántica Para Recuperar, Compartir Y Construir Colaborativamente Las Relaciones Entre Plantas, Seres Humanos, Comunidades Y Entornos.",,María Juana Espinosa Menéndez;Camilo Martinez,poster / demo / art installation,"<text>
+        
+            <p>Milpaís, proyecto de tesis para la maestría en Humanidades Digitales de la Universidad de los Andes de Colombia, nace como iniciativa del colectivo Savias y Sabias quienes en sus trabajos con comunidades expertas y no, han encontrado la necesidad de apropiarse de herramientas digitales que permitan democratizar el acceso al conocimiento experto sobre plantas, visibilizar el conocimiento tradicional y local y sobre todo defender este saber en tanto bien común (Bollier, 2016; Zuluaga Ramírez, 1994). Con especial énfasis discutimos los aspectos éticos y legales que tuvimos que sopesar al formular este trabajo en Humanidades Digitales sobre conocimientos tradicionales en el contexto global y en particular en el caso colombiano (Organización Mundial de la Propiedad Intelectual (OMPI), 2017; Gómez Madrigal, 2013). Al respecto, debimos considerar estrategias para prevenir la expropiación indebida de conocimientos mediante la definición de la catalogación y la visibilización en la wiki de los territorios, las personas y comunidades que cuidan, siembran y trabajan con las plantas. Este mapeo permite construir elementos probatorios de la pertenencia cultural de conocimientos colectivos circunscritos a territorios.</p>
+            <p>El 
+                <hi rend=""italic"">prototipo se desarrolla a partir de una wiki semántica del software libre Media Wiki</hi> (
+                <hi rend=""italic"">semantic-mediawiki.org</hi>, 2018) para la gestión del conocimiento etnobotánico de comunidades que usan, defienden y comparten saberes sobre las plantas. Diseñada a partir de una reflexión ética y legal de lo que implica documentar, catalogar y difundir conocimientos tradicionales y locales, el prototipo cuida de no exponer contenidos susceptibles de expropiación indebida tales como componentes, fórmulas, técnicas y rituales. Es así que en este prototipo nos interesa conectar qué lugares, qué personas (comunidades) y de qué maneras se construyen las relaciones con las plantas, entendidas estas como uno de los bienes comunes que sostienen y equilibran entornos como el cuerpo y el medio ambiente (Lafuente, 2007).
+            </p>
+            <p>En términos técnicos, la SMW permite estructurar una Base de Datos Relacional (BDR) mediante el uso de plantillas que integran notación semántica y vocabularios controlados. Para esta wiki utilizamos el estándar de metadatos FOAF(
+                <hi rend=""italic"">The FOAF Project</hi>, 2018) y un conjunto de metadatos propios y vocabularios controlados alimentados de diversas fuentes de catalogación etnobotánica (Royal Museum From Central Africa, 2017; 
+                <hi rend=""italic"">BRIT - Native American Ethnobotany Database</hi>, 2003). Igualmente, se ha tenido y se tendrá en cuenta la información que colaboradores y posibles usuarios han reportado necesaria. Para recuperar la información y que se integre la notación semántica, el prototipo implementa los formularios de Semantic Media Wiki (
+                <hi rend=""italic"">Page Forms - MediaWiki</hi>, 2018). Estos formularios permiten a los colaboradores/creadores de la wiki ingresar la información mediante una interfaz amable sin necesidad de hacer notación semántica manual. Una vez se ingresa la información la SMW permite recuperar información relacional (qué personas son amigos de una planta, qué plantas sirven a las personas para hacer artesanía, qué comunidades resguardan una semilla en particular, quiénes y dónde hay médicos tradicionales, yerbateras, investigadores, médicos alópatas que trabajan con plantas, etc.) así como visualizar datos tales como los geográficos.
+            </p>
+            <p>Finalmente, el prototipo tiene una fase piloto anterior a la implementación (2018-II) en la cual empezamos a trabajar la campaña de difusión “Adopta una planta y cultiva su conocimiento en la web”. Dicha estrategia se enmarca en el trabajo que se adelanta con comunidades potencialmente usuarias en zonas aledañas y urbanas de Bogotá y en la cual se llevó a cabo un primer rastreo sobre la información que consideran importante documentar, compartir y defender. Así, la herramienta digital se dispondrá al servicio de procesos educativos con comunidades que quieran intercambiar saberes, investigar y defender el conocimiento tradicional y local sobre las plantas.</p>
+        
+        <back>
+            <div type=""bibliogr"">
+                <listbibl>
+                    Bibliography
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""italic bold"">Biblioteca digital de la medicina tradicional mexicana</hi> (2009). Available at: http://medicinatradicionalmexicana.unam.mx/index.php (Accessed: 27 October, 2017).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Bollier, D</hi> (2016). 
+                        <hi rend=""italic"">Pensar desde los comunes</hi>. Madrid: Traficantes de Sueños.
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""italic bold"">BRIT - Native American Ethnobotany Database</hi> (2003). Available at: http://naeb.brit.org/ (Accessed: 27 March 2017).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Gómez Madrigal, L. S.</hi> (2013). 
+                        <hi rend=""italic"">Protección de la tradición. Los derechos no tradicionales de la propiedad intelectual. Comité intergubernamental de recursos genéticos, conocimientos tradicionales y folclore de la OMPI. Revista La Propiedad Inmaterial</hi>. Available at: http://revistas.uexternado.edu.co/index.php/propin/article/view/3581/3798 (Accessed: 2 February 2017).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Lafuente, A</hi>. (2007). Los cuatro entornos del procomún. 
+                        <hi rend=""italic"">Archipiélago: Cuadernos de crítica de la cultura</hi>, (77), pp. 15–22. Available at: https://dialnet.unirioja.es/servlet/articulo?codigo=2500491 (Accessed: 11 September 2017).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Organización Mundial de la Propiedad Intelectual (OMPI)</hi> (2017). 
+                        <hi rend=""italic"">Guía para la catalogación de conocimientos tradicionales, OMPI.</hi> Available at: http://www.wipo.int/edocs/pubdocs/es/wipo_pub_1049.pdf (Accessed: 8 May 2017).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""italic bold"">Page Forms - MediaWiki</hi> (2018). Available at: https://www.mediawiki.org/wiki/Extension:Page_Forms (Accessed: 27 April 2018).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Royal Museum From Central Africa</hi> (2017). 
+                        <hi rend=""italic"">Prelude, Medicinal Plants Data Base</hi>. Available at: http://www.africamuseum.be/collections/external/prelude/plant_collection (Accessed: 27 April 2018).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""italic bold"">The FOAF Project</hi> (2018). Available at: http://www.foaf-project.org/ (Accessed: 5 February 2018).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Semantic-mediawiki.org</hi> (2018). 
+                        <hi rend=""italic"">Semantic MediaWiki.</hi> Available at: https://www.semantic-mediawiki.org/wiki/Semantic_MediaWiki (Accessed: 5 March 2018).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Zuluaga Ramírez, G. (1994).</hi>
+                        <hi rend=""italic"">El aprendizaje de las plantas: en la senda de un conocimiento olvidado.</hi> Bogotá: Seguros Bolívar.
+                    </bibl>
+                </listbibl>
+            </div>
+        </back>
+    </text>",xml,Creative Commons Attribution 4.0 International,,citizen science;etnobotany;semantic wiki;traditional and local knowledge,Spanish,anthropology;databases & dbms;design;digital activism and networked communities;information architecture and modeling;library & information science;spanish
+6416,2018 - Mexico City,Mexico City,Puentes/Bridges,2018-01-01T00:00:00Z,ADHO,ADHO;EHD,El Colegio de México;Universidad Nacional Autónoma de México (UNAM) (National Autonomous University of Mexico),Mexico City,,Mexico,https://dh2018.adho.org/,Empatía Digital: en los pixeles del otro.,,Carolina Laverde,poster / demo / art installation,"<text>
+        
+            <p>Vivimos en la sociedad de la imagen y la información (Manuel Castells, 1996) que se caracteriza por la hiperproducción de conocimiento. Esto representa un verdadero desafío estructural a la hora de formular proyectos relevantes en los que el desarrollo y la investigación no sean los únicos enfoques de un humanista digital: se requiere aplicar la empatía digital como puente que equilibre el desarrollo de productos digitales. </p>
+            <p>“La empatía digital es un proceso en el cual una persona puede analizar &gt; reflexionar &gt; proyectar &gt; predecir &gt; sentir mediante la comunicación con lo digital” (Friesem, 2105). La empatía es un proceso subvalorado como herramienta en las primeras etapas de la creación de un proyecto, cuando realmente la empatía aplicada a los contextos digitales es crucial para poder formular y formar productos responsables, sostenibles y cohesivos desde un contexto de creación multidisciplinar.</p>
+            <p>Asimismo, para desarrollar proyectos en Humanidades Digitales resulta necesario estructurarlos a partir de tres preguntas: ¿qué se quiere generar?, ¿cómo se quiere construir? y ¿cómo se va a presentar?, y de esta manera encontrar 
+                <hi rend=""bold"" xml:space=""preserve"">insights </hi>que generen empatía con el usuario, que den cuenta de sus motivaciones y gustos para lograr proyectar un tono de comunicación, línea de pensamiento e interacción, entendiendo desde un plano mucho más profundo las necesidades de del usuario para poder crear un resultado y producto más efectivo (McDonag y Tomas J, 2010) al establecer una conexión emocional que se convierte en una oportunidad creativa.
+            </p>
+            <p>Es la habilidad cognitiva y emocional de ser reflexivo y socialmente responsable mientras se utilizan estratégicamente medios digitales.</p>
+            <p>
+                <hi rend=""bold"">(Friesem, 2015)</hi>
+            </p>
+            <p>En otras palabras, enviar el mensaje en el formato adecuado apelando a la sensibilidad del público objetivo y a direccionar una estrategia de valor a través de la emoción lleva a “humanizar los productos digitales”, al mismo tiempo que permite observar y analizar más allá de la superficialidad comercial de algunas herramientas como 
+                <hi rend=""italic"">focus group</hi> o encuestas, al identificarse con estados emocionales, cognitivos y con actitudes de otras personas por medio de la experiencia indirecta, es decir, “ponerse en los zapatos del otro”.
+            </p>
+            <p>En este orden de ideas, mi propuesta es un poster que permita a los participantes del congreso encontrar 
+                <hi rend=""bold"">insights</hi> de una manera sencilla a través de una caja de herramientas que funcione como base de un proyecto acertado y sostenible. Por lo tanto, este poster permitirá al usuario llevarse algo práctico de él con claves rápidas y pasos simples para empezar a fortalecer la habilidad der ser empático y así utilizarlo como una herramienta para conectar a un nivel emocional como valor agregado a los proyectos digitales. 
+            </p>
+            <p>Sobre el contenido del poster se plantean 3 formatos con ejercicios y técnicas básicas como primer acercamiento al concepto de empatía digital divido en tres secciones a partir de tres preguntas básicas que son ¿qué? ¿cómo? ¿por qué? Con la finalidad de 
+                <hi rend=""bold"">Sentir + compartir+ reaccionar = experiencia de usuario.</hi>
+            </p>
+            <p>Finalmente se quiere evidenciar los procesos creativos de la Biblioteca Nacional de Colombia en el área de Humanidades y Desarrollos Digitales y como han se han transformado utilizando este puente como herramienta que serán aplicados en la creación de este poster ya que después de un proceso de conceptualización por medio de metodologías como design thinking entre otras herramientas y por su puesto desde la empatía digital se utilizarán unos colores específicos por conceptos que se van a comunicar basados en la teoría del color para aplicarlos mediante técnicas como: ilustración digital y tipografías que hacen alusión a la estética del mundo digital como los pixeles o el código. </p>
+            <p>La interacción será análoga en la medida que el usuario pueda entender los insights para ponerlos en práctica en sus procesos al poder revelar el contenido del poster con ayuda de un elemento externo para poder filtrar el contenido de cada color, esto es posible al hacer uso de un recurso visual como la adición de colores primarios RGB. En ese orden de ideas al tener todos los contenidos impresos al mismo tiempo cada tipo de contenido en una tinta (verde, rojo o azul), se genera una recarga o confusión visual resultando complicado para el usuario entender la información en la primera impresión. Al ayudarse con los elementos de filtrado de color pueden obtener la información por medio de filtrado por lo tanto se propone es que haya un cambio de visión y perspectiva como lo requiere la habilidad de ser empático para su posterior aplicación a proyectos de humanidades digitales.</p>
+        
+        <back>
+            <div type=""bibliogr"">
+                <listbibl>
+                    Bibliografía
+                    <bibl>
+                        <hi rend=""bold"" xml:space=""preserve"">Dave M Berry. (2010). </hi>The Computational Turn: Thinking About the Digital Humanities.
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Yonty Friesem.</hi> (2016). Chapter 2 - Empathy for the Digital Age: Using Video Production to Enhance Social, Emotional, and Cognitive Skills.
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">IDEO.</hi> (2016). What is Human-Centered Design? 
+                    </bibl>
+                    <bibl rend=""p1"">
+                        <hi rend=""bold"">Jon Kolko</hi>. (2010). Abductive Thinking and Sense making: The Drivers of Design Synthesis. 
+                    </bibl>
+                    <bibl rend=""p2"">
+                        <hi rend=""apple-converted-space""> </hi>Vol. 26, No. 1 (Winter, 2010), pp. 15-28.
+                    </bibl>
+                    <bibl rend=""p2"">
+                        <hi rend=""bold"" xml:space=""preserve"">Jon Kolko. </hi>(2015). Design Thinking Comes of Age.
+                    </bibl>
+                    <bibl rend=""p1"">
+                        <hi rend=""bold"">Hasso Plattner</hi> (2013). Empathy field guide. Institute of Design at Stanford.
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"" xml:space=""preserve"">Mark Considine (2012). </hi>Thinking Outside the Box? Applying Design Theory to Public Policy: Applying Design Theory to Public Policy
+                    </bibl>
+                    <bibl rend=""p1"">
+                        <hi rend=""bold"" xml:space=""preserve"">McDonagh y Deana. (2010). </hi>Rethinking Design Thinking: Empathy Supporting Innovation
+                    </bibl>
+                    <bibl rend=""p2"">
+                        <hi rend=""bold"" xml:space=""preserve"">Sanhueza y Camila Holven. (2012). </hi>Design Empathy in Service Design Methodology.
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"" xml:space=""preserve"">Elena González García (2016). </hi>Un nuevo camino hacia las humanidades digitales: el laboratorio de innovación en humanidades digitales de la uned (linhd).
+                    </bibl>
+                </listbibl>
+            </div>
+        </back>
+    </text>",xml,Creative Commons Attribution 4.0 International,,conexión;desarrollo de proyectos;digital;diseño;empatía;herramienta;humanidades digitales;punte,Spanish,"creative and performing arts, including writing;criticism;cultural studies;design;digital humanities history;digitisation, resource creation, and discovery;epistemology;interface & user experience design/publishing & delivery systems/user studies/user needs;project design, organization, management;spanish;theory"
+6422,2018 - Mexico City,Mexico City,Puentes/Bridges,2018-01-01T00:00:00Z,ADHO,ADHO;EHD,El Colegio de México;Universidad Nacional Autónoma de México (UNAM) (National Autonomous University of Mexico),Mexico City,,Mexico,https://dh2018.adho.org/,La geopólitica de las humanidades digitales: un caso de estudio de DH2017 Montreal,,José Pino-Díaz;Domenico Fiormonte,poster / demo / art installation,"<text>
+        
+            <p rend=""Standard"">
+                <hi rend=""bold"">Resumen:</hi> Las discusiones y reflexiones sobre los desequilibrios culturales, políticos, lingüísticos y de género en las Humanidades Digitales se han concentrado sobre aspectos generales y, con pocas excepciones (Dacos, 2016; Fiormonte 2017b; Grandjean, 2014; Weingart 2014; Weingart and Eichmann-Kalwara 2017), no han ofrecido un análisis de datos y casos concretos. Nuestra propuesta intenta aportar una contribución al debate a través del análisis de las 420 colaboraciones del congreso DH2017 de Montreal. Los datos archivados nos permitieron realizar mapas de colaboración entre países y entre países y centros académicos o de investigación; así como mapas de temas de investigación (palabras clave) y de redes de autores. El resultado es una imagen real de lo que son hoy en día las Humanidades Digitales a nivel global, y donde parece confirmado el papel hegemónico del Norte global, y sobre todo de los países anglosajones, en la comunidad internacional.
+            </p>
+            <p rend=""Standard"">
+                <hi rend=""bold"">Palabras clave:</hi> Geopolítica de las Humanidades Digitales, geopolítica del conocimiento, colaboración científica, análisis de las relaciones de asociación 
+            </p>
+            <p rend=""Standard"">
+                <hi rend=""bold"">Texto:</hi>
+            </p>
+            <p rend=""Standard"">El conjunto de comunicaciones presentadas en el último congreso global Digital Humanities 2017 (DH2017), celebrado, del 8 al 9 de agosto de 2017 en Montreal (Canadá), constituye, hasta la fecha, el corpus de conocimiento cooperativo más actual sobre Humanidades Digitales. Este corpus documental constituye el elemento más actual y necesario para indagar en las relaciones de asociación que se establecen entre países y centros (centros de investigación, universidades, etc.). A partir de la afiliación de los autores de los documentos, el estudio multidisciplinar de la colaboración en la investigación se ha abordado comúnmente desde diversos campos científicos: Historia de la Ciencia, Filosofía, Documentación, Bibliometría o Sociología (González Alcaide y Gómez Ferri 2014). </p>
+            <p rend=""Standard"">Este trabajo, planteado desde la óptica de la geopolítica del conocimiento (Adriansen 2016 y 2017; Canagarajah 2002; de Sousa Santos 2010; Graham et al. 2011; Fiormonte 2017a; Mignolo 2011)
+                <note place=""foot"" xml:id=""ftn1"" n=""1"">
+                    <p rend=""footnote text""> En el ámbito académico ver el reciente proyecto http://knowledgegap.org/ </p>
+                </note>, evidencia los desequilibrios culturales, institucionales o políticos existentes en el ecosistema de las Humanidades Digitales. El estudio de las relaciones de coautoría establecidas en las comunicaciones presentadas al congreso DH2017, pone de manifiesto las desigualdades entre países y centros. 
+            </p>
+            <p rend=""Standard"">La información disponible de cada registro, accesible on-line en el sitio web del congreso
+                <note place=""foot"" xml:id=""ftn2"" n=""2"">
+                    <p rend=""Standard""> https://dh2017.adho.org/program/abstracts/ </p>
+                </note>, consta de: nombre, apellidos y correo electrónico de los autores; título, resumen y palabras clave de la comunicación; y, centro y país de procedencia. A partir de la información proporcionada por la web del congreso se ha elaborado un archivo de texto en formato 
+                <hi rend=""italic"">Research Information System</hi> (RIS), base de conocimiento y partida para realizar los análisis de asociación. 
+            </p>
+            <p rend=""Standard"">
+                <hi rend=""italic"">VOSviewer</hi>
+                <note place=""foot"" xml:id=""ftn3"" n=""3"">
+                    <p rend=""footnote text""> http://www.vosviewer.com/</p>
+                </note> (Van Eck y Waltman 2010, 2011 y 2014), herramienta desarrollada en la Universidad de Leiden, facilita el análisis de la colaboración científica mediante la visualización y la clasificación de las redes bibliométricas (Waltman, Van Eck y Noyons 2010) de autores, palabras clave, países o centros, existentes, pero no explícitas, en archivos RIS. El método de normalización de los enlaces elegido ha sido el del “valor de asociación”. 
+            </p>
+            <p rend=""Standard"">Se han analizado las relaciones de asociación entre países, entre países y centros, entre palabras clave y entre autores, y se han obtenido tres tipos de redes y mapas de calor, según se haga proporcional el tamaño de los nodos a los valores de las ocurrencias, al número total de enlaces o al peso total de los enlaces. Veánse los siguientes ejemplos:</p>
+            <p rend=""Standard"">
+                <hi rend=""bold"">Figura 1.</hi>- Mapa de relaciones de asociación entre países y centros. Sólo aparecen los nodos conectados (modo de visualización “total link strength”; factor de variación de tamaño x0,5). 
+            </p>
+            <figure>
+                <graphic n=""1001"" width=""17.00036111111111cm"" height=""10.004777777777777cm"" url=""Pictures/567de0eb3b27a81ad83ef758428e9b38.png"" rend=""inline""></graphic>
+            </figure>
+            <p rend=""Standard"">
+                <hi rend=""bold"">Figura 2.</hi>- Mapa de calor de las relaciones de asociación entre países y centros. Sólo aparecen los nodos conectados “total link strength”; factor de variación de tamaño x0,5).
+            </p>
+            <figure>
+                <graphic n=""1002"" width=""17.00036111111111cm"" height=""10.004777777777777cm"" url=""Pictures/f697cd7c449353088137b85073ec35a0.png"" rend=""inline""></graphic>
+            </figure>
+            <p rend=""Standard"">
+                <hi rend=""bold"">Figura 3.</hi>- Mapa de relaciones de asociación entre países. Sólo aparecen los nodos conectados (modo de visualización “total link strength”; factor de variación de tamaño x1).
+            </p>
+            <figure>
+                <graphic n=""1003"" width=""17.00036111111111cm"" height=""10.004777777777777cm"" url=""Pictures/9e30d499d3b2bfe295ad5ececf82617f.png"" rend=""inline""></graphic>
+            </figure>
+            <p rend=""Standard"">
+                <hi rend=""bold"">Figura 4.</hi>- Mapa de calor de las relaciones de asociación entre países. Sólo aparecen los nodos conectados (modo de visualización “total link strength”; factor de variación de tamaño x1).
+            </p>
+            <figure>
+                <graphic n=""1004"" width=""17cm"" height=""10.01cm"" url=""Pictures/f5255019e802f054c256e10c994096be.png"" rend=""inline""></graphic>
+            </figure>
+            <p>
+                <pb></pb>
+            </p>
+            <p rend=""Standard"">
+                <hi rend=""bold"">Figura 5</hi>.- Mapa de relaciones de co-ocurrencia entre palabras clave. Sólo aparecen los nodos conectados (modo de visualización “total link strength”; factor de variación de tamaño x0,5).
+            </p>
+            <figure>
+                <graphic n=""1005"" width=""17cm"" height=""10.01cm"" url=""Pictures/365daff5ff749691980453e4e45dc023.png"" rend=""inline""></graphic>
+            </figure>
+            <p rend=""Standard"">
+                <hi rend=""bold"">Figura 6.</hi>- Mapa de calor de las relaciones de co-ocurrencia entre palabras clave. Sólo aparecen los nodos conectados (modo de visualización “total link strength”; factor de variación de tamaño x0,5).
+            </p>
+            <figure>
+                <graphic n=""1006"" width=""17cm"" height=""10.62cm"" url=""Pictures/a2f5a64b3a8b51b8c5d6edadac9c0279.png"" rend=""inline""></graphic>
+            </figure>
+        
+        <back>
+            <div type=""bibliogr"">
+                <listbibl>
+                    Bibliografía
+                    <bibl>
+                        <anchor xml:id=""Hlk511327530""></anchor>
+                        <hi rend=""bold"">Adriansen, H. K.</hi> (2017). The power and politics of knowledge: what African universities need to do. 
+                        <hi rend=""italic"">The Conversation</hi>, September 28 2017. https://theconversation.com/the-power-and-politics-of-knowledge-what-african-universities-need-to-do-84233
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Adriansen, H. K.</hi> (2016). Global Academic Collaboration: A New Form of Colonisation? 
+                        <hi rend=""italic"">The Conversation</hi>, July 8 2016. https://theconversation.com/global-academic-collaboration-a-new-form-of-colonisation-61382 
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Alcaide, G. G., &amp; Ferri, J. G.</hi> (2014). La colaboración científica: principales líneas de investigación y retos de futuro. 
+                        <hi rend=""italic"">Revista española de Documentación Científica</hi>, 
+                        <hi rend=""italic"">37</hi>(4), 062. 
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Canagarajah, A. S.</hi> (2002). 
+                        <hi rend=""italic"">A Geopolitics of Academic Writing</hi>. Pittsburgh: University of Pittsburgh Press.
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Dacos, M.</hi> (2016). La stratégie du sauna finlandais: Les frontières des Digital Humanities. 
+                        <hi rend=""italic"">Digital Studies/Le champ numérique</hi>. http://doi.org/10.16995/dscn.41
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">de Sousa Santos, B.</hi> (2010). 
+                        <hi rend=""italic"">Descolonizar el saber, reinventar el poder</hi>. Montevideo: Extensión, Universidad de la República-Ediciones Trilce. 
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Fiormonte, D.</hi> (2017a). Digital Humanities and the Geopolitics of Knowledge. 
+                        <hi rend=""italic"">Digital Studies/Le champ numérique</hi>, 7(1). 
+                        <hi rend=""span-citation"">http://doi.org/10.16995/dscn.274</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Fiormonte, D.</hi> (2017b). Lingue, codici, rappresentanza. Margini delle Digital Humanities.
+                        <hi rend=""italic"" xml:space=""preserve""> Filologia digitale: problemi e prospettive</hi> (pp. 113-140). Accademia Nazionale dei Lincei. Contributi del Centro Linceo Interdisciplinare “Beniamino Segre”, 135. Roma: Bardi. 
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Graham, et al, M.</hi> (2011). Visualizing the uneven geographies of knowledge production and circulation. 
+                        <hi rend=""italic"">Global Higher Education</hi>, 14.9. https://globalhighered.wordpress.com/2011/09/14/visualizing-the-uneven-geographies-of-knowledge-production-and-circulation/.
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Grandjean, M.</hi> (2014). Le rêve du multilinguisme dans la science : l’exemple (malheureux) du colloque #DH2014. http://www.martingrandjean.ch/multilinguisme-dans-la-science-dh2014/
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Mignolo, W.</hi> (2011). 
+                        <hi rend=""italic"">The darker side of Western modernity</hi>. Durham (N.C.): Duke University Press Books. 
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">van Eck, N. J., &amp; Waltman, L.</hi> (2010). Software survey: VOSviewer, a computer program for bibliometric mapping. 
+                        <hi rend=""italic"">Scientometrics</hi>, 84(2), 523-538. https://doi.org/10.1007/s11192-009-0146-3
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">van Eck, N. J., &amp; Waltman, L.</hi> (2011). Text mining and visualization using VOSviewer. 
+                        <hi rend=""italic"">arXiv:1109.2058 [cs]</hi>. http://arxiv.org/abs/1109.2058
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">van Eck, N. J., &amp; Waltman, L.</hi> (2014). Visualizing Bibliometric Networks. En Y. Ding, R. Rousseau, &amp; D. Wolfram (Eds.), 
+                        <hi rend=""italic"">Measuring Scholarly Impact: Methods and Practice</hi> (pp. 285-320). Cham: Springer International Publishing. https://doi.org/10.1007/978-3-319-10377-8_13
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Waltman, L., van Eck, N. J., &amp; Noyons, E. C. M.</hi> (2010). A unified approach to mapping and clustering of bibliometric networks. 
+                        <hi rend=""italic"">Journal of Informetrics</hi>, 
+                        <hi rend=""italic"">4</hi>(4), 629-635. https://doi.org/10.1016/j.joi.2010.07.002 
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Weingert, S. B.</hi> (2014). Submission to DH2015. http://scottbot.net/submissions-to-digital-humanities-2015-pt-1/
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Weingart, S. B., &amp; Eichmann-Kalwara, N.</hi> (2017). What’s Under the Big Tent?: A Study of ADHO Conference Abstracts. 
+                        <hi rend=""italic"">Digital Studies/Le champ numérique</hi>, 7(1), 6. DOI: http://doi.org/10.16995/dscn.284 
+                    </bibl>
+                </listbibl>
+            </div>
+        </back>
+    </text>",xml,Creative Commons Attribution 4.0 International,,análisis de las relaciones de asociación;colaboración científica;geopolítica de las humanidades digitales;geopolítica del conocimiento,Spanish,"criticism;cultural and/or institutional infrastructure;cultural studies;digital humanities history;epistemology;globalization & digital divides;networks, relationships, graphs;sociology;spanish;theory"
+6427,2018 - Mexico City,Mexico City,Puentes/Bridges,2018-01-01T00:00:00Z,ADHO,ADHO;EHD,El Colegio de México;Universidad Nacional Autónoma de México (UNAM) (National Autonomous University of Mexico),Mexico City,,Mexico,https://dh2018.adho.org/,Propuesta Interdisciplinaria de un Juego Serio para la Divulgación de Conocimiento Histórico. Caso de Estudio: la divulgación del saber histórico sobre la vida conventual de los Carmelitas Descalzos del ex-Convento del Desierto de los Leones.,,Leticia Luna Tlatelpa;Fabián Gutiérrez Gómez;Edné Balmori;Feliciano García García;Luis Rodriguez Morales,poster / demo / art installation,"<text>
+        
+            <p>Resumen </p>
+            <p>
+                <hi rend=""color(#000000)"">El surgimiento de las narrativas hipermedia y transmedia así como de los productos culturales propios de la era digital como los </hi>
+                <hi rend=""color(#000000)italic"">Juegos Serios</hi>
+                <hi rend=""color(#000000)"">, expanden el espectro de los medios de comunicación tradicionalmente usados para divulgar </hi>la historia
+                <hi rend=""color(#000000)"">. Con estos nuevos medios es factible realizar divulgación bajo el modelo contextual, el cual, al contrario del modelo de déficit, </hi>considera
+                <hi rend=""color(#000000)""> las respuestas del público y la complejidad del fenómeno comunicativo de la divulgación (Leewenstein, 2003 ). En este sentido, se propone un </hi>
+                <hi rend=""color(#000000)italic"">Juego Serio</hi>
+                <hi rend=""color(#000000)""> sobre la vida conventual de los </hi>Carmelitas Descalzos
+                <hi rend=""color(#000000)""> que habitaron el Desierto de los Leones que </hi>estimule
+                <hi rend=""color(#000000)""> una experiencia memorable en jóvenes</hi>. 
+            </p>
+            <p> </p>
+            <p>Divulgación de la historia</p>
+            <p>Se retoma el concepto de comunicación de la ciencia propuesto por Burns 
+                <hi rend=""italic"">et al.</hi> (2003: 1991) para aplicarlo a la divulgación de la historia. Ellos plantean
+                <hi rend=""color(#000000)"">que la divulgación</hi>
+                <hi rend=""color(#000000)"">debe provocar alguna de las siguientes respuestas en la audiencia con relación a la ciencia: sensibilización, disfrute, interés, construción de opinión y/o análisis de contenido.</hi>
+            </p>
+            <p>Se siguió la metodología de interpretación temática propuesta por Ham (2013) para responder a la pregunta de cómo comunicar el conocimiento histórico acerca de los carmelitas a un público joven, este último definido según Feixa (2003), a través de un videojuego y generar lazos de identidad fincados en valores culturales.</p>
+            <p>
+                <hi rend=""color(#252525)"">Esta metodología resalta la importancia de conocer la audiencia y sus intereses para provocar en ella reflexiones, cuestionamientos o la generación de nuevos significados, de modo que recuerde la experiencia divulgativa. Gándara añade, además, la importancia que tiene la narrativa para crear divulgación significativa (Gándara citado por Sánchez, 2016). Es de destacar también, que las emociones </hi>
+                <hi rend=""color(#000000)"">son relevantes en</hi> el divulgación
+                <hi rend=""color(#000000)"">, </hi>ya que pueden lograr que esta sea más recordada
+                <hi rend=""color(#000000)""> (Bonfil</hi>, 
+                <hi rend=""color(#000000)"">2003)</hi>.
+            </p>
+            <p>Si bien 
+                <hi rend=""background-color(#ffffff)"">hay antecedentes del uso de videojuegos para tratar temas históricos,</hi>
+                <hi rend=""color(#ff0000) background-color(#ffffff)""> </hi>
+                <hi rend=""background-color(#ffffff)"">(Caldera Estudios, 2010), (Mulaka, 2018), (Nomdedeu, 2015), (</hi>Rodríguez
+                <hi rend=""background-color(#ffffff)""> </hi>
+                <hi rend=""background-color(#ffffff)"">et al, 2017), (Salinas et al, 2017), no se encontró uno cuyo diseño emplee la interpretación temática.</hi>
+            </p>
+            <p>Los Carmelitas Descalzos</p>
+            <p>Esta orden fue una de las últimas que llegaron a la Nueva España. Aún cuando el cometido de estos frailes fue evangelizar a la población indígena,  decidieron que su misión sería continuar su vida contemplativa que, según su cosmovisión, los acercaba a Dios (Ramírez, 2015). Formaron la Provincia de San Alberto con conventos en las principales ciudades de la Nueva España. Así, la Corona les permitió edificar el Desierto en el Monte de Santa Fe. Este yermo fue un espacio donde renunciaban a todo placer sensorial, como el disfrute de la comida, la prohibición de mirar a otra persona a los ojos, y el cumplimiento de la regla del silencio y del claustro para dedicarse a la contemplación (Báez, 1981).</p>
+            <p>Videojuegos</p>
+            <p>Se escogió el juego serio ya que “buscan cumplir un propósito más allá del propósito autocontenido de los juegos de entretenimiento” (Mitgush y Alvarado, 2012: 121, citado por González, 2017). Las emociones son observadas desde el enfoque de los videojuegos, como lo propone Lazzaro (2004). Finalmente, para 
+                <hi rend=""color(#252525)"">el diseño del videojuego se siguieron los lineamientos propuestos por Shell (2005) y la metodología de interpretación temática. En esta, es primordial escoger un Tema (Ham, 2003) que guíe el contenido del objeto comunicativo.</hi>
+            </p>
+            <p>
+                <hi rend=""color(#252525)"">Después de analizar los documentos históricos y desde la perspectiva de una audiencia jóven, se definió el tema como</hi>
+                <hi rend=""bold"">los espacios donde se ejerce control sobre las personas  anulan la individualidad y fomentan el desarraigo</hi>. A partir de allí, se modeló la vida de los frailes
+                <hi rend=""color(#252525)""> en términos de tentaciones, recuerdos de la vida pasada, castigos, recompensas, el diablo, reglas, obediencia. El tema también determinó la estética gráfica, la animaciones y la música. </hi>
+            </p>
+            <p>El videojuego se titula 
+                <hi rend=""italic"">Tentación en el Desierto </hi>y es de tipo 
+                <hi rend=""italic"">Click and Point</hi>. El jugador ayuda a un fraile Carmelita recién llegado al Yermo de Santa Fe a luchar contra tentaciones para que lo acepten como ermitaño
+                <anchor xml:id=""id__732lxckkdn4q""></anchor>mientras explora elementos de diferentes espacios del convento.  Hay cinemáticas que muestran los recuerdos del personaje antes de convertirse en fraile;  las tentaciones, castigos y retos del diablo son representados como minijuegos que el jugador debe resolver; la obediencia a las reglas es la energía del fraile; hay un diario escrito en primera persona el cual brinda información acerca del contexto histórico. 
+            </p>
+            <p>
+                <anchor xml:id=""id__pxa5rw1cijp8""></anchor>Conclusiones
+            </p>
+            <p>
+                <anchor xml:id=""id__6yf7qndwmruy""></anchor>Las pruebas con el prototipo analógico del juego mostraron que los jugadores problematizaron la vida carmelita y manifestaron emociones e interés. Se recomienda evaluar con la versión digital para determinar si la interpretación temática aplicada al diseño de un juego serio genera experiencia memorable al divulgar conocimiento histórico.
+            </p>
+        
+        <back>
+            <div type=""bibliogr"">
+                <listbibl>
+                    Bibliography
+                    <bibl>
+                        <hi rend=""bold"">Báez M., E. </hi>(1981). 
+                        <hi rend=""italic"">El Santo Desierto. Jardín de Contemplación de los Carmelitas Descalzos en la Nueva España</hi>, México: Universidad Nacional Autónoma de México. 
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Bonfil</hi>, O., M. (2003). Una estrategia de guerrilla para la divulgación: Difusión cultural de la ciencia. 
+                        <hi rend=""italic"">Congreso Latinoamericano Ciencia, comunicación y sociedad, Costa Rica.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Burns, T.W., O’Connor, D. J., y Stockmayer, S. M. </hi>(2003). 
+                        <hi rend=""italic"">Science communication: a contemporary definition. Public understanding of science</hi>, 12(2), 183-202.
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Caldera Estudios. </hi>(2010). Peluconas. [en linea] disponible en: http://caldera-estudio.com/proyectos/asi-se-veia-mexico-hace-250-anos/ [consultado 20 abril 2018].
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Feixa, C.</hi> (2003). Del reloj de arena al reloj digital. Sobre las temporalidades juveniles. 
+                        <hi rend=""italic"">Jóvenes, Revista de Estudios sobre la Juventud.</hi> 7 (19), 6-27.
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">González, A.</hi> (2017). 
+                        <hi rend=""italic"">Comunicación de la ciencia en videojuegos: evolución y juegos serios. </hi>Tesis de Maestría. Universidad Nacional Autónoma de México. 
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Ham, S. H. </hi>(2013). 
+                        <hi rend=""italic"">Interpretation: making a difference on purpose</hi>. Fulcrum publishing
+                    </bibl>
+                    <bibl>
+                        <hi rend=""color(#222222) background-color(#ffffff)bold"">Lewenstein, B. </hi>
+                        <hi rend=""color(#222222) background-color(#ffffff)"">(2003). Models of public communication of science and technology. </hi>
+                        <hi rend=""color(#222222) background-color(#ffffff)italic"">http://communityrisks. cornell. edu/Background-Materials/Lewenstein2003.    pdf</hi>
+                        <hi rend=""color(#222222) background-color(#ffffff)"">.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Lazzaro, N.</hi> (2004). 
+                        <hi rend=""italic"">Why we play games: Four keys to more emotion without story.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Mulaka.</hi> (2018). Mulaka. [en linea] disponible en: https://www.lienzo.mx/mulaka/?lang=es [consultado 20 abril 2018].
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Nomdedeu, L. </hi>(2015). 
+                        <hi rend=""italic"">RAÍCES, un juego serio social para revalorizar las culturas originarias. </hi>Tesina de Licenciatura. Universidad Nacional de la Plata.
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Ramirez, J. </hi>(2015). 
+                        <hi rend=""italic"">Los Carmelitas Descalzos en la Nueva España. Del activismo misional al apostolado urbano. 1585 - 1614</hi>., México, INAH.
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Rodríguez, F. C., Palacios D., E., Marín G., P., Ortiz M., B. y Romero Q., G. </hi>(2017).Wirikuta. [en linea] disponible en: 
+                        <ptr target=""https://leiva2017.wordpress.com/proyectos/wirikuta/""></ptr> [consultado 20 abril 2018].
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Salinas, I., Hernández, E., Rodríguez, S. </hi>(2015). El desarrollo social a través de la valoración del sistema estético-comunicativo de los pueblos nativos de Baja California. [en linea] disponible en: 
+                        <ptr target=""http://www.redalyc.org/pdf/4981/498150319057.pdf""></ptr>[consultado 20 abril 2018].
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Sánchez, M</hi>. (2016). 
+                        <hi rend=""italic"">La Museología como herramienta de vinculación entre el profesor y el patrimonio. Propuesta de un curso de capacitación a profesores que imparten la asignatura estatal Patrimonio Cultural y Natural del Distrito Federal. </hi>Tesis de Maestría. Escuela Nacional de Conservación, Restauración y Museografía. 
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Schell, J. </hi>(2015). 
+                        <hi rend=""italic"">The art of game design: a book of lenses</hi>. CRC Press.
+                    </bibl>
+                </listbibl>
+            </div>
+        </back>
+    </text>",xml,Creative Commons Attribution 4.0 International,,carmelitas;conocimiento historico;divulgacion;interdisciplina;videojuegos,Spanish,"computer science;design;digitisation, resource creation, and discovery;historical studies;hypertext;spanish;visualization"
+6430,2018 - Mexico City,Mexico City,Puentes/Bridges,2018-01-01T00:00:00Z,ADHO,ADHO;EHD,El Colegio de México;Universidad Nacional Autónoma de México (UNAM) (National Autonomous University of Mexico),Mexico City,,Mexico,https://dh2018.adho.org/,4 Ríos: una construcción transmedia de memoria histórica sobre el conflicto armado en Colombia,,Elder Manuel Tobar Panchoaga,poster / demo / art installation,"<text>
+        
+            <p>
+                <figure>
+                    <graphic url=""Pictures/fbce92b64a144e89cc1d089673ed31ef.jpg""></graphic>
+                </figure>
+            </p>
+            <p>
+                <figure>
+                    <graphic url=""Pictures/4f09e3c5c8896acef9e88ee99ae11f6d.jpg""></graphic>
+                </figure>
+            </p>
+            <p>
+                <figure>
+                    <graphic url=""Pictures/a81d1edc25949269f8ce70900925e02a.jpg""></graphic>
+                </figure>
+            </p>
+            <p>
+                <figure>
+                    <graphic url=""Pictures/44174af0d62265fe7e79030a5858be37.png""></graphic>
+                </figure>
+            </p>
+            <p>
+                <anchor xml:id=""id_docs-internal-guid-329751db-22f1-1d4c-9cb4-070312acf453""></anchor>Colombia ha vivido las secuelas del conflicto armado durante más de cinco décadas; el Centro Nacional de Memoria Histórica (CNMH) calcula que existen más de seis millones de desplazados por la violencia, principalmente población civil, campesinos e indígenas.
+            </p>
+            <p>Desde el inicio del conflicto las víctimas han manifestado de múltiples formas sus sentires, vivencias, recuerdo, testimonios acerca del conflicto y sus consecuencias. Prueba de ello son las más de 177 iniciativas no gubernamentales llevadas a cabo por población víctima de la violencia armada, las cuales giran alrededor de la memoria histórica del conflicto y que fueron registradas en una investigación a fondo realizada por el CNMH (Centro de Memoria Histórica, 2013)</p>
+            <p>El CNMH ha identificado por lo menos tres usos de la memoria dentro de estas acciones comunitarias y sociales, en la primera la memoria es expuesta en búsqueda del esclarecimiento de los hechos sucedidos para exigir justicia por parte del Estado y las instituciones encargadas. En la segunda, la memoria sirve como elemento pedagógico de lo acontecido en búsqueda de la no repetición de estos hechos; mientras que en su tercer uso, la memoria apunta al duelo, a la dimensión reparadora, a proponer ‘una oportunidad para restablecer los vínculos sociales y un horizonte para la reconstrucción de lo que se perdió’ (Centro de Memoria Histórica, 2013). </p>
+            <p>El cambio de percepción acerca del conflicto armado a partir de sucesos como la firma del acuerdo de Paz con la guerrilla de las Farc,  la creación del Centro de Memoria Histórica Nacional o la promulgación de la Ley de Víctimas y Restitución de Tierras o Ley 1448 de 2011, ha revitalizado el interés en la construcción y recuperación de las memorias de la violencia, lo que ha repercutido en la producción de múltiples productos artísticos, periodísticos y comunicativos relacionados con este tema.</p>
+            <p>En ese contexto surge ‘4 Ríos’, un proyecto transmedia que narra historias del conflicto armado en Colombia a través de distintos medios, entre ellos un cómic interactivo, un aplicativo web de memoria además de una exposición interactiva compuesta de maquetas con realidad aumentada. </p>
+            <p>La primera historia producida está basada en la masacre del Naya, perpetrada durante la Semana Santa del año 2001 en la región del Naya donde alrededor de 300 paramilitares asesinaron a más de 30 personas, lo que provocó el desplazamiento de miles de habitantes de la región.</p>
+            <p>En el inicio del proceso investigativo, el proyecto se puso en contacto  con la población desplazada de la masacre, sin embargo, luego de meses de charlas y reuniones telefónicas, la comunidad manifestó que no estaba interesada en trabajar en nuevos procesos alrededor del tema lo que impidió realizar un trabajo de campo con las víctimas, en cambio las autoridades del cabildo autorizaron el uso de fuentes de archivo donde habían contribuido de forma activa. De esta forma el proceso investigativo se enfocó en la búsqueda, clasificación y curaduría de diversos archivos, investigaciones, tesis, fotografías y noticias de medios públicos. </p>
+            <p>
+                <hi rend=""color(#00000a)"">Una vez establecida la orientación curatorial de la información, se consolidó un equipo de trabajo multidisciplinario integrado por diseñadores gráficos, artistas plásticos, dibujantes de cómic, desarrolladores de software, programadores y animadores que trabajaron en la producción total de todas las plataformas: un cómic interactivo que mezcla una narración ficcional basada en la masacre (disponible en </hi>
+                <ref target=""http://www.4rios.co/"">
+                    <hi rend=""color(#1155cc)underline"">www.4rios.co</hi>
+                </ref>
+                <hi rend=""color(#00000a)"">), acompañado de un aplicativo web que permite a los usuarios dejar mensajes en forma de texto, gráfico o un archivo de audio, además de un corto animado que se complementa con una exposición interactiva compuesta de 3 maquetas que fusionan elementos materiales con animaciones en Realidad Aumentada. </hi>
+            </p>
+            <p>Posterior a su lanzamiento en el año 2016, el proyecto ha interactuado con más de 5.000 usuarios a través de sus distintas plataformas, explorando temas como la narración del conflicto armado a través de Realidad Aumentada. En Internet, el cómic y el Flujo de Memoria han permitido la visualización de historias y documentación además de recibir mensajes, dibujos y audios que reflexionan sobre temas relacionados a las consecuencias del conflicto armado en el territorio nacional. </p>
+            <p>
+                <hi rend=""color(#00000a)"">Así, 4 Ríos busca aportar a la construcción de memoria histórica alrededor del conflicto armado en Colombia, citando a Paloma Aguilar, a través de “una ‘memoria prestada’ que el sujeto no ha experimentado personalmente, y a la que llega por medio de documentos de diverso tipo” (Aguilar,1996) en donde el trabajo </hi>
+                <hi rend=""color(#00000a)"">interdisciplinario busca proponer nuevas experiencias que reúnan otras formas de narrar, investigar, crear y construir a través de arte y tecnología. </hi>
+            </p>
+        
+        <back>
+            <div type=""bibliogr"">
+                <listbibl>
+                    Bibliografía
+                    <bibl>
+                        <anchor xml:id=""id_docs-internal-guid-329751db-22f1-e266-4819-c71a02beffa8""></anchor>
+                        <hi rend=""color(#00000a)bold"">Aguilar Fernández, P.</hi>
+                        <hi rend=""color(#00000a)""> </hi>
+                        <hi rend=""color(#00000a)"">(2008). </hi>
+                        <hi rend=""color(#00000a)italic"">Políticas de La Memoria y Memorias de La Política: El Caso Español En Perspectiva Comparada</hi>
+                        <hi rend=""color(#00000a)"">. Madrid: Alianza Editorial.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""color(#00000a)bold"">Comisión Nacional de Reparación y Reconciliación (Colombia) (ed).</hi>
+                        <hi rend=""color(#00000a)""> </hi>
+                        <hi rend=""color(#00000a)"">(2013). </hi>
+                        <hi rend=""color(#00000a)italic"">¡Basta Ya! Colombia, Memorias de Guerra y Dignidad: Informe General</hi>
+                        <hi rend=""color(#00000a)"">. Segunda edición corregida. Bogotá: Centro Nacional de Memoria Histórica.</hi>
+                    </bibl>
+                </listbibl>
+            </div>
+        </back>
+    </text>",xml,Creative Commons Attribution 4.0 International,,conflicto armado en colombia;memoria histórica;narrativa transmedia;nuevas narrativas,Spanish,"audio, video, multimedia;creative and performing arts, including writing;electronic literature and digital arts;film and media studies;historical studies;interdisciplinary & community collaboration;spanish;virtual and augmented reality"
+6431,2018 - Mexico City,Mexico City,Puentes/Bridges,2018-01-01T00:00:00Z,ADHO,ADHO;EHD,El Colegio de México;Universidad Nacional Autónoma de México (UNAM) (National Autonomous University of Mexico),Mexico City,,Mexico,https://dh2018.adho.org/,Tensiones Entre El Archivo de Escritor Físico y El Digital: Hacia Una Aproximación Teórica,,Leonardo Ariel Escobar,poster / demo / art installation,"<text>
+        
+            <p>En mi investigación doctoral exploro el “archivo de escritor” como un artefacto que cambia la manera en que los lectores se relacionan con los textos de determinado escritor, entendiendo como dispositivo la: “disposición de una serie de prácticas y de mecanismos (conjuntamente lingüísticos y no lingüísticos, jurídicos […]) con el objetivo de hacer frente a una urgencia y de conseguir un efecto” (Agamben). En este orden de ideas, una cita a Derrida es acertada y ahí radica lo arcóntico del archivo: “
+                <hi rend=""color(181818)"" xml:space=""preserve"">No solo aseguran la seguridad física del depósito y del soporte sino que también se les concede el derecho y la competencia hermenéuticos. Tienen el poder de </hi>
+                <hi rend=""italic color(181818)"">interpretar</hi>
+                <hi rend=""color(181818)"" xml:space=""preserve""> los archivos” (Derrida 1997 10).</hi>
+            </p>
+            <p>En la tesis se ha tomado como materia de estudio el archivo del escritor Gabriel García Márquez, repartido entre la Universidad de Texas en Austin y la Biblioteca Nacional de Colombia, aunque el segundo no sea muy numeroso y se trate solo de cierto material bibliográfico especifico (La Nación, 2014).</p>
+            <p>El estudio se emprende en medio de un panorama teórico que no resulta muy numeroso respecto a las definiciones del archivo de escritor. Se sabe que el archivo de escritor puede tener diferentes significados, no obstante, debemos aclarar que se tomará en la siguiente de sus acepciones dentro de esta propuesta:</p>
+            <p>un conjunto organizado de documentos, de cualquier fecha, carácter, forma y soporte material, generados o reunidos de manera arbitraria por un escritor a lo largo de su existencia, en el ejercicio de sus actividades personales o profesionales, conservados por su creador o por sus sucesores para sus propias necesidades o bien remitidos a una institución archivística para su preservación permanente (Goldchluk y Pené 13). </p>
+            <p>Hoy en día una de las principales preguntas que se realizan a la hora de postularse a una beca de estancia en un archivo físico de escritor es justificar el porqué es obligatoria la consulta del archivo del escritor en físico, aunque se encuentre gran parte de dicho legado en forma digital (Harry Ransom Center, 2017). La idea del presente escrito es precisamente observar qué tensiones se encuentran presentes entre una y otra forma del artefacto, ya que aunque se pudiera decir que son equiparables y que equivalen a lo mismo, están lejos de cumplir una misma función en común, debido a que sustancialmente pienso que funcionan de maneras distintas. Encontrar una aproximación teórica en torno a estas tensiones es precisamente el fin de este escrito. Interesa explorar estas cuestiones porque el archivo no es un artefacto inocente, sino que: “[…] se constituye como el espacio físico que resguarda los documentos, pasando por su institucionalidad arcóntica que ejerce su poder de custodia y autoridad hermenéutica legitimadora […]” (Nava 96).</p>
+            <p>Hay que decir que en muchas ocasiones las opciones digitales son tomadas como las más amenas, precisamente por su disposición pública y su libertad, no obstante, a través de este escrito pienso que esto debe verse con sumo cuidado:</p>
+            <p>Con el advenimiento de las tecnologías vinculadas a la información y la comunicación, y la generación de espacios virtuales donde se pueden almacenar y consultar volúmenes considerables de documentos, […]. Entra en escena el concepto de domiciliación, definido por Derrida (1997) como el lugar donde los documentos residen de modo permanente, transitando el camino institucional que va de lo privado a lo público. Esta domiciliación implica algo más que una simple noción espacial, es el reconocimiento de ese espacio dentro de una dimensión jurídica que le asigna determinadas características específicas” (Goldchluk y Pené 14).</p>
+            <p>Así que la domiciliación de los documentos se convertiría en un primer escollo de esta problemática. Esta se hace patente sobre todo cuando se decide aquello que se digitaliza y se pone en público y qué se deja en privado, resguardado a la parte física del archivo. El domicilio se apropia de la materia de los documentos, y ésta sería una primera tensión.</p>
+            <p>En un segundo momento la domiciliación que se aúna a la desterritolización, porque aquello que se posee está localizado y resguardado y solo se consulta con permiso institucional. La segunda de las tensiones que se presentan entre una y otra forma del archivo pienso que va por el lado de la desterritolización de las literaturas, precisamente porque opera un dispositivo, es decir, una conjunción entre el poder y la institucionalidad (Agamben). En últimas es un ejercicio de poder el que determina qué nación se apropia de un archivo. Dicha desterritolización no se presenta únicamente con nuestras literaturas, también pasa lo mismo con otras literaturas, por ejemplo, sobre los diversos ejemplares literarios del dadaísmo francés (Iowa University), de tal manera que la labor arcóntica de los archivos estadounidenses ha estado presente desde hace algún tiempo, y va en aumento constante. </p>
+            <p>Se conoce que un archivo de escritor está básicamente poblado de documentos y es obvio que el presente debate también va en la vía de las tensiones y la actualización obvia de dicho concepto. Se puede decir en cierta media que los verdaderos documentos se encuentran en la versión física y que muchas veces los archivos digitales se limitan a ser solo una muestra. Esto es notorio en la descripción que se puede leer en la página del Ransom Center sobre el archivo de García Márquez: de más de 1000 documentos guardados solo 33 están para la consulta pública en línea. De esta manera queda difícil emprender una labor como la que propone Foucault:</p>
+            <p>ahora bien, por una mutación que no data ciertamente de hoy, pero que no está indudablemente terminada aún, la historia ha cambiado de posición respecto del documento: se atribuye como tarea primordial, no el interpretarlo, ni tampoco determinar si es veraz y cuál sea su valor expresivo, sino trabajarlo desde el interior y elaborarlo. […] (Foucault 9-10).</p>
+            <p>Así, ¿cómo es esto posible si los archivos no se poseen? Es la pregunta que queda en el aire para nuestra propia tradición crítica.</p>
+            <p>En tercer lugar, encuentro que los países que no tienen en su poder los archivos de sus escritores tienen menos opciones de poder proceder a ediciones críticas de sus literaturas que tengan en cuenta el modelo de la genética textual, puesto que dichos manuscritos y demás son tenidos en cuenta meramente como materia para especialistas que se puedan desplazar hasta estos lugares de consulta, la mayoría de las veces más accesible para aquellos que se encuentren dentro del ámbito lingüístico al que pertenece el archivo. Un ejemplo claro de esto es el documento de las galeradas corregidas de la versión de conmemoración que hizo la RAE en el año 2007 de 
+                <hi rend=""italic"">Cien años de soledad</hi>, si no fuera por estas galeradas que reposan en Austin, entonces no sabríamos los cambios (casi imperceptibles) que tuvo la novela en su edición revisada, lo cual sería una tarea titánica de comparación de ediciones (Harry Ransom Center, 2017). Se piensa así que el acceso a los archivos físicos da mayor opción a cierta actualización editorial de la obra.
+            </p>
+            <p>Para señalar la última de las tensiones, citamos de nuevo a Foucault: “reconstituir, a partir de lo que dicen esos documentos – y a veces a medias palabras- el pasado del que emanan y que ahora ha quedado desvanecido muy atrás de ellos; el documento seguía tratándose como el lenguaje de una voz reducida ahora al silencio: su frágil rastro, pero afortundamente descrifrable (Foucault, 9).</p>
+            <p>Dicha idea de Foucault está muy conectada precisamente con la idea de iterabilidad de Derrida, es decir, poder reconstruir el enunciado del emisor aunque no se cuente con su presencia:</p>
+            <p>La posibilidad de repetir, y en consecuencia, de identificar las marcas está implícita en todo código, hace de éste una clave comunicable, transmisible, descifrable, repetible por un tercero, por tanto por todo usuario posible en general. Toda escritura debe, pues, para ser lo que es, poder funcionar en la ausencia radical de todo destinatario empíricamente determinado en general (Derrida 1998 364).</p>
+            <p>Obviamente si no se tiene un acceso físico a los archivos, la capacidad de su iterabilidad se desvanece, sobre todo en lo que tiene que ver con la genética de los textos. Al ordenar y definir qué se da al público y qué se conserva privado se está resguardando de cierta forma la capacidad de iterabilidad que podría tener tal documento, en ese orden de ideas, su capacidad de iterable se disminuye. ¿Hasta qué punto son más iterables aquellas obras que se ponen en público y en digital y aquellas a las que se les guarda con más celo?</p>
+            <p>Finalmente, lo que se quiere lograr con esta aproximación es observar qué contrastes existen entre ambas formas de presentación del archivo de escritor y las diversas tensiones que se producen entre una forma y otra de presentación de los archivos, a pesar de su supuesto carácter de equiparabilidad. </p>
+        
+        <back>
+            <div type=""bibliogr"">
+                <listbibl>
+                    Bibliography
+                    <bibl>Agamben, Giorgio. “¿Qué es un dispositivo?”. 
+                        <hi rend=""italic"">Arte y pensamiento</hi>. Universidad Internacional de Andalucía. Web. 20 de noviembre de 2017. 
+                        <ref target=""http://ayp.unia.es/r08/IMG/pdf/agamben-dispositivo.pdf"">http://ayp.unia.es/r08/IMG/pdf/agamben-dispositivo.pdf</ref>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""Hyperlink"">“Colombia: polémica por la venta del archivo personal de Gabriel García Márquez a la Universidad de Texas”. La Nación. 24 de noviembre de 2014. Web. http://www.lanacion.com.ar/1746618-colombia-polemica-por-la-venta-del-archivo-personal-de-gabriel-garcia-marquez-a-la-universidad-de-texas</hi>
+                    </bibl>
+                    <bibl>Derrida, Jacques. “Firma, acontecimiento, contexto”. Márgenes de la filosofía, Madrid, Cátedra, 1998, pp. 347-372. Impreso. </bibl>
+                    <bibl>Derrida, Jacques. 
+                        <hi rend=""italic"">Mal de archivo: una impresión freudiana</hi>. Madrid: Trotta, 1997. Impreso. 
+                    </bibl>
+                    <bibl>Foucault, Michel. 
+                        <hi rend=""italic"">La arqueología del saber</hi>. Buenos Aires: Siglo XXI Editores, 2002. Impreso. 
+                    </bibl>
+                    <bibl>Goldchluk, Graciela y Pené, Mónica Gabriela. “Archivos de escritura, génesis literaria y teoría del archivo”. Repositorio institucional. Universidad Nacional de la Plata. Web. 20 de noviembre de 2017. 
+                        <ref target=""http://www.memoria.fahce.unlp.edu.ar/trab_eventos/ev.772/ev.772.pdf"">http://www.memoria.fahce.unlp.edu.ar/trab_eventos/ev.772/ev.772.pdf</ref>
+                    </bibl>
+                    <bibl>Harry Ramson Center. “2018–2019 Research Fellowships Application Instructions”. Universidad de Texas en Austin. Web. 20 de noviembre de 2017. 
+                        <ref target=""http://www.hrc.utexas.edu/research/fellowships/application/"">http://www.hrc.utexas.edu/research/fellowships/application/</ref>
+                    </bibl>
+                    <bibl>Harry Ramson Center. “Gabriel García Márquez: Un Inventario de sus documentos en el Harry Ransom Center”. Universidad de Texas en Austin. Web. 20 de noviembre de 2017. http://norman.hrc.utexas.edu/fasearch/findingAid.cfm?eadid=01084</bibl>
+                    <bibl>Iowa University. “Digital library”. Web. 20 de noviembre de 2017. 
+                        <ref target=""http://digital.lib.uiowa.edu/"">http://digital.lib.uiowa.edu/</ref>
+                    </bibl>
+                    <bibl>Nava Murcia, Ricardo. “El mal de archivo en la escritura de la historia
+                        <hi rend=""italic"">”. Historia y grafía</hi>, núm. 38, enero-junio 2012, pp. 95-126. Impreso. 
+                    </bibl>
+                </listbibl>
+            </div>
+        </back>
+    </text>",xml,Creative Commons Attribution 4.0 International,,archivo de escritor;archivo digital;archivo físico;gabriel garcía márquez,Spanish,"archives, repositories, sustainability and preservation;library & information science;literary studies;philology;spanish"
+6436,2018 - Mexico City,Mexico City,Puentes/Bridges,2018-01-01T00:00:00Z,ADHO,ADHO;EHD,El Colegio de México;Universidad Nacional Autónoma de México (UNAM) (National Autonomous University of Mexico),Mexico City,,Mexico,https://dh2018.adho.org/,Prospectiva de la arquitectura en el siglo XXI. La arquitectura en entornos digitales,,Luis David Cardona Jiménez,poster / demo / art installation,"<text>
+        
+            <div>
+                <p>Desde la irrupción y aplicación de los adelantos de los medios digitales en los procesos de diseño y creación en arquitectura, los ámbitos académicos y profesionales han encontrado alternativas, posturas y desarrollos para la adopción de la tecnología digital, la cual, ha propiciado impactos en las formas de trabajo y en los abordajes del problema arquitectónico definiendo interesantes posibilidades en la imaginación y creación arquitectónica.</p>
+                <p>Se ha establecido por varios autores como, Carpo, Piccon, Frazer, Menges Cache, entre otros, que estos procesos de cambio en la imaginación y procesos de diseño y creación del espacio arquitectónico se dieron a principios de la década de los 90’s con la aparición de los primeros programas comerciales de CAD (Computer-Aided Design) los cuales ofrecieron oportunidades de transformación y manejo en la proyectación geométrica de espacios y edificios.</p>
+                <p>Es importante mencionar que la tradición del pensamiento arquitectónico desde sus orígenes se ha basado en la geometría euclidiana y en los sólidos platónicos, prisma, cilindro, cubo, pirámide, esfera, son figuras que se encuentran en las arquitecturas de todas las civilizaciones antiguas, las cuales se podían identificar claramente como arquetipos únicos y aislados (Fernández-Álvarez, 2014) </p>
+                <div>
+                    El giro post-digital
+                    <p>El termino post-digital es relativamente reciente y aún en construcción, sin embargo, una postura es no entenderlo como “después” de lo digital o lo “anti” digital, más bien se debe pensar como en la relación y el dominio de lo humano sobre lo tecnológico. El término “post-digital” apunta la llamar la atención sobre ""una actitud que se preocupa más por ser humano que por ser digital” (Zreik &amp; Gareus, 2012)</p>
+                    <p>Reiteradamente se ha mencionado a los años 90 como el momento en el que se evidencia la aplicación de medios y tecnólogas digitales en arquitectura. De acuerdo con Buchanan (1992), el reposicionamiento de nuevas ideas y planteamientos desencadenados por las pociones e intenciones de interpretación de nuevas preguntas y prácticas en todo al diseño incorporando tecnologías alternativas con entornos de simulación buscando productos y materiales innovadoras.</p>
+                    <p>La incorporación de medios digitales al pensamiento, imaginación y creación arquitectónica expresadas en la representación y visualización del espacio arquitectónico. Aquí cabe mencionar de nuevo a Buchanan (1992) el cual, sin ser arquitecto, pero con una consciencia y formación en diseño, nombra la arquitectura deconstructivista como una de las iniciativas arriesgadas y agresivas que contribuirían a recuperar el significado que trasmite la obra arquitectónica. </p>
+                </div>
+                <div>
+                    El futuro de la arquitectura, el Siglo XXI
+                    <p>La arquitectura como disciplina de tradicional arraigada a principios y postulados casi inmutables, viene desde hace tres décadas presentado cambios en la forma de abordar el problema del diseño del espacio habitable representado en la ciudad, edificios o viviendas. Con el constante cambio tecnológico, el fortalecimiento de las relaciones humanas a través de los digital, la arquitectura empieza a responder acertadamente a las demandas de nuevas formas de abordar la trasformación de la realidad.</p>
+                    <p>En un mundo hiperconectado, con una producción diaria de datos incalculables, el Big Data se convierte en una herramienta que permite crear plataformas de trabajo colaborativo, fortaleciendo la relación entre usuarios y diseñadores. </p>
+                    <p>Phil Bernstein, arquitecto y profesor de Yale University visualiza el futuro de la arquitectura a través avatares para el análisis de comportamiento de usuarios en entornos construidos virtualmente desde la visualización del Big Data. </p>
+                    <p>
+                        <hi rend=""italic"">“Big Data ya está transformando la forma en que los arquitectos diseñan edificios. Cambiando las potencias Big Data y la realidad virtual, se avanzará en la práctica arquitectónica a pasos agigantados”</hi>.
+                    </p>
+                    <p>Phil Bernstein</p>
+                    <p>Esta visión prospectiva de la arquitectura es emergente y esta en proceso de convergencia. Hoy, aunque incipiente, en Latinoamérica se empieza a mostrar un interés por avanzar en el entendimiento y aplicación de conceptos de investigación e innovación a través de las posibilidades que las tecnologías digitales ofrecen para el desarrollo de una arquitectura que responda a las expectativas del mundo en constante proceso de cambio. </p>
+                </div>
+            </div>
+        
+        <back>
+            <div type=""bibliogr"">
+                <listbibl>
+                    Bibliografía
+                    <bibl>Alexenberg, M. (2011). 
+                        <hi rend=""italic"">The Future of Art in a Postdigital Age: From Hellenistic to Hebraic Consciousness.</hi> Chicago: Intellect Ltd.
+                    </bibl>
+                    <bibl>Allen, S. (2009). 
+                        <hi rend=""italic"">“Velocidades terminales” en La digitalización toma el mando.</hi> Barceolna: Gustavo Gili.
+                    </bibl>
+                    <bibl>Amado, R. (2007). La arquitectura como interfaz. En 
+                        <hi rend=""italic"">Arte, Arquitectura y Sociedad_ Digital</hi> (págs. 107-109). Barcelona: Universitat de Barcelona/ESARQ‐UIC.
+                    </bibl>
+                    <bibl>Baltazar, A. (2009). 
+                        <hi rend=""italic"">Cyberarchitecture: the virtualisation of architecture beyond, Tesis doctoral.</hi> University College London, UCL.: The Bartlett School of Architecture.
+                    </bibl>
+                    <bibl>Buchanan, N. (1992). Wicked Problems in Design Thinking paper. 
+                        <hi rend=""italic"">Design Issues</hi>, 5-21.
+                    </bibl>
+                    <bibl>Carpo, M. (2013). 
+                        <hi rend=""italic"">The Digital Turn in Architecture 1992 - 2012.</hi> Chichester, UK: John Wiley &amp; Sons Ltd.
+                    </bibl>
+                    <bibl>Cross, N. (1982). Designerly Ways Of Knowing paper. 
+                        <hi rend=""italic"">Design Studies</hi>, 221-227.
+                    </bibl>
+                    <bibl>Fernández-Álvarez, Á. J. (2014). Riding the cloud. Information and architectural representation in the post-digital age. 
+                        <hi rend=""italic"" xml:space=""preserve"">EGE: Revista de Expresión Gráfica en la Edificación, </hi>, 159-166.
+                    </bibl>
+                    <bibl>Ortega, L. (2009). 
+                        <hi rend=""italic"">La digitalización toma el mando.</hi> Barcelona: Gustavo Gili.
+                    </bibl>
+                    <bibl>Períes, L. (2016). 
+                        <hi rend=""italic"">Estereotomía y topología en arquitectura.</hi> Buenas Aires: Editorial de la Universidad Nacional de Córdoba.
+                    </bibl>
+                    <bibl>Piccon, A. (2010). 
+                        <hi rend=""italic"">Digital Culture in Architecture.</hi> Basilea: Birkhäuser.
+                    </bibl>
+                    <bibl>Sandoval Vizcaíno, M. (2014). Herramientas de diseño y arqutiectura, la relación intrínseca entre herramientas y diseño . 
+                        <hi rend=""italic"">Revista Legado de Arquitectura y Diseño</hi>, 39-56.
+                    </bibl>
+                    <bibl>Zreik , K., &amp; Gareus, R. (2012). 
+                        <hi rend=""italic"">PostDigital Art - Proceedings of the 3rd Computer Art .</hi> Paris: Europia Productions.
+                    </bibl>
+                </listbibl>
+            </div>
+        </back>
+    </text>",xml,Creative Commons Attribution 4.0 International,,arquitectura;big data;diseño;prospectiva;realidad virtual,Spanish,"design;digitisation, resource creation, and discovery;information architecture and modeling;spanish"
+6437,2018 - Mexico City,Mexico City,Puentes/Bridges,2018-01-01T00:00:00Z,ADHO,ADHO;EHD,El Colegio de México;Universidad Nacional Autónoma de México (UNAM) (National Autonomous University of Mexico),Mexico City,,Mexico,https://dh2018.adho.org/,"ANJA, ¿dónde están los encabalgamientos?",,Clara Martinez-Canton;Pablo Ruiz-Fabo;Elena González-Blanco,poster / demo / art installation,"<text>
+        
+            <div type=""div1"" rend=""DH-Heading1"">
+                Introducción
+                <p>Encabalgamiento es el desajuste entre la pausa métrica y la sintáctica 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a13a78t84e0"",""properties"":{""formattedCitation"":""{\\rtf (Dom\\uc0\\u237{}nguez Caparr\\uc0\\u243{}s, 2000)}"",""plainCitation"":""(Domínguez Caparrós, 2000)""},""citationItems"":[{""id"":372,""uris"":[""http://zotero.org/users/3707759/items/GQ7BA63M""],""uri"":[""http://zotero.org/users/3707759/items/GQ7BA63M""],""itemData"":{""id"":372,""type"":""book"",""title"":""Métrica española"",""publisher"":""Síntesis"",""publisher-place"":""Madrid"",""event-place"":""Madrid"",""author"":[{""family"":""Domínguez Caparrós"",""given"":""José""}],""issued"":{""date-parts"":[[""2000""]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(Domínguez Caparrós, 2000: 103) que ocurre cuando una unidad de sentido se rompe entre dos versos. Este fenómeno, desde siempre utilizado con distintos fines expresivos (énfasis, ambigüedad, etc.) es difícil de delimitar formalmente. 
+                </p>
+                <p>El estudio más sistemático realizado para su caracterización en español sigue siendo el realizado en su tesis por Quilis 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a1hr4shuc56"",""properties"":{""formattedCitation"":""(Quilis, 1964)"",""plainCitation"":""(Quilis, 1964)""},""citationItems"":[{""id"":527,""uris"":[""http://zotero.org/groups/1263792/items/MZU73NXT""],""uri"":[""http://zotero.org/groups/1263792/items/MZU73NXT""],""itemData"":{""id"":527,""type"":""book"",""title"":""Estructura del encabalgamiento en la métrica española"",""publisher"":""Consejo Superior de Investigaciones Científicas, patronato\"" Menéndez y Pelayo,\"" Instituto\"" Miguel de Cervantes,\"""",""source"":""Google Scholar"",""note"":""00002"",""author"":[{""family"":""Quilis"",""given"":""Antonio""}],""issued"":{""date-parts"":[[""1964""]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(1964). El estudioso experimentó con lecturas de prosa, buscando demostrar qué unidades sintácticas no permiten pausa de sentido en su interior. Basándose en los resultados definió una serie de categorías gramaticales y sintácticas cuya separación en versos distintos produce encabalgamiento. La tipología allí establecida se considera ya clásica. El estudio de Quilis proporciona una definición formal y empírica del fenómeno. Con base en sus reglas se ha creado una herramienta capaz de detectar el encabalgamiento y sus tipos. 
+                </p>
+                <p>Este póster presenta la interfaz ANJA para el análisis automático del encabalgamiento desde una sencilla aplicación web: 
+                    <ref target=""http://prf1.org/anja/index/"">http://prf1.org/anja/index/</ref>, desarrollada dentro del proyecto ERC POSTDATA GA- 679528
+                    <note place=""foot"" xml:id=""ftn1"" n=""1"">
+                        <p rend=""footnote text""> Este trabajo se enmarca dentro del proyecto de investigación Starting Grant Poetry Standardization and Linked Open Data: POSTDATA (ERC-2015-STG-679528), financiado por el European Research Council (ERC) bajo el programa: European Union´s Horizon 2020 research and innovation programme, dirigido como Investigador Principal por la profesora Elena González-Blanco, LINHD UNED (
+                            <ref target=""http://postdata.linhd.es/"">http://postdata.linhd.es/</ref>).
+                        </p>
+                    </note>.
+                </p>
+            </div>
+            <div type=""div1"" rend=""DH-Heading1"">
+                Estado del arte
+                <p>La naturaleza formal del análisis métrico lo hace un campo propicio para su tratamiento computacional 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a1711n8sdfn"",""properties"":{""formattedCitation"":""(Birnbaum and Thorsen, 2015)"",""plainCitation"":""(Birnbaum and Thorsen, 2015)""},""citationItems"":[{""id"":540,""uris"":[""http://zotero.org/groups/1263792/items/SZX4IMRJ""],""uri"":[""http://zotero.org/groups/1263792/items/SZX4IMRJ""],""itemData"":{""id"":540,""type"":""paper-conference"",""title"":""Markup and meter: Using XML tools to teach a computer to think about versification"",""container-title"":""Balisage: The Markup Conference"",""source"":""Google Scholar"",""URL"":""http://www.balisage.net/Proceedings/vol15/print/Birnbaum01/BalisageVol15-Birnbaum01.html"",""note"":""00002"",""shortTitle"":""Markup and meter"",""author"":[{""family"":""Birnbaum"",""given"":""David J.""},{""family"":""Thorsen"",""given"":""Elise""}],""issued"":{""date-parts"":[[""2015""]]},""accessed"":{""date-parts"":[[""2017"",4,22]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(Birnbaum and Thorsen, 2015;
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a62fi7049n"",""properties"":{""formattedCitation"":""(Delente and Renault, 2015)"",""plainCitation"":""(Delente and Renault, 2015)""},""citationItems"":[{""id"":489,""uris"":[""http://zotero.org/groups/1263792/items/VZWBTWI2""],""uri"":[""http://zotero.org/groups/1263792/items/VZWBTWI2""],""itemData"":{""id"":489,""type"":""article-journal"",""title"":""Outils et métrique: un tour d'horizon"",""container-title"":""Langages"",""page"":""5–22"",""issue"":""3"",""source"":""Google Scholar"",""note"":""00001"",""shortTitle"":""Outils et métrique"",""author"":[{""family"":""Delente"",""given"":""Éliane""},{""family"":""Renault"",""given"":""Richard""}],""issued"":{""date-parts"":[[""2015""]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?> Delente and Renault, 2015). El procesamiento del lenguaje natural (PLN) ofrece muchas posibilidades para la métrica, pues las reglas de definición lingüística permiten llevar a cabo análisis y extracción automática de grandes cantidades de información de corpus textuales. 
+                </p>
+                <p>Para la automatización del análisis métrico en español destacamos los estudios de escansión silábica y acentual de Navarro-Colorado 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a152ofsqonf"",""properties"":{""formattedCitation"":""(Navarro-Colorado, 2017)"",""plainCitation"":""(Navarro-Colorado, 2017)""},""citationItems"":[{""id"":498,""uris"":[""http://zotero.org/groups/1263792/items/CQK7XFVG""],""uri"":[""http://zotero.org/groups/1263792/items/CQK7XFVG""],""itemData"":{""id"":498,""type"":""article-journal"",""title"":""A metrical scansion system for fixed-metre Spanish poetry"",""container-title"":""Digital Scholarship in the Humanities"",""source"":""academic.oup.com"",""URL"":""https://academic.oup.com/dsh/article-abstract/doi/10.1093/llc/fqx009/3064339/A-metrical-scansion-system-for-fixed-metre-Spanish"",""DOI"":""10.1093/llc/fqx009"",""note"":""00002"",""journalAbbreviation"":""Digital Scholarship Humanities"",""author"":[{""family"":""Navarro-Colorado"",""given"":""Borja""}],""issued"":{""date-parts"":[[""2017""]]},""accessed"":{""date-parts"":[[""2017"",4,19]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(2017), Agirrezabal 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""aut9qaud1g"",""properties"":{""formattedCitation"":""(Agirrezabal, 2017)"",""plainCitation"":""(Agirrezabal, 2017)""},""citationItems"":[{""id"":1122,""uris"":[""http://zotero.org/groups/1263792/items/NDI4SBZW""],""uri"":[""http://zotero.org/groups/1263792/items/NDI4SBZW""],""itemData"":{""id"":1122,""type"":""thesis"",""title"":""Automatic Scansion of Poetry"",""publisher"":""Universidad del País Vasco"",""publisher-place"":""San Sebastián/Donosti"",""event-place"":""San Sebastián/Donosti"",""author"":[{""family"":""Agirrezabal"",""given"":""Manex""}],""issued"":{""date-parts"":[[""2017""]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(2017) y Gervás 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a1u243kq4dl"",""properties"":{""formattedCitation"":""{\\rtf (Gerv\\uc0\\u225{}s, 2000)}"",""plainCitation"":""(Gervás, 2000)"",""dontUpdate"":true},""citationItems"":[{""id"":1127,""uris"":[""http://zotero.org/groups/1263792/items/ZFBT9N5S""],""uri"":[""http://zotero.org/groups/1263792/items/ZFBT9N5S""],""itemData"":{""id"":1127,""type"":""chapter"",""title"":""A Logic Programming Application for the Analysis of Spanish Verse"",""container-title"":""Computational Logic—CL 2000"",""publisher"":""Springer Berlin Heidelberg"",""publisher-place"":""Berlin"",""page"":""1330-1344"",""event-place"":""Berlin"",""author"":[{""family"":""Gervás"",""given"":""Pablo""}],""issued"":{""date-parts"":[[""2000""]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(2000). También los trabajos de generación automática de poesía con patrones métricos 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""aar7h14imv"",""properties"":{""formattedCitation"":""{\\rtf (Gerv\\uc0\\u225{}s, 2000b)}"",""plainCitation"":""(Gervás, 2000b)""},""citationItems"":[{""id"":561,""uris"":[""http://zotero.org/groups/1263792/items/HNDJRDIR""],""uri"":[""http://zotero.org/groups/1263792/items/HNDJRDIR""],""itemData"":{""id"":561,""type"":""paper-conference"",""title"":""Wasp: Evaluation of different strategies for the automatic generation of spanish verse"",""container-title"":""Proceedings of the AISB-00 symposium on creative & cultural aspects of AI"",""page"":""93–100"",""source"":""Google Scholar"",""URL"":""https://www.researchgate.net/profile/Pablo_Gervas/publication/228609235_Wasp_Evaluation_of_different_strategies_for_the_automatic_generation_of_spanish_verse/links/00b4952aada6407047000000.pdf"",""note"":""00071"",""shortTitle"":""Wasp"",""author"":[{""family"":""Gervás"",""given"":""Pablo""}],""issued"":{""date-parts"":[[""2000""]]},""accessed"":{""date-parts"":[[""2017"",4,22]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(Gervás, 2000b) y 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""IqQ3WEcx"",""properties"":{""formattedCitation"":""{\\rtf (Gerv\\uc0\\u225{}s, 2015)}"",""plainCitation"":""(Gervás, 2015)""},""citationItems"":[{""id"":563,""uris"":[""http://zotero.org/groups/1263792/items/7TDNKEXM""],""uri"":[""http://zotero.org/groups/1263792/items/7TDNKEXM""],""itemData"":{""id"":563,""type"":""paper-conference"",""title"":""Tightening the Constraints on Form and Content for an Existing Computer Poet"",""container-title"":""AISB Convention 2015"",""source"":""Google Scholar"",""URL"":""http://eprints.sim.ucm.es/37000/"",""note"":""00001"",""author"":[{""family"":""Gervás"",""given"":""Pablo""}],""issued"":{""date-parts"":[[""2015""]]},""accessed"":{""date-parts"":[[""2017"",4,22]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(Gervás, 2015). 
+                </p>
+                <p>En el campo de las interfaces cabe distinguir entre aquellas que exploran datos de textos ya analizados, recogidos en una base de datos, y aquellas que permiten la entrada y análisis de cualquier poema. Del primer tipo destacamos For Better For Verse
+                    <note place=""foot"" xml:id=""ftn2"" n=""2"">
+                        <p rend=""footnote text"">
+                            <ref target=""http://prosody.lib.virginia.edu/"">http://prosody.lib.virginia.edu/</ref>
+                        </p>
+                    </note>
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a2nfmtb449o"",""properties"":{""formattedCitation"":""(Tucker, 2011)"",""plainCitation"":""(Tucker, 2011)""},""citationItems"":[{""id"":1152,""uris"":[""http://zotero.org/groups/1263792/items/ZIS5PXPE""],""uri"":[""http://zotero.org/groups/1263792/items/ZIS5PXPE""],""itemData"":{""id"":1152,""type"":""article-journal"",""title"":""Poetic data and the news from poems: A for better for verse memoir"",""container-title"":""Victorian Poetry"",""page"":""267–281"",""volume"":""49"",""issue"":""2"",""source"":""Google Scholar"",""shortTitle"":""Poetic data and the news from poems"",""author"":[{""family"":""Tucker"",""given"":""Herbert F.""}],""issued"":{""date-parts"":[[""2011""]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(Tucker, 2011) y Database of Czech Metre
+                    <note place=""foot"" xml:id=""ftn3"" n=""3"">
+                        <p rend=""footnote text"">
+                            <ref target=""http://versologie.cz/v2/web_content/"">http://versologie.cz/v2/web_content/</ref>
+                        </p>
+                    </note>
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a2ei4qt3l8"",""properties"":{""formattedCitation"":""{\\rtf (Plech\\uc0\\u225{}\\uc0\\u269{} and Kol\\uc0\\u225{}r, 2015)}"",""plainCitation"":""(Plecháč and Kolár, 2015)""},""citationItems"":[{""id"":1157,""uris"":[""http://zotero.org/groups/1263792/items/TINCAKV7""],""uri"":[""http://zotero.org/groups/1263792/items/TINCAKV7""],""itemData"":{""id"":1157,""type"":""article-journal"",""title"":""The Corpus of Czech Verse"",""container-title"":""Studia Metrica et Poetica"",""page"":""107–118"",""volume"":""2"",""issue"":""1"",""source"":""Google Scholar"",""author"":[{""family"":""Plecháč"",""given"":""Petr""},{""family"":""Kolár"",""given"":""Robert""}],""issued"":{""date-parts"":[[""2015""]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(Plecháč and Kolár, 2015). Entre las que permiten introducir textos destacamos, en español, la ligada a la herramienta de Navarro-Colorado
+                    <note place=""foot"" xml:id=""ftn4"" n=""4"">
+                        <p rend=""footnote text"">
+                            <ref target=""http://adso.gplsi.es/index.php/es/demostracion/"">http://adso.gplsi.es/index.php/es/demostracion/</ref>
+                        </p>
+                    </note>, que analiza versos endecasílabos. Otros sitios con interfaz de entrada para análisis métrico son Separarensílabas
+                    <note place=""foot"" xml:id=""ftn5"" n=""5"">
+                        <p rend=""footnote text"">
+                            <ref target=""http://www.separarensilabas.com/index.php"">http://www.separarensilabas.com/index.php</ref>
+                        </p>
+                    </note> o Lexiquetos
+                    <note place=""foot"" xml:id=""ftn6"" n=""6"">
+                        <p rend=""footnote text"">
+                            <ref target=""http://lexiquetos.org/silio/"">http://lexiquetos.org/silio/</ref>
+                        </p>
+                    </note>. En otras lenguas destacamos Metricalizer
+                    <note place=""foot"" xml:id=""ftn7"" n=""7"">
+                        <p rend=""footnote text"">
+                            <ref target=""https://metricalizer.de/en/metrikanalyse/poem"">https://metricalizer.de/en/metrikanalyse/poem</ref>
+                        </p>
+                    </note>
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a147qktvdo"",""properties"":{""formattedCitation"":""(Bobenhausen and Hammerich, 2015)"",""plainCitation"":""(Bobenhausen and Hammerich, 2015)""},""citationItems"":[{""id"":423,""uris"":[""http://zotero.org/users/3707759/items/JR4P2QG8""],""uri"":[""http://zotero.org/users/3707759/items/JR4P2QG8""],""itemData"":{""id"":423,""type"":""article-journal"",""title"":""Métrique littéraire, métrique linguistique et métrique algorithmique de l'allemand mises en jeu dans le programme Metricalizer2"",""container-title"":""Langages"",""page"":""67–88"",""issue"":""3"",""source"":""Google Scholar"",""author"":[{""family"":""Bobenhausen"",""given"":""Klemens""},{""family"":""Hammerich"",""given"":""Benjamin""}],""issued"":{""date-parts"":[[""2015""]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(Bobenhausen and Hammerich, 2015) para alemán, Aoidos
+                    <note place=""foot"" xml:id=""ftn8"" n=""8"">
+                        <p rend=""footnote text"">
+                            <ref target=""http://aoidos.ufsc.br/"">http://aoidos.ufsc.br/</ref>
+                        </p>
+                    </note>
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a2h1bsuf6hj"",""properties"":{""formattedCitation"":""(Mittmann, 2016)"",""plainCitation"":""(Mittmann, 2016)""},""citationItems"":[{""id"":827,""uris"":[""http://zotero.org/groups/604703/items/X7859Z3V""],""uri"":[""http://zotero.org/groups/604703/items/X7859Z3V""],""itemData"":{""id"":827,""type"":""article-journal"",""title"":""Escansão automática de versos em português"",""source"":""Google Scholar"",""URL"":""https://repositorio.ufsc.br/handle/123456789/175819"",""note"":""00000"",""author"":[{""family"":""Mittmann"",""given"":""Adiel""}],""issued"":{""date-parts"":[[""2016""]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(Mittmann, 2016) para portugués y español, y RhymeDesign
+                    <note place=""foot"" xml:id=""ftn9"" n=""9"">
+                        <p rend=""footnote text"">
+                            <ref target=""http://www.sci.utah.edu/~nmccurdy/rhymeDesign/"">http://www.sci.utah.edu/~nmccurdy/rhymeDesign/</ref>
+                        </p>
+                    </note>
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a2lga04s1b6"",""properties"":{""formattedCitation"":""(McCurdy et al., 2015)"",""plainCitation"":""(McCurdy et al., 2015)""},""citationItems"":[{""id"":1142,""uris"":[""http://zotero.org/groups/1263792/items/T5IE63ZA""],""uri"":[""http://zotero.org/groups/1263792/items/T5IE63ZA""],""itemData"":{""id"":1142,""type"":""chapter"",""title"":""Rhymedesign: A tool for analyzing sonic devices in poetry"",""container-title"":""Proceedings of the Fourth Workshop on Computational Linguistics for Literature"",""page"":""12–22"",""source"":""Google Scholar"",""shortTitle"":""Rhymedesign"",""author"":[{""family"":""McCurdy"",""given"":""Nina""},{""family"":""Srikumar"",""given"":""Vivek""},{""family"":""Meyer"",""given"":""Miriah""}],""issued"":{""date-parts"":[[""2015""]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(McCurdy et al., 2015) especializado en rima en inglés.
+                </p>
+                <p>Una interfaz para el análisis del encabalgamiento representa, sin embargo, una novedad en el campo.</p>
+            </div>
+            <div type=""div1"" rend=""DH-Heading1"">
+                 Herramienta y resultados 
+                <p>El programa de detección del encabalgamiento en español, basado en PLN, se desarrolló en 2016-2017 y fue evaluado sobre dos corpus de test de distintos periodos 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a8vtl0rkqc"",""properties"":{""formattedCitation"":""(Ruiz et al., 2017)"",""plainCitation"":""(Ruiz et al., 2017)""},""citationItems"":[{""id"":1002,""uris"":[""http://zotero.org/groups/1263792/items/J5BAIM6A""],""uri"":[""http://zotero.org/groups/1263792/items/J5BAIM6A""],""itemData"":{""id"":1002,""type"":""paper-conference"",""title"":""Enjambment Detection in a Large Diachronic Corpus of Spanish Sonnets"",""container-title"":""Proceedings of the Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature"",""publisher"":""Association for Computational Linguistics"",""page"":""27–32"",""source"":""Google Scholar"",""author"":[{""family"":""Ruiz"",""given"":""Pablo""},{""family"":""Martínez Cantón"",""given"":""Clara""},{""family"":""Poibeau"",""given"":""Thierry""},{""family"":""González-Blanco"",""given"":""Elena""}],""issued"":{""date-parts"":[[""2017""]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(Ruiz et al., 2017). ANJA proporciona una interfaz web simple para este programa. El sistema consta de tres componentes: módulo de preprocesado para uniformar el formato de los poemas, pipeline de PLN (basada en IXA Pipes 
+                    <?biblio ADDIN ZOTERO_ITEM CSL_CITATION {""citationID"":""a156unuhkub"",""properties"":{""formattedCitation"":""(Agerri et al., 2014)"",""plainCitation"":""(Agerri et al., 2014)""},""citationItems"":[{""id"":500,""uris"":[""http://zotero.org/groups/1263792/items/2JB37MX6""],""uri"":[""http://zotero.org/groups/1263792/items/2JB37MX6""],""itemData"":{""id"":500,""type"":""paper-conference"",""title"":""IXA pipeline: Efficient and Ready to Use Multilingual NLP tools."",""container-title"":""Proceedings of LREC 2014, the 9th International Language Resources and Evaluation Conference"",""publisher-place"":""Reykjavik,Iceland"",""page"":""3823–3828"",""volume"":""2014"",""source"":""Google Scholar"",""event-place"":""Reykjavik,Iceland"",""URL"":""http://www.lrec-conf.org/proceedings/lrec2014/pdf/775_Paper.pdf"",""note"":""00068"",""shortTitle"":""IXA pipeline"",""author"":[{""family"":""Agerri"",""given"":""Rodrigo""},{""family"":""Bermudez"",""given"":""Josu""},{""family"":""Rigau"",""given"":""German""}],""issued"":{""date-parts"":[[""2014""]]},""accessed"":{""date-parts"":[[""2017"",4,20]]}}}],""schema"":""https://github.com/citation-style-language/schema/raw/master/csl-citation.json""}?>(Agerri et al., 2014) para POS-tagging, constituyentes y dependencias sintácticas) y módulo de detección de encabalgamiento (basado en reglas y diccionarios) y ampliamente documentado en el sitio web
+                    <note place=""foot"" xml:id=""ftn10"" n=""10"">
+                        <p rend=""footnote text"">
+                            <ref target=""https://sites.google.com/site/spanishenjambment/"">
+                                <hi rend=""underline color(1155CC)"">https://sites.google.com/site/spanishenjambment/</hi>
+                            </ref>
+                        </p>
+                    </note>. Se ha utilizado esta herramienta para etiquetar un corpus de más de 4000 sonetos alojado y documentado en
+                    <ref target=""https://github.com/pruizf/disco/"">
+                        <hi rend=""underline color(1155CC)"">https://github.com/postdataproject/disco</hi>
+                    </ref>.
+                </p>
+                <p>El código de la herramienta de detección de encabalgamientos está disponible en 
+                    <ref target=""https://bitbucket.org/pruizf/anja_public/"">https://bitbucket.org/pruizf/anja_public/</ref>.
+                </p>
+            </div>
+            <div type=""div1"" rend=""DH-Heading1"">
+                Interfaz gráfica de usuario
+                <p>ANJA es una interfaz pública y gratuita, alojada en: 
+                    <ref target=""http://prf1.org/anja/index/"">http://prf1.org/anja/index/</ref>. Permite cargar los poemas que el usuario decida y analizarlos en el momento. También ofrece la carga de archivos ZIP que contengan archivos en texto plano.
+                </p>
+                <p>La interfaz de usuario está construida con el framework Django (Python), con las plantillas de Bootstrap 3. Las vistas de Django se llaman con AJAX para poblar los elementos de la UI. Para el análisis de PLN, Django accede a servicios web Java (IXA Pipes) implementados en nuestro servidor.</p>
+                <p>ANJA presenta dos ventanas de navegación (Fig. 1), la principal, para introducir poemas, a la derecha y, a la izquierda, una mínima guía de uso que explica su funcionamiento y enlaza a la web del proyecto.</p>
+                <figure>
+                    <graphic n=""1001"" width=""15.828344444444445cm"" height=""5.267158333333334cm"" url=""Pictures/2c2b77178ab6b500074f08d76ffe598a.png"" rend=""inline""></graphic>
+                    Captura de ANJA
+                </figure>
+                <p>Los resultados se ofrecen dos formatos: 
+                    <hi rend=""italic"">Standoff</hi> (tipo de encabalgamiento y línea), e 
+                    <hi rend=""italic"">Inline</hi> (etiquetado gramatical y tipo de encabalgamiento por línea, ver Fig. 2 para 
+                    <hi rend=""italic"">Inline</hi>). Las anotaciones PLN en que se basa en sistema se ofrecen en las pestañas 
+                    <hi rend=""italic"">PosTags</hi> (etiquetas gramaticales) y 
+                    <hi rend=""italic"">FullNLP</hi> (pipeline completa). 
+                </p>
+                <p>El enlace 
+                    <hi rend=""bold"">legend</hi>
+                    <note place=""foot"" xml:id=""ftn11"" n=""11"">
+                        <p rend=""footnote text"">
+                            <ref target=""https://sites.google.com/site/spanishenjambment/legend"">https://sites.google.com/site/spanishenjambment/legend</ref>
+                        </p>
+                    </note> da acceso a la leyenda que explica los tipos de encabalgamiento, las etiquetas gramaticales y otras convenciones de representación: 
+                </p>
+                <figure>
+                    <graphic n=""1002"" width=""16.102980555555554cm"" height=""5.828630555555556cm"" url=""Pictures/81ac689c2b9c94488c8a4943dba75b83.png"" rend=""inline""></graphic>
+                    Anotaciones de encabalgamiento en formato 
+                        <hi rend=""italic"">Inline</hi>
+                    
+                </figure>
+                <p>La existencia de una aplicación web simple para la utilización esta herramienta la hace accesible para una gama mucho más amplia de usuarios.</p>
+            </div>
+        
+        <back>
+            <div type=""bibliogr"">
+                <listbibl>
+                    Bibliografía
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Agerri, R., Bermudez, J. and Rigau, G.</hi> (2014). IXA pipeline: Efficient and Ready to Use Multilingual NLP tools. 
+                        <hi rend=""italic"">Proceedings of LREC 2014, the 9th International Language Resources and Evaluation Conference</hi>, vol. 2014. Reykjavik,Iceland, pp. 3823–3828 http://www.lrec-conf.org/proceedings/lrec2014/pdf/775_Paper.pdf (accessed 20 April 2017).
+                        <?biblio ADDIN ZOTERO_BIBL {""custom"":[]} CSL_BIBLIOGRAPHY?>
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Agirrezabal, M.</hi> (2017). Automatic Scansion of Poetry San Sebastián/Donosti: Universidad del País Vasco.
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Birnbaum, D. J. and Thorsen, E.</hi> (2015). Markup and meter: Using XML tools to teach a computer to think about versification. 
+                        <hi rend=""italic"">Balisage: The Markup Conference</hi> http://www.balisage.net/Proceedings/vol15/print/Birnbaum01/BalisageVol15-Birnbaum01.html (accessed 22 April 2017).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Bobenhausen, K. and Hammerich, B.</hi> (2015). Métrique littéraire, métrique linguistique et métrique algorithmique de l’allemand mises en jeu dans le programme Metricalizer2. 
+                        <hi rend=""italic"">Langages</hi>(3): 67–88.
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Delente, É. and Renault, R.</hi> (2015). Outils et métrique: un tour d’horizon. 
+                        <hi rend=""italic"">Langages</hi>(3): 5–22.
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Domínguez Caparrós, J.</hi> (2000). 
+                        <hi rend=""italic"">Métrica Española</hi>. Madrid: Síntesis.
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Gervás, P.</hi> (2000a). A Logic Programming Application for the Analysis of Spanish Verse. 
+                        <hi rend=""italic"">Computational Logic—CL 2000</hi>. Berlin: Springer Berlin Heidelberg, pp. 1330–44.
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Gervás, P.</hi> (2000b). Wasp: Evaluation of different strategies for the automatic generation of spanish verse. 
+                        <hi rend=""italic"">Proceedings of the AISB-00 Symposium on Creative &amp; Cultural Aspects of AI</hi>. pp. 93–100 https://www.researchgate.net/profile/Pablo_Gervas/publication/228609235_Wasp_Evaluation_of_different_strategies_for_the_automatic_generation_of_spanish_verse/links/00b4952aada6407047000000.pdf (accessed 22 April 2017).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Gervás, P.</hi> (2015). Tightening the Constraints on Form and Content for an Existing Computer Poet. 
+                        <hi rend=""italic"">AISB Convention 2015</hi> http://eprints.sim.ucm.es/37000/ (accessed 22 April 2017).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">McCurdy, N., Srikumar, V. and Meyer, M.</hi> (2015). Rhymedesign: A tool for analyzing sonic devices in poetry. 
+                        <hi rend=""italic"">Proceedings of the Fourth Workshop on Computational Linguistics for Literature</hi>. pp. 12–22.
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Mittmann, A.</hi> (2016). Escansão automática de versos em português. https://repositorio.ufsc.br/handle/123456789/175819.
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Navarro-Colorado, B.</hi> (2017). A metrical scansion system for fixed-metre Spanish poetry. 
+                        <hi rend=""italic"">Digital Scholarship in the Humanities</hi> doi:10.1093/llc/fqx009. https://academic.oup.com/dsh/article-abstract/doi/10.1093/llc/fqx009/3064339/A-metrical-scansion-system-for-fixed-metre-Spanish (accessed 19 April 2017).
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Plecháč, P. and Kolár, R.</hi> (2015). The Corpus of Czech Verse. 
+                        <hi rend=""italic"">Studia Metrica et Poetica</hi>, 
+                        <hi rend=""bold"">2</hi>(1): 107–118.
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Quilis, A.</hi> (1964). 
+                        <hi rend=""italic"">Estructura Del Encabalgamiento En La Métrica Española</hi>. Consejo Superior de Investigaciones Científicas, patronato‘ Menéndez y Pelayo,’ Instituto‘ Miguel de Cervantes,’.
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"" xml:space=""preserve"">Ruiz Fabo, P., Bermúdez Sabel, H., Martínez Cantón, C. I., González-Blanco, E. and Navarro-Colorado, B. </hi>(2018). The Diachronic Spanish Sonnet Corpus (DISCO): TEI and Linked Open Data Encoding, Data Distribution and Metrical Findings. Humanidades Digitales 2018 (DH 2018). Ciudad de México, México. 
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Ruiz Fabo, P., Bermúdez-Sabel, H., Martínez Cantón, C. I. and Calvo Tello, J.</hi> (2017). 
+                        <hi rend=""italic"">Diachronic Spanish Sonnet Corpus (DISCO). Madrid: UNED.</hi> Madrid https://doi.org/10.5281/zenodo.1012567.
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Ruiz, P., Martínez Cantón, C., Poibeau, T. and González-Blanco, E.</hi> (2017). Enjambment Detection in a Large Diachronic Corpus of Spanish Sonnets. 
+                        <hi rend=""italic"">Proceedings of the Joint SIGHUM Workshop on Computational Linguistics for Cultural Heritage, Social Sciences, Humanities and Literature</hi>. Association for Computational Linguistics, pp. 27–32.
+                    </bibl>
+                    <bibl rend=""Bibliography"">
+                        <hi rend=""bold"">Tucker, H. F.</hi> (2011). Poetic data and the news from poems: A for better for verse memoir. 
+                        <hi rend=""italic"">Victorian Poetry</hi>, 
+                        <hi rend=""bold"">49</hi>(2): 267–281.
+                    </bibl>
+                </listbibl>
+            </div>
+        </back>
+    </text>",xml,Creative Commons Attribution 4.0 International,,enjambment;literary analysis tool;metrics;user interface;web application,Spanish,computer science;interface & user experience design/publishing & delivery systems/user studies/user needs;literary studies;natural language processing;software design and development;spanish;spanish and spanish american studies;stylistics and stylometry
+6438,2018 - Mexico City,Mexico City,Puentes/Bridges,2018-01-01T00:00:00Z,ADHO,ADHO;EHD,El Colegio de México;Universidad Nacional Autónoma de México (UNAM) (National Autonomous University of Mexico),Mexico City,,Mexico,https://dh2018.adho.org/,Visualizando una Aproximación Narratológica sobre la Producción y Utilización de los Recursos Online de Museos de Arte.,,María Isabel Hidalgo Urbaneja,poster / demo / art installation,"<text>
+        
+            <p rend=""No Spacing"">Publicaciones y exposiciones online, así como otros recursos interactivos, se encuentran entre los recursos online más utilizados por museos de arte en todo el mundo para transmitir historias vinculadas a obras de arte y colecciones. Los formatos tradicionalmente utilizados por museos para contar la historia del arte están siendo reconceptualizados a través de las cualidades y funcionalidades que nos ofrece el medio digital. El proceso experimental que aquí se expone nace con el objetivo de visualizar las particularidades que definen las narrativas generadas en los recursos online de museos de arte. Una selección de seis recursos online representativos de las tipologías más comunes producidos por museos de los Estados Unidos, España y Reino Unido* han sido la base para, por un lado, recabar datos sobre la perspectiva de los productores, y por otro, la de los usuarios especializados—una audiencia de perfil académico/investigador en el área de la historia del arte. Los datos se obtuvieron a través de dos métodos: entrevistas con los productores involucrados en la creación de los recursos online seleccionados, y en el caso de los usuarios, a través del protocolo conocido como “pensamiento en voz alta” (thinking aloud protocol) que ayuda a capturar información relevante a los procesos de navegación de los recursos online. Ambos procedimientos fueron grabados y transcritos para un facilitar el análisis posterior. Estos datos que se codificaron y analizaron desde una perspectiva narratológica permitiendo la observación de elementos configurantes de las narrativas: autoría, recepción como lectoespectador, estructuración, espacialidad, cronología. </p>
+            <p rend=""No Spacing"">Aunque en la investigación doctoral que da origen a los datos utilizados en esta propuesta se siguió una metodología cualitativa de corte más tradicional, en este póster se expone una aproximación experimental basada en la visualización de los códigos extraídos de las transcripciones. La visualización ofrece una visión complementaria al análisis inicial de los datos, orientado a presentar resultados de forma discursiva. De acuerdo con esta premisa, el póster compararía las posibilidades de análisis y presentación de las visualizaciones con el formato discursivo. Un análisis visual de los códigos revela aspectos cuantitativos de los datos, así como las conexiones entre los códigos de forma más explícita. En un cierto sentido, se presenta un resumen visual o vista general. La visualización de datos puede ayudar en la identificación de aspectos que habían sido obviados tras el empleo de la metodología más tradicional, y potencialmente, puede ofrecer nuevas conclusiones en la investigación. </p>
+            <p rend=""No Spacing"">La modalidad de visualización que se emplea en esta propuesta ha sido diseñada partiendo de diferentes metodologías y herramientas de visualización de datos. En primer lugar, toma como punto de partida en el uso de diagramas como herramienta de análisis narratológico (Ryan, 2007). Aunque el diseño de la metodología usada para visualizar datos en este póster emplea específicamente el procedimiento conocido como “map analysis” (Carley, 1993), éste permite la comparación de textos en base a los códigos extraídos y las relaciones entre ellos. Por otro lado, el trabajo de Luther (2017) propone un modelo y herramienta de visualización centrado en la representación de aspectos cualitativos y cuantitativos, éste fue desarrollado con el objetivo de estudiar aspectos de temática socio-histórico artística. No obstante, como herramientas se han elegido Gephi y d3.js ya que permiten representar la frecuencia de los códigos e interrelaciones. Las visualizaciones de este póster representan por separado los datos tanto de productores como de usuarios especializados de los recursos online, permitiendo comparar los seis recursos online. Las visualizaciones permiten estudiar las diferencias y similitudes existentes entre las perspectivas de los creadores, desde un punto de vista referente a la autoría, y las perspectivas de la audiencia especializada, como lectoespectadores de los recursos online. Conclusiones derivadas del proceso de visualización de datos serán argumentadas en el póster. Las visualizaciones se conciben como generadoras de discusiones además de ser una representación de la investigación llevada a cabo, éstas podrán ser consultadas en http://m-hidalgo.com. </p>
+            <p rend=""No Spacing"">Este trabajo es también resultado del proyecto de I+D: ""HAR2014-51915-P. Catálogos artísticos: Gnoseología, epistemologías y redes de conocimiento. Análisis crítico y computacional”.</p>
+            <p rend=""No Spacing"">*Los estudios de son recursos digitales de las siguientes instituciones: Museo Nacional del Prado, Museo Centro de Arte Contemporáneo Reina Sofía, National Gallery, Londres, National Gallery of Art, Washington DC, Metropolitan Museum of Art y MoMA.</p>
+        
+        <back>
+            <div type=""bibliogr"">
+                <listbibl>
+                    Bibliography
+                    <bibl rend=""No Spacing"">
+                        <hi rend=""bold"">Carley, K. M.</hi> (1993). Coding choices for textual analysis: A comparison of content analysis and map analysis. Sociological Methodology, 23, 75–126. http://www.casos.cs.cmu.edu/publications/papers/carley_1993_codingchoices.PDF 
+                    </bibl>
+                    <bibl rend=""No Spacing"">Drucker, J., (2014). Graphesis. Visual Forms of Knowledge Production. Cambridge, MA.: Harvard University Press.</bibl>
+                    <bibl rend=""No Spacing"">Flick, U., (2010). An Introduction to Qualitative Research. London: Sage Publications.</bibl>
+                    <bibl rend=""No Spacing"">
+                        <hi rend=""bold"" xml:space=""preserve"">Gee, K. </hi>(2001). The ergonomics of hypertext narrative: usability testing as a tool for evaluation and redesign. 
+                        <hi rend=""italic"">ACM J. Comput. Doc.</hi> 25, 1 (February 2001), 3-16. DOI=
+                        <ref target=""http://dx.doi.org/10.1145/383948.383950"">
+                            <hi rend=""Hyperlink.0"">http://dx.doi.org/10.1145/383948.383950</hi>
+                        </ref>
+                    </bibl>
+                    <bibl rend=""No Spacing"">
+                        <hi rend=""None"">
+                            <hi rend=""bold"">Luther, A.</hi>
+                        </hi> (2017). The Entity Mapper: A Data Visualization Tool for Qualitative Research Methods. 
+                        <hi rend=""None"">
+                            <hi rend=""italic"">Leonardo</hi>
+                        </hi>, Volume 50, Issue 3, June 2017. Cambridge: MIT Press, p.268-271. Doi:
+                        <ref target=""http://dx.doi.org/10.1162/LEON_a_01148"">
+                            <hi rend=""Hyperlink.1"" xml:space=""preserve""> 10.1162/LEON_a_01148</hi>
+                        </ref>. Abstract available at: 
+                        <ref target=""http://www.mitpressjournals.org/doi/abs/10.1162/LEON_a_01148"">
+                            <hi rend=""Hyperlink.1"">http://www.mitpressjournals.org/doi/abs/10.1162/LEON_a_01148</hi>
+                        </ref>
+                    </bibl>
+                    <bibl rend=""No Spacing"">
+                        <hi rend=""None"">
+                            <hi rend=""bold"">Mann, L.</hi>
+                        </hi> (2016). Online scholarly catalogues: Data and insights from OSCI. 
+                        <hi rend=""None"">
+                            <hi rend=""italic"">MW2016: Museums and the Web 2016</hi>
+                        </hi>. Consulted November 26, 2017.
+                    </bibl>
+                    <bibl rend=""No Spacing"">
+                        <ref target=""http://mw2016.museumsandtheweb.com/paper/online-scholarly-catalogues-data-and-insights-from-osci/"">http://mw2016.museumsandtheweb.com/paper/online-scholarly-catalogues-data-and-insights-from-osci/</ref>
+                    </bibl>
+                    <bibl rend=""No Spacing"">
+                        <hi rend=""None"">
+                            <hi rend=""bold"">Ryan, M.</hi>
+                        </hi> (2007). Diagramming narratives. Semiotica. 165: 1.4, 11-40. 
+                    </bibl>
+                    <bibl rend=""No Spacing"">
+                        <hi rend=""None"">
+                            <hi rend=""bold"">Warwick, C.</hi>
+                        </hi> (2013). Studying users in digital humanities. Terras, Melissa; Nyhan, Julianne, and Vanhoutte, Edward, eds., Defining Digital Humanities. A Reader. London: Routledge 
+                        <ref target=""https://blogs.ucl.ac.uk/dh-in-practice/chapter-1/"">https://blogs.ucl.ac.uk/dh-in-practice/chapter-1/</ref>
+                    </bibl>
+                </listbibl>
+            </div>
+        </back>
+    </text>",xml,Creative Commons Attribution 4.0 International,,art museums online resources;digital publishing;narratology;usability;visualization,Spanish,"archives, repositories, sustainability and preservation;art history;cultural and/or institutional infrastructure;cultural studies;design;GLAM: galleries, libraries, archives, museums;interface & user experience design/publishing & delivery systems/user studies/user needs;spanish;visualization"
+6445,2018 - Mexico City,Mexico City,Puentes/Bridges,2018-01-01T00:00:00Z,ADHO,ADHO;EHD,El Colegio de México;Universidad Nacional Autónoma de México (UNAM) (National Autonomous University of Mexico),Mexico City,,Mexico,https://dh2018.adho.org/,"Una Investigación a Explotar : Los Cristianos de Alá, Siglos XVI y XVII.",,Marianne Delacourt;Véronique Fabre,poster / demo / art installation,"<text>
+        
+            <p> E
+                <anchor xml:id=""id__GoBack""></anchor>n los siglos XVI y XVII, el Mediterráneo fue el reto geopolitico entre la Monarquia Española y el Imperio Otoman. Entre batallas e incursiones, muchos cristianos fueron reducidos a la esclavitud por los Berberiscos. Unos,para suavizar sus condiciones de vida o por fuerza, se convertieron al Islam, y fueron llamados *Renegados* Ellosfueron *puentes* entre las dos civilisaciones y religiones.
+            </p>
+            <p>Cuando regresaban a la vida cristiana, fueron juzgados por la Inquisición.</p>
+            <p>
+                <hi rend=""bold"">Bartolomé Bennassar</hi>, historiador frances, hizo, al fin de los 80, fichas de papel sobre más de 1550 renegados, basadas en las fuentes de los archivos de la Inquisición.
+            </p>
+            <p>Nuestro proyecto es digitalizar esas fichas y crear una base de datos, albergada en la plataforma francesa de humanidades digitales del CNRS : *HUMA-NUM*</p>
+            <p>El poster que queremos presentar da cuenta del método y de las etapas de un proyecto de *Humanidades digitales* entre dos instituciones que no suelen trabajar juntas.</p>
+            <p>La numerisacion fue bastante facil… construir la base de datos que permitara interrogar a las fichas es muchas mas dificil.</p>
+            <p>El Profesor Bennassar habia preparado fichas dactilograficas con datos fijos tipo nombre, lugar de nacimeinto, condiciones de renegacion, etc…Pero, leyendo el archivo de los procesos, añadia muchas informaciones manuscritas que vienen enriquecer el perfil de vida del renegado, pero que no son « normalizadas ».</p>
+            <p>Es decir que para construir la base de datos teniamos que ser pertinente con las estructuras de interrogacion y decidir cual informaciones adicional teniamos que tomar en cuenta para aclarar unos datos biograficos del renegado y sucitar el interes del investigador .</p>
+            <p>Entonces, pedimos a historiadores de validar cada etapa de la elaboracion de la base de datos.</p>
+            <p>Esperamos que esos datos seran explotados : que los datos geograficos un dia sean explotados por un logiciel de visualisacion y analisis de redes, que la informacion « se casa con uzansas de moros », permiten investigar sobre la vida intima de los renegados, etc…</p>
+            <p>Asi que como lo dice el titulo del poster : « los critianos de Ala, una investigacion a explotar »</p>
+        
+    </text>",xml,Creative Commons Attribution 4.0 International,,archivo de investigador;bartolomé bennassar;mediterráneo;renegados;siglos xvi-xvii,Spanish,"archives, repositories, sustainability and preservation;criticism;digital humanities history;digitisation, resource creation, and discovery;digitisation - theory and practice;epistemology;historical studies;renaissance studies;spanish;spanish and spanish american studies;theory"
