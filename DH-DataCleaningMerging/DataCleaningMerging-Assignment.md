@@ -1,6 +1,6 @@
 # About Data Cleaning Assignment
 
-There are two datasets tied to this assignment. 
+There are two datasets tied to this assignment that I was able to complete using OpenRefine. 
 
 For the first csv, I text filtered the full_text column to find all entries that used geospatial analysis. I wanted to look not just at one DH tool but at the type of analysis you could do with it. In this case, geospatial analysis. 
 
