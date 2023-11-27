@@ -1,0 +1,1399 @@
+work_id,conference_label,conference_short_title,conference_theme_title,conference_year,conference_organizers,conference_series,conference_hosting_institutions,conference_city,conference_state,conference_country,conference_url,work_title,work_url,work_authors,work_type,full_text,full_text_type,full_text_license,parent_work_id,keywords,languages,topics
+1066,2009 - UMD College Park,UMD College Park,,2009-01-01T00:00:00Z,ADHO,ADHO,"University of Maryland, College Park",College Park,Maryland,United States,http://web.archive.org/web/20130307234434/http://mith.umd.edu/dh09/,SEASR integrates with Zotero to Provide Analytical Environment for Mashing up Other Analytical Tools,,Loretta Auvil;Boris Capitanu;Xavier Llorà;Michael Welge;Bernie Ács,poster / demo / art installation,"This paper describes a development effort to link two
+humanities cyberscholarship infrastructure projects
+supported by The Andrew W. Mellon Foundation. We
+have created an extension to Zotero [1] that acts as a
+bridge between the data stored by Zotero, and the suite
+of analytic tools provided by SEASR [2]. This extension
+provides users with the ability to apply a variety of data
+analysis algorithms to their Zotero constructed collections,
+and visualize the results directly in the browser.
+This is accomplished by directly accessing the data model
+provided by Zotero, and converting that data model
+into RDF, which allows the ability to exploit the analytical
+capabilities of SEASR.
+The SEASR environment provides a framework to integrate
+data, analytics, and tool constructs, so that data
+from one component can be passed to another. One of the
+unique capabilities of SEASR is the facility to provide a
+tool for mashups. That is, the ability to allow users to
+combine tools in efficient and effective ways. This paper
+describes the coupling of two relevant environments for
+humanist, Zotero and SEASR - Zotero’s data asset creation
+with the analytical capabilities of SEASR. Through
+the use of Zotero’s plugin environment, we can execute
+the analysis capabilities of the SEASR environment.
+The following sections provide a description of the two
+major pieces of this effort—Zotero and SEASR. Also
+provided is a description of the major functions performed
+by the combination of the two. These include:
+data gathering, data analytics, and data visualization. We
+end with a summary of the integration of the two efforts
+and a view to our future work.
+1. Background
+1.1 Zotero
+Zotero was selected because of its popularity with scholars
+to record, catalog and find resources collected from
+the Internet. Zotero was developed at the Center for History
+and New Media, George Mason University, and is
+a tool aimed at facilitating a user’s research process by
+providing mechanisms for collecting, managing, and citing
+internet resources. Zotero functions as an extension
+of the popular open-source browser, Firefox, which allows
+it to provide its services in the same environment
+where the research is usually performed. One of the key
+features provided by Zotero is the ability to automatically
+extract metadata from online resources as part of
+the resource collection process, and store it conveniently
+on the user’s computer, allowing for offline retrieval of
+this data on demand. Zotero also provides advanced tagging
+and searching functionality, allowing the user to organize,
+find, and visualize the collected resources.
+Zotero includes a powerful metadata editor, allowing the
+user to make additions/corrections to the automatically
+extracted information. Users can add new fields, attach
+screenshots and documents, create notes, and even create
+relationships between the various resources collected.
+Overall, with such a vast and diverse amount of information,
+a mechanism for finding patterns or interesting
+relationship between these resources would go a step
+further in helping researchers discover and extract more
+information from their collections. Enter SEASR.
+1.2 SEASR
+(Software Environment for the
+Advancement of Scholarly Research)
+SEASR analytics enhances scholars’ use of digital materials
+by helping them uncover hidden information and
+connections, supporting the study of assets from small
+patterns drawn from a single text or chunk of text to
+broader entity categories and relations across a million
+words or a million books. SEASR is designed to enable
+digital humanities scholars to rapidly design, build, and share software applications that support research and
+collaboration.
+The SEASR team developed Meandre [3], which is the
+machinery for assembling and executing data flows—
+software applications consisting of software components
+that process data (such as by accessing a data store,
+transforming the data from that store and analyzing or
+visualizing the transformed results).
+SEASR is extensible allowing for new analytics to be
+added, such as support for linguistic analysis for different
+time periods or languages, to readjusting entire
+steps in the work process so that researchers can validate
+results from their queries. Components can be created
+from other programming projects. The SEASR environment
+is data driven and includes a workbench to orchestrate
+the flow of data through the different components.
+All SEASR analytics are enabled as web service calls.
+SEASR also provides publishing capabilities for flows
+and components, enabling users to assemble a repository
+of components for reuse and sharing. This allows users
+to leverage other research and development efforts by
+querying and integrating component descriptions that
+have been published previously at other shareable repository
+locations.
+2. Data Gathering
+Zotero’s data model is very flexible, allowing the user
+to add new fields, create notes, attach documents and
+screenshots, and establish relationships between resources.
+At a minimum, Zotero adds the following information
+for each resource that is added: title of the
+resource, originating URL, and the dates when the resource
+was created, modified, and accessed. For many
+major research and library sites Zotero can automatically
+extract the full reference information, which includes authorship
+data, abstracts, page references, locations, etc.
+This provides a wealth of information that can then be
+submitted for analysis to SEASR.
+Once the data are converted into RDF (a process which
+is transparent to the user), it can be sent for processing, at
+user’s request, to any of a number of available data analysis
+algorithms. When such a data processing request
+is received, the extension establishes a communication
+channel with the web service associated with the processing
+flow, through which the RDF data are submitted.
+After processing completes, the results are retrieved via
+the same communication channel and displayed in a new
+browser window. Depending on the complexity of the
+type of processing requested, there may be a significant
+delay until the results are retrieved.
+Figure 1. Plugin for Zotero that requests SEASR analytics.
+The extension provides a flexible mechanism through
+which the user can specify which data processing flows
+they want to have access to, by configuring a list of SEASR
+servers where these flows are hosted. This way, the
+user can include any number of Zotero-compatible data
+processing flows hosted by 3rd party organizations.
+3. Data Analytics
+The SEASR team has been integrating a variety of tools
+as well as developing our own analytics. Currently we
+have integrated natural language processing tools (NLP)
+and current research algorithms from our data mining
+collaborators as well as transformation components to
+allow for data movement between the different components.
+We have enabled some very simple and straightforward
+requests, like word counts, information regarding part of
+speech, and entity extraction capabilities. We also have
+additional machine learning approaches that can be leveraged,
+like clustering, frequent pattern analysis, predictive
+modeling, graph mining, and sequence analysis. We
+have currently integrated D2K (Data to Knowledge) [4]
+and T2K (Text to Knowledge) analysis, OpenNLP [5],
+and GATE (General Architecture for Text Engineering)
+[6]. This means that from your Zotero collection, you
+can ask for a social network analysis based on authors
+and other metadata. You can ask for a tag cloud of all
+your notes. You can ask for a tag cloud of a particular
+work or collection. You can cluster the documents from
+your collection. You can track a character or set of terms
+throughout a book or collection. You can look at extracted
+entities like locations on a Google map [7]. You
+can look at extracted entities like date on a timeline like
+Simile [8]. You can build a social network of the people
+mentioned in your collection.
+4. Data Visualization
+As with the data analysis, a number of visualization tools
+exist, so we have been working to integrate with these
+tools rather than redeveloping. We have incorporated
+visualizations from D2K as applets such as frequent pattern analysis as well as several of the predictive modeling
+visualizations. We have also leveraged code to create
+a tag cloud [9]. We are providing link-node charts and
+stacked bar charts via flare [10]. The collage of example
+visualizations below is meant to provide an idea of the
+visual metaphors being used.
+5. Future Work
+We continue developing analysis and visualization capabilities
+that can be leveraged by Zotero. As part of our
+Pathways to SEASR Workshops, we are demonstrating
+this tool integration and are establishing collaborations
+with workshop teams. These teams are exploring specific
+use cases to demonstrate scholarly research that can
+be easily added to this plugin environment. We are looking
+to improve the interaction between the plugin and the
+SEASR framework and its ability to provide users with
+visual interfaces for customizing the execution of flows.
+Figure 2. Collage of visual metaphors available with
+SEASR analytics.
+6. Summary
+In summary, we have created a tool that facilitates the
+communication of Zotero collections data with SEASR
+for further study and research. We have linked SEASR,
+a strong and flexible tool that can add research capabilities
+to these text assets. SEASR allows for the use of
+its existing analysis and visualization tools, and more,
+it allows for the integration of other tools through a
+mashup process. The result of this effort is a synergy—a
+strengthening of both Zotero and SEASR—as useable
+tools for cyberscholarship.
+7. Acknowledgement
+The SEASR project is funded by The Andrew W. Mellon
+Foundation.
+8. References
+1. Zotero, http://www.zotero.org
+2. SEASR, http://seasr.org
+3. Llorà, Ács B, Auvil LS, Capitanu B, Welge ME,
+Goldberg DE (2008) Meandre: Semantic-Driven Data-
+Intensive Flows in the Clouds, in Proceedings of IEEE
+Fourth International Conference on eScience, 238-245,
+IEEE Press.
+4. D2K, http://alg.ncsa.uiuc.edu/do/tools/d2k
+5. OpenNLP, http://opennlp.sourceforge.net/
+6. H. Cunningham, D. Maynard, K. Bontcheva, V.
+Tablan. GATE: A Framework and Graphical Development
+Environment for Robust NLP Tools and Applications.
+Proceedings of the 40th Anniversary Meeting of
+the Association for Computational Linguistics (ACL’02).
+Philadelphia, July 2002.
+7. Google Maps API, shttp://code.google.com/apis/
+maps/
+8. Simile Timeline, http://www.simile-widgets.org/timeline/
+9. Tag Cloud, http://emumarketing.uoregon.edu/
+paul/2008/09/28/the-new-tag-cloud/
+10. Flare, http://flare.prefuse.org/",txt,This text is republished here with permission from the original rights holder.,,,English,
+1610,2013 - Nebraska,Nebraska,Freedom to Explore,2013-01-01T00:00:00Z,ADHO,ADHO,University of Nebraska–Lincoln,Lincoln,Nebraska,United States,http://dh2013.unl.edu/,"Bibliopedia, Linked Open Data, and the Web of Scholarly Citations",,Michael Widner,"paper, specified ""short paper""","Overview
+Bibliopedia, which recently completed an NEH Digital Humanities Start-Up Grant, performs data-mining and cross-referencing of scholarly literature to create a humanities-centered collaboratory. Currently a working prototype, Bibliopedia can search resources including JSTOR and Library of Congress for metadata about scholarly articles and books, examine the articles and books for citations, then present the results in a publicly accessible database. Bibliopedia is designed to work with all humanities scholarship. It will also allow users to create browsable and customizable bibliographies of all the works cited by each article and book. Most importantly, it uses semantic web technology to enable automated textual analysis, data extraction, cross-referencing, and visualizations of the relationships among texts and authors. Using existing open source software, it extracts citation data from existing plain text resources and transforms them into linked open data. This process makes the information easily accessible to the wider scholarly and linked data communities, enables network visualizations of the scholarly landscape. This presentation will cover the details of the Bibliopedia system to show others how they can replicate it. We will also offer to all interested academic parties our existing installation and hosting platform for their experimentation. In particular, we will present our Drupal-based semantic wiki, which features a full web services API, and our custom citation crawler.
+
+Linked open data, one of the core technologies of the semantic web, promotes open sharing of digital scholarly research while it encourages further, potentially unexpected uses. Bibliopedia's method for incorporating linked open data (via RDFa) requires only minimal technical expertise to reproduce. One of the central components of Bibliopedia is the Drupal content management sytem (CMS), which as of version 7 exposes data via RDF/RDFa as part of its core functionality. This functionality, moreover, is not limited to Drupal. For example, Omeka, another CMS developed at the Roy Rosenzweig Center for History and New Media, George Mason University, has some limited support for linked data through its DublinCoreExtended plugin. Bibliopedia demonstrates the power and flexibility of Drupal's approach to linked data while providing more general lessons for digital humanists who seek to incorporate this technology into their projects.
+
+Project Details
+Bibliopedia will aid humanities researchers of all levels of expertise by making simple the currently difficult tasks of discovering new scholarly works and the relationships among them. It will create an a scholarly community to verify and elaborate cross-referenced, linked bibliographic data through easy-to-use wiki pages. Scholarly literature will become browsable not only backwards in time, but also forwards, something that is currently impossible.
+
+The semantic web is transforming the Internet from a collection of pages and data readable only by humans to one that machines can understand and process. Semantic web technology promises the ability automatically to determine meaning and then infer connections among different elements, thereby vastly improving search capabilities, discovery of new information, and the overall usefulness of the Internet. Just as information accessible only to humans comprises the great majority of the general Internet, so too is data about scholarly literature locked away in text that computers cannot process without great difficulty. At best, search engines for repositories such as JSTOR permit researchers to query author name, journal titles, and keywords, but once a work is found, the search stops. No connections among works are found precisely because machines cannot currently read that data. Although Google Scholar attempts to show citations of articles, its usefulness is highly limited because it does not make clear the relationships among articles, present very limited metadata about each article (if any), fails to provide for community elaboration or correction, and includes only works that are publicly available. Yet despite its limitations, Google Scholar stands as a significant technological advance beyond keyword-based search engines such as those provided by JSTOR and Project Muse.
+
+Bibliopedia will, by aggregating data from as many sources as possible, converting citations into semantic web format, and then cross-referencing an ever-growing database of scholarly works, be able not only to overcome many of the limitations of Google Scholar and become a powerful research tool in its own right, but also to make a valuable contribution to the growing semantic web. Introducing high quality metadata about humanities scholarship to the semantic web will enable others in the semantic web/linked data world to process that data in new, unexpected ways that will accrue further benefits to the scholarly community. For example, the standards underlying the semantic web make data visualization and automated inferences about relationships trivially easy rather than the complex problems such tasks currently present. Bibliopedia will, then, through the innovation of placing metadata about scholarly literature into a linked data format, open up a vast range of possible future innovations and analyses based on that data, which is currently locked away and readable only by select humans.
+
+Another virtue of a linked data format is that it will help resolve many of the challenges inherent in metadata, some will inevitably remain. Rather than attempt to solve this incredibly complex problem through automation alone, then, Bibliopedia will, in the process of displaying its results for human consumption, also provide for human feedback in the form of correction and elaboration. A common disadvantage of fully automated text analysis and data extraction tools such as Google Books, Google Scholar, and other digital research tools is that their automatic parsers have errors in their metadata that they do not allow subject matter experts to repair. Bibliopedia will pursue the goal of unifying that information into an environment that not only displays the information efficiently, but actively encourages crowd-sourcing metadata on books, articles, and publications of all kinds. In thus opening data up to revision by the scholarly community, Bibliopedia can build on the strong work of mature data silos, improve overall data quality, and provide the academic community at large a continuously evolving research tool.
+
+There currently exists a multitude of projects and tools designed to work with book metadata, cross-reference scholarly articles (localized to the sciences), or create user communities around a chosen interest. Further, some of the most important trends currently revising the ways we use technology are social media, collaboration, and data aggregation. By incorporating the benefits realizable from each of these trends, Bibliopedia will create a powerful tool for scholarly research at all levels. None of the existing tools, however, focus on scholarship for the humanities, nor do they present the information in the linked data format necessary to the semantic web.",txt,This text is republished here with permission from the original rights holder.,,citation networks;drupal;linked open data;semantic web,English,crowdsourcing;databases & dbms;data mining / text mining;information retrieval;knowledge representation;linking and annotation;metadata;ontologies;publishing and delivery systems;semantic web
+1762,2013 - Nebraska,Nebraska,Freedom to Explore,2013-01-01T00:00:00Z,ADHO,ADHO,University of Nebraska–Lincoln,Lincoln,Nebraska,United States,http://dh2013.unl.edu/,Preliminaries: The Social Networks of Literary Production in the Spanish Empire During the Administration of the Duke of Lerma (1598-1618),,David Michael Brown;Juan Luis Suárez,"paper, specified ""long paper""","The “preliminaries” section of a 17th-century book encompasses the pages appearing in the printed text before the beginning of the work itself. This information is divided into seven different types of documents: details of publication, documentation of censorship (both civil and ecclesiastical), licensing, selling price, dedications, letters, and errors. The importance of the preliminaries for this project lies in the information present in these sections: the names of the officials signing the documents, their governmental/institutional affiliation, dates, place of issue, and literary circles that appear in the form of dedications and poetry written by various authors and published in their friend’s or associate’s books. In a few pages, the preliminaries give a complete image of the formal process required for the publication of each work of literature. By compiling all this information into a graph database and performing queries specific to various research questions, we have at hand a valuable source of information about the historical networks that influenced the publication of Early Modern Spanish literature.
+To get a comprehensive look at this information, we generated lists of every edition of what we consider literary texts (fiction in prose, theatre, poetry, chronicles) published during the 17th -century in the Spanish empire (Jiménez et al. 1980)(Calvo et al. 2003). As shown by the following screen shot, we have focused on acquiring every available edition of each literary work.
+ 
+
+Sample of one of our acquisitions lists
+We then divided the 17th Century into periods corresponding to the different “validos” —royal favorites that served as head of government or “prime ministers” — of the various kings in order to address the changing power structures of the time and their influence in literary production (Hernán et al. 2002). Through interlibrary loans and, in some cases, trips to the libraries that hold the edition, we acquired copies of the pages of each book that make up the preliminaries section. Then, we manually built a graph database using sylvadb.com, an open source software and free graph database management service developed in the CulturePlex Lab. Within Sylva, data was stored and organized using a custom designed system of schemas based on a node/edge relationship system. Finally, we exported the database to Gephi (https://gephi.org/), a software package that allows for visualization and statistical/metric analysis of the network using built-in algorithms and Python based scripting (Bastian et al. 2009). This allows us to detect important communities within the network, key players, important objects, and hubs of production.
+For this study, we have unearthed the social networks of publishing and literary creation in 17th-century Spanish literature, focusing particularly on the period during the rule of the Duke of Lerma (1598-1618). Currently the first of our editions lists (Duke of Lerma) consists of 330 editions, out of which we have successfully obtained 228 scanned copies of preliminaries sections: approximately 70% of the total number. Of these scans, 121 have been entered into the database, producing a graph with 1612 nodes and 3472 relationships. Rendered in Gephi using the built-in OpenOrd algorithm, the graph looks like this:
+ 
+
+The Preliminaries graph rendered in Gephi
+Using the algorithms, metric analysis tools, and filters built into Gephi we pinpointed the individuals, governmental and ecclesiastical bodies that influenced publication in this period. Also, by using the concept of “ego network” from social network analysis, we established what we call the “publication network” of some of the authors that interest us (Carrington et al. 2011). A publication network includes the editors, censors, and other individuals important in the formal process of publication, as well as any other individuals that are more directly connected to the author: friends, family, patrons, literary colleagues, etc. We determined the range of the publication network based on the internal data structure of the Preliminaries database as follows. Due to bibliographic concerns (Bowers et al. 1962) and organizational aspects of our data schema, in order to establish a connection between the author and those involved in the approval, licensing, and publication of an edition there are four steps e.g., Author->Work, Work->Edition, Edition->Approval, Approval->Censor. Therefore, to establish an author’s publication network we needed to find neighbors for up to four degrees of separation. Although Gephi does not include ego network filters that extend to four degrees, using its Python based scripting console we were able to code functions that allowed us to isolate subsets within the graph to generate ego networks for any node to n degrees of separation. For instance, in the graph below we can see the publication networks of two authors associated with Mexico; Bernardo de Balbuena, author of Grandeza Mexicana; Juan de Torquemada, author of Monarquía Indiana; and the intersecting nodes in their publication networks:
+ 
+
+Publications Networks: Balbuena=Black, Torquemada=Grey, Intersecting Nodes=White
+Using the above techniques, we set out to find and isolate the main nodes of this social network that made possible the creation and sustainability of a transatlantic network of cultural agents. The first thing that stands out in the graph is Lope de Vega and his powerful, Madrid based publication network (Martínez et al. 2011). Using the Python scripting console, we determined that Lope’s publication network consists of 1083 nodes, or 67% of the nodes in the graph. This information is not new, based on the extremely prolific nature of his literary production we can assume that he was very well connected. However, we can also determine who wasn’t in his publication network. Departing from Lope’s publication network, we were able to locate the successful political and institutional connections that help us explain the central position of institutions such as the House of Zúñiga in the cultural fabric of the period.
+ 
+
+Publication network: Lope de Vega=Black
+To do this we used the scripting console to remove the subset of nodes representing Lope’s publication network from the other nodes that make up the graph, and returned a list of the names of all of the people who are not in Lope’s publication network. A quick review of this list produced some interesting results: we found several authors based in Spain including Gonzalo de Céspedes y Meneses and El Inca Garcilaso; and two authors active in Peru, Diego Dávalos y Figueroa and Pedro de Oña. While a quick look at both Céspedes and El Inca produced interesting results, the two Lima based authors attracted our attention. In this period social circles were highly influenced by geography, and it is logical that these authors find themselves at the periphery of a network centered geographically in Madrid. However, despite geographic concerns both authors remain connected to Lope de Vega’s network. We found that both Oña and Dávalos y Figueroa are connected to Lope’s network at 3 degrees of separation through their dedications to the Viceroy of Peru, Luis de Velasco y Castilla; and at four degrees through Juan de Zúñiga, Diego de Ojeda, and the Order of Santiago:
+ 
+
+Publication networks: Dávalos y Figueroa=Black, Lope de Vega=Grey, Intersecting nodes=White
+In order to contextualize the Peruvian network we compared the aforementioned “Mexican” authors with the “Peruvian” authors. Combining the four social networks into two based on geographic constraints, we found that at 4 degrees of separation there was no direct overlap, so we upped the parameter to 5 degrees of separation and produced the following image:
+ 
+
+Publication Networks: Intersection between Mexican and Peruvian Networks
+As shown here, even at five degrees of separation there are few overlaps between the networks. However, in the above image we begin to notice the importance of the House of Zúñiga. It is well known that the House of Zúñiga was powerful in both Spain and the Americas, and also that certain members of this house were important patrons of the arts and literature (Cátedra 2003; Díez Fernández et al. 2005). Nonetheless, we don’t think that their role in transatlantic literary production has been adequately explored. The political importance of this family in New Spain is obviously important (an Archbishop and a Viceroy); however, the Preliminaries graph illustrates not only the political role this house played in America, but also the importance of political figures/nobility in publication circles and how the members of one house can spread their cultural influence throughout geographic space. To take this concept one step further, we followed the Zúñigas back the Spain. Here we find the Duke of Béjar, Alonso López de Zúñiga y Pérez de Guzmán, and the first part of Don Quixote. It turns out that American authors were not the only artists soliciting support from the House of Zúñiga: Miguel de Cervantes dedicated part 1 of Don Quixote to the famous Duke of Béjar(Rico 2005).
+The above samples show the potential of a research model that combines network-based analysis with quantitative and qualitative studies of cultural production, providing evidence of the interaction between political structures and cultural production in the Spanish Empire (Martínez et al 2008). By repurposing bibliographic data, the Preliminaries Project allows us to explore the concept of cultural networks within the framework of transatlantic studies and complexity theory (Wood 2010; Suárez 2007). Furthermore, this study demonstrates the effectiveness of digital humanities methods as a tool to locate previously overlooked areas for further study using a more traditional humanistic approach.
+References
+1. Pedraza Jiménez, F. B., and M. R. Cáceres. (1980). Manual de literature española. Pamploa: Cénlit.
+2. Huerta Calvo, J. (dir.) (2003). Historia del teatro español. Madrid: Gredos.
+3. García Hernán, E. (2002). Políticos de la monarquía hispánica (1469-1700). Madrid: Fernández Ciudad.
+4. Bastian M., S. Heymann, and M. Jacomy (2009). “Gephi: an open source software for exploring and manipulating networks.” International AAAI Conference on Weblogs and Social Media.
+5. Carrington, P. J., and J. Scott (2011). The SAGE Handbook of Social Network Analysis. Los Angeles: Sage.
+6. Bowers, Fredson. (1962). Principles of Bibliographic Description. New York: Russell & Russell.
+7. Martínez, J. F. (2011).Biografía de Lope de Vega, 1562-1635: un friso literario del Siglo de Oro. Barcelona, PPU.
+8. Cátedra, P. M. (2003). La ""Historia de la Casa de Zúñiga"" otrora atribuida a Mosén Diego de Valera. Salamanca: Gráficas Cervantes.
+9. Díez Fernández, J.; I., and G. Santonja. (2005). El mecenazgo literario en la casa ducal de Béjar. Burgos: Instituto Castellano y Leonés de la Lengua.
+10. Rico, F. (2005). El texto del ""Quijote”: preliminares a una ecdótica del Siglo de Oro. Barcelona: Ediciónes Destino.
+11. Martínez Millán, J.;, and M. A. Visceglia (eds.) (2008). La monarquía de Felipe III. >Madrid: Cyan, Proyectos y Producciones Editoriales. Print.
+12. Wood, A. T. (2010). Fire, Water, Earth, and Sky: Global Systems History and the Human Prospect. The Journal of the Historical Society. X:3: 287-318.
+13. Suárez, J. L. (2007). Hispanic Baroque: A Model for the Study of Cultural Complexity in the Atlantic World. South Atlantic Review. 72(1): 31-47.",txt,This text is republished here with permission from the original rights holder.,,gephi;hispanic studies;publication;social networks;transatlantic communities,English,bibliographic methods / textual studies;cultural studies;databases & dbms;data modeling and architecture including hypothesis-driven modeling;historical studies;literary studies;metadata;spanish and spanish american studies;visualization
+1932,2014 - Lausanne,Lausanne,Digital Cultural Empowerment,2014-01-01T00:00:00Z,ADHO,ADHO,École Polytechnique Fédérale de Lausanne (EPFL);Université de Lausanne,Lausanne,,Switzerland,https://web.archive.org/web/20161227182033/https://dh2014.org/program/,Enduring Traces: Exploring correspondence from the archives of Canadian modernism using digital tools and methods,,Anouk Lang,poster / demo / art installation,"This project uses Neatline and Gephi to demonstrate how digital visualization tools can bring to light new dimensions of modernist studies and periodical studies. Drawing on metadata from as-yet-undigitized letters between various Canadian writers and editors, the project uses geospatial visualizations and network diagrams to interrogate the literary networks and geographical patterning of authors associated with the little magazine Contemporary Verse. In addition to the printed poster, I will have a laptop running Neatline and Gephi, which will allow attendees to interact with the data by exploring it through maps, timelines and network diagrams.
+
+Contemporary Verseran from 1941-1953 and was one of the only vehicles for the publication of modern poetry in mid-century Canada. It was edited by Alan Crawley (1887-1975), whose voluminous correspondence – lodged in various archives across Canada – is an enormously rich resource for the study of the social networks through which poetic currents and aesthetic influences developed. To read it is to get a clear sense of the importance of Crawley in brokering relationships between writers and publishers, shaping the poems that contributors submitted to the journal, and encouraging young writers – particularly younger women who faced considerable difficulties breaking into male-dominated networks for publication and critique – to see their poetry as something worth pursuing.1 
+
+The letters tell an important story of pre-digital cultural empowerment that digital humanities approaches are particularly well suited to uncovering, given that the volume of correspondence lends itself to the kind of distant reading that is made possible by computational analysis of prosopographical and geographical metadata. The new perspectives opened up on this archival material by digital methods are also timely, as scholars of Canadian literature are increasingly engaged in challenging canonical accounts of modernism’s development within the country,2 something which has coincided with a postcolonial turn of sorts within digital humanities more generally.3
+
+The poster, which reports on work in progress into the Crawley letters, is focused around two research questions:
+
+1) How does geography inflect the development of modern poetry in Canada?
+Each letter was entered as a record in Omeka and then visualized geospatially using Neatline (www.modmaps.net/mm/neatline/show/crawley-letters). Neatline was configured so that as the timeline slider was moved from earlier to later dates, the map display showed the growth and geographical distribution of Crawley’s network of correspondents. Displaying the correspondence in this way enables investigation of spatial questions that arise at a range of scales from the national to the local, for example the extent to which Crawley’s location on the west coast was able to challenge the dominance of literary networks in the eastern cities of Montreal and Toronto, and the effect of Vancouver’s geography on his ability to participate in literary activities.
+
+2) What is the relationship between literary networks and cultural production?
+Gephi was used to create a directed graph with 25 nodes, representing Crawley, various authors with whom he corresponded, other journal editors, and the women who did the bulk of the administrative work for Contemporary Verse. As with the Neatline map, the network diagrams generated by Gephi do not give a complete picture of Crawley’s network of correspondents as archival work is still ongoing, but nonetheless some preliminary suggestive patterns emerge. Crawley’s initial correspondents are more likely to be women, for instance, but as the journal accrues prestige, more established poets become interested in submitting to it, and these poets were more likely to be men. Such a narrative is clearly open to critique – for example it raises methodological questions about which letters were included – but this is a valuable process for raising questions about the partiality of the “data” on which existing narratives about the development of Canadian modernism have relied.
+
+This project forms part of EMiC: Editing Modernism in Canada (editingmodernism.ca). It is also being developed in association with TCLL: Twentieth Century Literary Letters (www.modmaps.net/tcllp), a collaborative project in its early stages which aims to build a digital infrastructure for the discovery, analysis, and visualization of the metadata from a wide range of epistolary materials relating to twentieth century literary figures. As a founding member of TCLL, I am keen to find other scholars working on letter collections who would be interested in joining the project, and one of the aims of showcasing this work at DH2014 is to make connections with others whose metadata could be productively brought into conversation with existing TCLL materials.
+
+References
+1. McCullagh, Joan. Alan Crawley and Contemporary Verse. Vancouver: U British Columbia P, 1976. Print; Robertson, George. “Alan Crawley and Contemporary Verse.” Canadian Literature 41 (1969): 87–96. Print; Wilson, Ethel. “Of Alan Crawley.” Canadian Literature 19 (1964): 33–42. Print.
+
+2. Irvine, Dean (2011). Spectres of Modernism. Canadian Literature 209: 6–10. Print.
+
+3. Koh, Adeline, and Roopika Risam (2013). Open Thread: The Digital Humanities as a Historical “Refuge” from Race/Class/Gender/Sexuality/Disability? Postcolonial Digital Humanities. 10 May 2013. Web. 1 Nov. 2013.",txt,This text is republished here with permission from the original rights holder.,,correspondence;gephi;metadata;modernism;neatline,English,"english studies;geospatial analysis, interfaces and technology;literary studies;maps and mapping;metadata;networks, relationships, graphs;spatio-temporal modeling, analysis and visualisation"
+2111,2014 - Lausanne,Lausanne,Digital Cultural Empowerment,2014-01-01T00:00:00Z,ADHO,ADHO,École Polytechnique Fédérale de Lausanne (EPFL);Université de Lausanne,Lausanne,,Switzerland,https://web.archive.org/web/20161227182033/https://dh2014.org/program/,"The Scholarly 3D Toolkit: Annotation, Publication, and Analysis of 3D Scenes alongside Imported Humanities Data",,James Joel Coltrain,"paper, specified ""long paper""","New advances in online game engines have made it possible to easily view 3D virtual environments from any web browser, but the full potential of 3D humanities research has gone unrealized because of the difficulty in connecting important 3D findings to the work of traditional scholars grounded in texts. This presentation will discuss the current development and show demonstrations of the Scholarly 3D Toolkit, (S3DT) a plug-in for the Unity game engine designed to help better interface 3D historical reconstructions with other data. The work of a team lead by James Coltrain, S3DT will provide simple interfaces that allow creators to link their 3D scenes to sources and documents, and to dynamically import and view traditionally indexed digital humanities data from databases, spreadsheets, or GIS programs. The result will allow users to view multiple layers of data plotted within a single online 3D environment, showing markers for events, personal connections, documents, images, and annotations from multiple users, all in time and space. S3TD will allow for greater and more sophisticated interdisciplinary analysis, helping scholars studying three dimensional spaces to contextualize models of architecture, urban structures, and natural topography using texts and other spatial data. By comparing existing digital humanities findings with 3D scenes that show scale, light, and texture, the platform will allow for more complex and nuanced investigations of past spaces. Along with a discussion of the project’s progress and the theoretical questions at play, this presentation will show early demos of a test case for the platform. These will include a richly annotated high quality 3D reconstruction of Fort Stanwix, an 18th-century historic site and National Monument, with an existing database constructed by Nebraska undergraduates of over 400 letters, maps, and plans.
+
+S3DT will build upon the achievements of previous digital humanities projects by expanding the options scholars have for working in 3D spaces. Earlier platforms have allowed for the real-time display of annotated 3D models, but some could not stream live in a browser, and most allowed creators little in the way of customization.i Extremely important work has been done with diverse and creative applications of historical GIS, and S3DT will allow for those established types of analyses to be brought into the third dimension. ii More recently, some scholars have made use of online game engines like Unity to achieve some of the goals set forth in the S3DT project, including the use of advanced real time graphics in an online environment. iii However, these projects have not resulted in open, customizable platforms, and none allow for the importation of new 3D content. S3DT will build upon previous work in Unity by connecting 3D scenes from multiple creators to the layered viewing of all kinds of outside humanities data.
+
+The practical tools in S3DT also make many previously difficult modes of spatial analysis quicker and more accessible. S3DT scenes can show spaces changing over time with numerous iterations and nuance, and also display multiple interpretations of the same structure side by side as competing arguments. With 3D objects linking to multimedia sources, users can now better understand the interpretive leaps creators made, and which pieces of fragmentary evidence scholars privileged in creating coherent 3D spaces, information that also facilities efficient peer review. The ability to display different types of data can also promote public outreach in addition to academic collaboration, letting universities, museums, archives, historic sites, and even individual visitors contribute to the same online 3D spaces. The design of the S3DT plug-in for Unity will allow for open analysis of 3D scenes, while protecting scholars’ data for future use. The plug-in does not interfere with the traditional workflows for 3D content creation, and also stores all textual and multimedia data in standard MySQL databases. As a result, neither scholars’ 3D models nor their annotations or data will become stuck in the S3DT if creators find better future platforms for presentation.
+
+S3DT will consist of a two part plug-in for Unity. The first part, within the Unity Editor, will allow creators to add notes and metadata to imported 3D objects, and prepare them for publishing. The second, is a web template which will allow for the viewing and manipulation of published scenes, as well as the live importation and plotting of new data layers from outside sources. Below is a typical workflow for S3DT along with key features at each step. This presentation will conclude with early demonstrations of many features from both parts of the plug-in.
+
+I. 3D Content Creation
+Creators begin by modeling and texturing a 3D scene in their typical workflow in a 3D suite such as 3D Studio Max, Maya, or Blender. When they have finished, they export their 3D models to industry standard formats (ex. .obj or .fbx) . They then download and install the Unity Editor and the accompanying S3DT plug-in. Finally they load their 3D scene into the Unity Editor.
+
+II. S3DT Plug-in for Unity Editor
+
+With their models loaded into the Unity editor, creators will use the S3DT plug-in to prepare them for publication. This includes creating an object hierarchy, denoting nested neighborhoods, complexes, buildings, rooms, architectural features, and sub-features, each as defined by the creator. Once the objects are defined, creators can enter metadata for each scene object in any fields they like. In particular, creators will be able to enter time sensitive information, such as the dates for the object's creation, alteration, damage, and destruction. Creators will also be able to enter links to sources used in their interpretation of the reconstructed object, as well as notes about their specific decisions.
+
+Next creators will publish their scene. In the process each published scene is exported as two parts, a Unity 3D file formatted for web display, and a matching MySQL database containing all metadata and links to sources and annotations.
+
+III. S3DT Plug-in for Browsers
+
+The S3DT web browser plug-in consists of a Javascript library and web template for loading and displaying published S3DT scenes on the web. Most projects will use a customized version of the web template, but the Javascript library is available for projects that are integrated into existing sites or for which creators desire a higher level of customization.
+
+The S3DT browser plug-in has a simple user interface consists of the following:
+
+The Main Window displays the published Unity scene in real-time 3D.
+The Timeline consists of a scalable time line with a slider to control time position and markers corresponding to time sensitive events plotted in the scene.
+The Layers List shows all the elements in the scene, organized by package. Each layer has a collapsible view that expands to show the entire object hierarchy as defined by scene creators in the S3DT Unity Editor plug-in. Any additional content or data loaded into the 3D scene will appear in the layers list as a new layer, including published S3DT packages, maps, images, collections of user annotations, collections of plotted events, GIS data, etc. Users will be able to toggle the visibility and opacity of any layer or any object within a layer hierarchy.
+The Tools Window features a set of utilities users can use to manipulate or analyze the scene. These will include:
+Advanced Search - Allowing customizable complex searches bases on any metadata field or object attribute.
+Groups - Allows users to group objects from any layer together into a new layer.
+Edit Object Metadata - If enabled, allows users to add to or edit metadata for scene objects. Annotate -Allows users to leave comments live in the scene, either attached to scene objects or in freestanding 3D space.
+Camera Tools - Allows users to place custom cameras, define camera paths and animate them, and to take and save camera snapshots.
+Import Data - Allows users to import data with geographic information from outside sources including SQL, Excel, KML, and ARCGIS. Also allows users to choose and customize marker appearances based on imported data, or upload their own.
+Create Exhibits - A set of sub-tools will allow users to connect camera views, and animations over time and space with HTML text for guided tours and other exhibits. Created exhibits will load into the layers view.
+Map and Image Import- Allows users to import maps and images into the live scene, and to align maps to existing terrain or images to camera views. Imported maps and images can then load into the layers view.
+References
+VSIM https://idre.ucla.edu/gis-visualization/vsim; Rome Reborn http://romereborn.frischerconsulting.com; CDI Second Life projects http://wt-dc19-prod.astate.edu/a/centers-programs-and-institutes/cdi/projects.dot .
+
+Anne Kelly KnowlesPast time, past place: GIS for history;David J. Bodenhamer, John Corrigon, and Trevor M. HarrisThe Spatial Humanities; Spatial History Project http://www.stanford.edu/group/spatialhistory/cgi-bin/site/index.php; Hypercities http://hypercities.com/ ; Neatline http://neatline.org/about/ ; World Map Project http://worldmap.harvard.edu/.
+
+lab, UCLA Experimental Technologies Center http://etc.ucla.edu/research/projects/romelab/ ; Hadrian's Villa Simulation http://idialab.org/nsf-funded-virtual-simulation-of-hadrians-villa/ ; Digital Pompeii http://classics.uark.edu/DigitalPompeii.html; Simulated Environment for Theater, http://humviz.org/set/index.html.",txt,This text is republished here with permission from the original rights holder.,,3d;architecture;online;reconstruction;unity,English,"archaeology;art history;classical studies;geospatial analysis, interfaces and technology;historical studies;interdisciplinary collaboration;maps and mapping;spatio-temporal modeling, analysis and visualisation;virtual and augmented reality;visualization"
+2257,2015 - Sydney,Sydney,Global Digital Humanities,2015-01-01T00:00:00Z,ADHO,ADHO,Western Sydney University,Sydney,,Australia,https://web.archive.org/web/20190121165412/http://dh2015.org/,From Mapping the Republic of Letters to Humanities +Design Research Lab: Creating Visualization Tools for Humanistic Inquiry,https://github.com/ADHO/dh2015/blob/master/xml/COLEMAN_Catherine_Nicole_From_Mapping_the_Republic_of_L.xml,Catherine Nicole Coleman;Giorgio Caviglia;Maria Comsa;Mark Braude;Dan Edelstein;Giovanna Ceserani,poster / demo / art installation,"<?xml version=""1.0"" encoding=""UTF-8""?>
+<TEI xmlns=""http://www.tei-c.org/ns/1.0"">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>From Mapping the Republic of Letters to Humanities +Design Research Lab: Creating Visualization Tools for Humanistic Inquiry</title>
+                <author>
+                    <persName>
+                        <surname>Coleman</surname>
+                        <forename>Catherine Nicole</forename>
+                    </persName>
+                    <affiliation>Stanford University, United States of America</affiliation>
+                    <email>cncoleman@stanford.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Caviglia</surname>
+                        <forename>Giorgio</forename>
+                    </persName>
+                    <affiliation>Stanford University, United States of America</affiliation>
+                    <email>giorgio.caviglia@gmail.com</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Comsa</surname>
+                        <forename>Maria</forename>
+                    </persName>
+                    <affiliation>Stanford University, United States of America</affiliation>
+                    <email>mcomsa@stanford.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Braude</surname>
+                        <forename>Mark</forename>
+                    </persName>
+                    <affiliation>Stanford University, United States of America</affiliation>
+                    <email>braude@stanford.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Edelstein</surname>
+                        <forename>Dan</forename>
+                    </persName>
+                    <affiliation>Stanford University, United States of America</affiliation>
+                    <email>danedels@stanford.edu</email>
+                </author>
+                <author>
+                    <persName>
+                        <surname>Ceserani</surname>
+                        <forename>Giovanna</forename>
+                    </persName>
+                    <affiliation>Stanford University, United States of America</affiliation>
+                    <email>ceserani@stanford.edu</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014-12-19T13:50:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Paul Arthur, University of Western Sidney</publisher>
+                <address>
+                    <addrLine>Locked Bag 1797</addrLine>
+                    <addrLine>Penrith NSW 2751</addrLine>
+                    <addrLine>Australia</addrLine>
+                    <addrLine>Paul Arthur</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document </p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident=""DHCONVALIDATOR"" version=""1.9"">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme=""ConfTool"" n=""category"">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme=""ConfTool"" n=""subcategory"">
+                    <term>Long Paper</term>
+                </keywords>
+                <keywords scheme=""ConfTool"" n=""keywords"">
+                    <term>knowledge design</term>
+                    <term>interface design</term>
+                    <term>open design</term>
+                    <term>visualization</term>
+                </keywords>
+                <keywords scheme=""ConfTool"" n=""topics"">
+                    <term>interface and user experience design</term>
+                    <term>software design and development</term>
+                    <term>knowledge representation</term>
+                    <term>visualisation</term>
+                    <term>networks</term>
+                    <term>relationships</term>
+                    <term>graphs</term>
+                    <term>spatio-temporal modeling</term>
+                    <term>analysis and visualisation</term>
+                    <term>English</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>What does it mean to build visualization tools that support the research process in the humanities? In this paper we will trace the evolution of our thinking about data-driven tools beginning with case studies in early modern intellectual history and eventually including a wide range of projects from classics, social history, performance studies, and other fields. We will give concrete examples of how individual tools were designed and whether those tools ultimately failed or succeeded to provide scholars with a means to gain insights into historical data. Through these examples, this paper argues for the role of an open design process in the development of visualization tools for humanities research that brings designers, developers, and scholars into deep collaboration to build nuanced and rigorous tools for humanities research. </p>
+            <p>Mapping the Republic of Letters</p>
+            <p>Mapping the Republic of Letters was formed on the assumption that intellectual history is one of the fields that stands the most to gain from the influx of big data. By combining metadata from library catalogues and large-scale digitization projects, the project seeks to maximize the transformative effect of all this information. The cartographic, chronological, and network visualizations ultimately produced allow researchers to examine some of the big questions that intellectual historians have long struggled with: How do intellectual networks function? How interconnected are they? How independent are these networks from other social networks? </p>
+            <p>The 2009 Digging Into Data Challenge grant award launched an active tool development phase in the Mapping the Republic of Letters (MRofL) project at Stanford. In partnership with DensityDesign Research Lab in Milan, the team began to engage in a tool design process in response to concrete research questions. The data—based on individuals and their correspondence, travel, and publications—were multidimensional and qualitatively rich. It became clear that historians who wish to bring data visualization tools to bear on the study of the past face a number of challenges. Many available tools had a steep learning curve and were ultimately of limited help for humanists. These tools rest on assumptions about the completeness and empirical value of data that often do not hold true for humanities research. Historical data can be incomplete and messy: statistical analysis can be a helpful to a limited extent, but interpretation at the most fundamental level is required to uncover meaning. Humanists also ask questions about the data that cannot be answered by numerical analysis. We needed tools that help us filter, contextualize, compare, and see the gaps in our data. </p>
+            <p>Humanities + Design</p>
+            <p>
+                <hi rend=""color(262626)"">Humanities + Design, a research lab founded in 2012 by Dan Edelstein, Paula Findlen, and Nicole Coleman, emerged directly out of lessons learned and opportunities for humanities data analysis discovered through MRofL. The mission of the lab is to produce, through the lens of humanistic inquiry, new modes of thinking in design and computer science to serve data-driven research in the humanities. We believe that humanistic inquiry, grounded in interpretation, has much to contribute to the development of technologies if they are to help us reveal ambiguity and paradox, allowing human-scale exploration of complex systems. In the laboratory environment, theoretical and methodological discussions happen side by side with hands-on work with digital materials. Humanities scholars and students, designers, engineers, and computer scientists engage together in ongoing tool design as defined by the specific needs of participating humanities projects.</hi>
+            </p>
+            <p>Palladio Project</p>
+            <p>The award of the 2012 NEH Implementation Grant for Networks in History allowed the lab to pursue the development of visualization techniques and rich interaction with data that supports ‘thinking through data’ rather than using prescribed algorithms for data analysis. Palladio is a web-based demonstration application that allows any researcher to upload, visualize, and explore complex and multidimensional data, directly in a web browser. 
+                <hi rend=""color(262626)"">It has been </hi>designed for humanistic inquiry, with a special focus on historical research. 
+                <hi rend=""color(333333)"">The Palladio visualization system combines a primary view (for example, Map, Network Graph, and Tabular views) with filters to make it easy to query a dataset. </hi>
+                <hi rend=""color(262626)"">There is no need to create an account, nor do we store any data</hi>
+                <hi rend=""bold color(262626)"">. </hi>
+                <hi rend=""color(262626)"">Researchers can save and shared the work they have done in the browser as a Palladio Project. Palladio’s TimeLine and TimeSpan filters encourage filtering and sorting temporal data, and allows the filtering of two or more discontinuous time periods. A Facet filter is also particularly useful when exploring multidimensional datasets and drilling down to specific aspects of one’s data. Using case studies (examples listed later in this document) we will discuss how scholars have used Palladio, highlighting those instances when uses of the tool diverged from our expectations or led us toward new insights that we incorporated (or plan to incorporate) in future versions.</hi>
+            </p>
+            <p>Open Design</p>
+            <p>
+                <hi rend=""color(444444)"">The development of Palladio has been an iterative process. We have been eliciting and incorporating feedback from the academic community concerning Palladio’s current and potential features and uses. Most specifically, we have engaged in sustained discussion with a small and inter-disciplinary group of scholars, known as Open Design Contributors. Our paper will offer insight into this design process and the ways that it has directly influenced current and future iterations of Palladio, as well as other tools.</hi>
+            </p>
+            <p>Summary</p>
+            <p>The core innovation of our project is the design of visualization techniques that emphasize the contextualization and interpretation of data in cases where we lack the metrics for useful quantitative analysis. The two other key innovations both involve the leveraging of novel technologies that are particularly important to the study of cultural heritage data: we use new flexible data models to let individual scholars create and apply their own data categorizations, and we use open linked data sources to reconcile datasets against established authority files, in order to link entities across datasets and thereby explore networks across collections.</p>
+            <p>
+                <hi rend=""bold"">Additional Case Studies to Be Discussed</hi>
+            </p>
+            <p>
+                <hi rend=""italic"">Case Study: Toward More Complex Ways of Displaying Travel</hi>
+            </p>
+            <p>
+                <hi rend=""italic"">Kate Elswit, Lecturer in Theatre and Performance Studies at the University of Bristol, ‘Ballet, Digital History, and the Cold War: Visualizing the Labor of Dance Touring’</hi>
+            </p>
+            <p>Dance scholar Kate Elswit has been using Palladio in her research on the labor of dance touring. She writes, ‘Such [visualization] techniques enable us to feel the passage of time differently.’ Following discussion with Elswit and other scholars interested in tracing travel routes, we have been thinking about how to display point-to-point travel in ways that go beyond simple flight-path-like visualizations. How to account for the differences in traveling at night rather than in the day? How to represent different levels of comfort, safety, and efficiency in travel?</p>
+            <p>Case Study: Questions of Scale and Incomplete Data</p>
+            <p>
+                <hi rend=""italic"">Molly Taylor-Poleskey, PhD Candidate, Department of History, Stanford: Food Culture in Brandenburg-Prussia</hi>
+            </p>
+            <p>
+                <hi rend=""color(222222)"">Taylor-Poleskey uses a large base of manuscript sources detailing the yearly consumption of one of the palaces of Prince-Elector Friedrich Wilhelm of Brandenburg-Prussia. She argues that the elector’s cultural agenda helped transform his territories over the course of his reign from dilapidated and war-torn to stable and powerful. To support her argument, she wants to see how tastes and consumption patterns changed over time, to consider how such changes might reveal the court’s aesthetic values and cultural ambitions. Creating visualizations in Palladio have helped her analyze what proportions of different foods or food groups were consumed. We have worked with Taylor-Poleskey toward creating visualizations that privilege the display of relative magnitude, and that are especially sensitive to working in different registers and scales. As some of the years in the sources she studies have incomplete or missing data, her use case has also aided us in thinking about how best to work with and represent incomplete data in ways that are not misleading or overly simplistic.</hi>
+            </p>
+            <p>Case Study: Toward New Palladio Data-Visualization Iterations</p>
+            <p>
+                <hi rend=""italic"">Office of the Historian, US State Department, Foreign Relations of the United States</hi>
+            </p>
+            <p>We will share results from our ongoing work with Thomas Faith at the Office of the Historian at the US Department of State, with whom we have been working toward the goal of producing an integrated version of Palladio that would function as a visual browser for extant online data concerning the foreign relations of the United States. The State Department project is one of many we are working on, as we look to help other researchers to implement customized versions of Palladio that can be used as search, analysis, and visualization exploratory tools within extant large-scale research projects.</p>
+        </body>
+        <back>
+            <div type=""bibliogr"">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Balsamo, A. </hi>
+                        <hi rend=""color(262626)"">(2009). Design. </hi>
+                        <hi rend=""italic color(262626)"">International Journal of Learning and Media,</hi>
+                        <hi rend=""bold color(262626)"">1</hi>
+                        <hi rend=""color(262626)"">(4): 1–10.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Berry, D. M. </hi>
+                        <hi rend=""color(262626)"">(2012). </hi>
+                        <hi rend=""italic color(262626)"">Understanding Digital Humanities.</hi>
+                        <hi rend=""color(262626)""> Palgrave Macmillan, New York.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Buchanan, R. </hi>
+                        <hi rend=""color(262626)"">(2001). Design Research and the New Learning. </hi>
+                        <hi rend=""italic color(262626)"">Design Issues,</hi>
+                        <hi rend=""bold color(262626)"">17</hi>
+                        <hi rend=""color(262626)"">(4): 3–23.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Burdick, A. </hi>
+                        <hi rend=""color(262626)"">(2009). Design Without Designers. </hi>
+                        <hi rend=""italic color(262626)"">Conference on the Future of Art and Design Education in the 21st Century</hi>
+                        <hi rend=""color(262626)"">, University of Brighton, England, 29 April 2009.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Burdick, A. and Willis, H. </hi>
+                        <hi rend=""color(262626)"">(2011). Digital Learning, Digital Scholarship, and Design Thinking.</hi>
+                        <hi rend=""italic color(262626)"">Design Studies,</hi>
+                        <hi rend=""bold color(262626)"">32</hi>
+                        <hi rend=""color(262626)"">(6): 546–56.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Drucker, J. </hi>
+                        <hi rend=""color(262626)"">(2009). SpecLab. In </hi>
+                        <hi rend=""italic color(262626)"">Digital Aesthetics and Projects in Speculative Computing.</hi>
+                        <hi rend=""color(262626)""> University of Chicago Press, Chicago.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Drucker, J. </hi>
+                        <hi rend=""color(262626)"">(2011). Humanities Approach to Interface Theory. </hi>
+                        <hi rend=""italic color(262626)"">Culture Machine,</hi>
+                        <hi rend=""bold color(262626)"">12</hi>
+                        <hi rend=""color(262626)"">: 1–20.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Friedman, K. </hi>
+                        <hi rend=""color(262626)"">(2003). Theory Construction in Design Research: Criteria, Approaches, and Methods. </hi>
+                        <hi rend=""italic color(262626)"">Design Studies,</hi>
+                        <hi rend=""bold color(262626)"">24</hi>
+                        <hi rend=""color(262626)"">(6): 16.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Fuller, M.</hi>
+                        <hi rend=""color(262626)"">(2008). Software Studies. MIT Press, Cambridge, MA.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Ivanhoe.</hi>
+                        <hi rend=""color(262626)""> (n.d.). http://www2.iath.virginia.edu/jjm2f/old/IGamehtm.html. </hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Lunenfeld, P., Burdick, A., Drucker, J., Presner, T. and Schnapp, J. P.</hi>
+                        <hi rend=""color(262626)"">(2012).</hi>
+                        <hi rend=""italic color(262626)"">Digital_Humanities</hi>
+                        <hi rend=""color(262626)"">. MIT Press, Cambridge, MA.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Mandala Browser. </hi>
+                        <hi rend=""color(262626)"">(n.d.). </hi>http://mandala.humviz.org/.
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Masud, L., Valsecchi, F., Ciuccarelli, P., Ricci, D. and Caviglia, G.</hi>
+                        <hi rend=""color(262626)"">(2010). From Data to Knowledge: Visualizations as Transformation Processes within the Data-Information-Knowledge Continuum. In Banissi, E., Bertschi, S., Burkhard, R., Counsell, J., Dastbaz, M., Eppler, M., Forsell, C., et al. (eds),</hi>
+                        <hi rend=""italic color(262626)"">Information Visualisation IV, 2010 14th International Conference</hi>
+                        <hi rend=""color(262626)"">, pp. 445–49.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">McCarty, W. </hi>
+                        <hi rend=""color(262626)"">(2003). </hi>
+                        <hi rend=""italic color(262626)"">Encyclopedia of Library and Information Science.</hi>
+                        <hi rend=""color(262626)""> Vol. 2. 2nd ed. New York: Dekker, pp. 1224–35.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">McGann, J. and Samuels, L. </hi>
+                        <hi rend=""color(262626)"">(2004). Deformance and Interpretation. In </hi>
+                        <hi rend=""italic color(262626)"">Radiant Textuality.</hi>
+                        <hi rend=""color(262626)"">New York: Palgrave Macmillan.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Moretti, F. (</hi>
+                        <hi rend=""color(262626)"">2005). </hi>
+                        <hi rend=""italic color(262626)"">Graphs, Maps, Trees.</hi>
+                        <hi rend=""color(262626)""> Verso Books, New York.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Nowviskie, B.</hi>
+                        <hi rend=""color(262626)"">(2004). </hi>
+                        <hi rend=""italic color(262626)"">Speculative Computing: Instruments for Interpretative Scholarship.</hi>
+                        <hi rend=""color(262626)""> Ph.D. thesis, University of Virginia.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Orbis.</hi>
+                        <hi rend=""color(262626)"">(n.d.). http://orbis.stanford.edu/.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Pope, R. (</hi>
+                        <hi rend=""color(262626)"">1995). </hi>
+                        <hi rend=""italic color(262626)"">Textual Intervention: Critical and Creative Strategies for Literary Studies.</hi>
+                        <hi rend=""color(262626)"">Routledge, London.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Ramsay, S. </hi>
+                        <hi rend=""color(262626)"">(2011a). On Building, 11 January, http://stephenramsay.us/text/2011/01/11/onNbuilding.html.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Ramsay, S. </hi>
+                        <hi rend=""color(262626)"">(2011b). Who’s In and Who’s Out, 8 January, http://stephenramsay.us/text/2011/01/08/whosNinNandNwhosNout.html.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Ruecker, S., Radzikowska, M. and Sinclair, S.</hi>
+                        <hi rend=""color(262626)""> (2011). </hi>
+                        <hi rend=""italic color(262626)"">Visual Interface Design for Digital Cultural Heritage.</hi>
+                        <hi rend=""color(262626)""> Ashgate.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Schnapp, J. and Presner, T. </hi>
+                        <hi rend=""color(262626)"">(2009). The Digital Humanities Manifesto 2.0, 17 June, www.humanitiesblast.com/manifesto/Manifesto_V2.pdf.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Schon, D. A. </hi>
+                        <hi rend=""color(262626)"">(1983). </hi>
+                        <hi rend=""italic color(262626)"">The Reflective Practitioner: How Professionals Think in Action.</hi>
+                        <hi rend=""color(262626)"">1st ed. Basic Books, New York.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Temporal Modeling. </hi>
+                        <hi rend=""color(262626)"">(n.d.). http://www2.iath.virginia.edu/time/time.html.</hi>
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold color(262626)"">Voyant.</hi>
+                        <hi rend=""color(262626)""> (n.d.). http://voyant-tools.org.</hi>
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+</TEI>",xml,Creative Commons Attribution 4.0 International,,interface design;knowledge design;open design;visualization,English,"english;interface and user experience design;knowledge representation;networks, relationships, graphs;software design and development;spatio-temporal modeling, analysis and visualisation;visualization"
+2621,2016 - Kraków,Kraków,Digital Identities: the Past and the Future,2016-01-01T00:00:00Z,ADHO,ADHO,Jagiellonian University;Pedagogical University of Krakow,Kraków,,Poland,https://dh2016.adho.org/,"Remapping Leigh Hunt's Circles"": Voyant Tools and Hunt's Dramatic Criticism",,Michael Eberle-Sinatra;Stéfan Sinclair;Emmanuel Chateau,poster / demo / art installation,"<text xmlns=""http://www.tei-c.org/ns/1.0"">
+        <body>
+            <p>“Remapping Leigh Hunt’s Circles” is an ambitious project that explores Leigh Hunt’s central position in the London literary and critical scene of the first half of the nineteenth century, through the lens of digital humanities tools. Hunt is today considered one of the key figures of the Romantic period in England, known for his work as editor, journalist, poet, and facilitator. Numerous articles, essay collections, biographies, and monographs published in the last fifteen years have made this clear. Hunt's contribution to Romantic and Victorian literature was as extensive as it has proven durable, in matters as various as prosodic experimentation and the modernization of the magazine essay. Yet little work (beyond some biographical notes) has been done on the second half of his life, a period that was as productive as the first, and during which Hunt was intimate with many of the finest writers of the time, and continued to contribute to London’s literary circles through the ongoing publication of critical essays in periodicals and anthologies. This project aims to redress this imbalance/oversight and reassert Hunt’s place in the Romantic and Victorian eras, as well as his continuing significance for understanding the London literary scene between 1805 (publication of his first critical essay) and 1859 (date of his death, with his last article published only a few weeks before). </p>
+            <p>“Remapping Leigh Hunt’s Circles” makes a case for Hunt’s position as a key critical voice in London beyond his already established prominence during the 
+                <hi rend=""italic"">Examiner</hi> years. It does so through a careful analysis of his critical reviews and essays (with a specific focus on his drama criticism to underscore Hunt’s ongoing engagement with the public sphere) published during his entire career, which spanned the first half of the nineteenth century. Data mining and textual analysis offer exciting opportunities to bring together different sets of data which, when prepared to the highest standard of text encoding, can yield new and innovative results that encourage reconsideration of preconceived notions regarding the transfer of ideas from one author to another, or one literary genre to another. The results of the research undertaken in “Remapping Leigh Hunt’s Circles” will be presented in a collaborative, visual context that reimagines the digital scholarly edition as a transparent workspace in which established primary objects from existing databases can be gathered, organized, correlated, annotated, and augmented by multiple users in a dynamic environment. 
+            </p>
+            <p>All the texts prepared for inclusion in our project are encoded to the Text-Encoding-Initiative (TEI) standards. The mark-up language and quality controls for improving metadata in all the resources provide more accurate search and discovery, allow for the presentation of well-supported content on multiple devices and develop tools for assembling, archiving and indexing research objects and artifacts. Ongoing work on this platform will enable researchers to undertake world-class research by providing the means to link data-sets to published content, encouraging data reanalysis, replication studies, and data re-purposing, all of which improve research quality and efficiency.</p>
+            <p>Our poster will report on the first year of this project, and the implementation of the latest version of the 
+                <hi rend=""italic"">Voyant Tools</hi> to examine the dramatic essays written by Hunt between 1805 and 1813 (when he was sentenced to two years in prison for libel against the Prince Regent). We will showcase in particular two aspects of the integration between the Hunt archives and Voyant Tools. First, the ability to identify and visualize named entity connections and their networks across multiple documents (this a refinement of the previous RezoViz tool in Voyant). The Hunt collection presents an ideal corpus for network exploration given the interconnectedness of the people, locations and events that animate the documents. Second, Voyant provides a generic and customizable way of presenting a web-based corpus catalogue with the same kinds of faceted browsing and advanced querying capabilities we have come to expect from library databases and online stores. A further benefit of this functionality is the ability to create dynamic subsets of a corpus to examine more closely (in other words, using a catalogue skin in Voyant to create worksets destined for Voyant’s more conventional analytic skin).
+            </p>
+            <p>The “Remapping Leigh Hunt’s Circles” is essentially a project of digital text editing and literary criticism whereas Voyant Tools is essentially a software platform for reading, analyzing and visualizing digital texts. These are separate traditions and separate concerns, but this poster will demonstrate the value of symbiotic development: both projects benefit from the collaboration.</p>
+        </body>
+        <back>
+            <div type=""bibliogr"">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl><hi rend=""bold"">McGann, J.</hi> (2014). 
+                        <hi rend=""italic"">A New Republic of Letters</hi>. Cambridge, MA: Harvard UP. 
+                    </bibl>
+                    <bibl><hi rend=""bold"">Sinatra, M., and Sinclair, S.</hi> (2015). Special issue “Repenser le numérique au 21
+                        <hi rend=""superscript"">ème</hi> siècle”. 
+                        <hi rend=""italic"">Sens public</hi> (hiver 2015). 
+                    </bibl>
+                    <bibl><hi rend=""bold"">Sinatra, M.</hi> (2015). “Representing Leigh Hunt’s Autobiography”.
+                        <hi rend=""italic"">Virtual Victorians: Networks, Connections, Technologies</hi>. Eds. Stauffer, A. and Alfano, V. R., Palgrave.
+                    </bibl>
+                    <bibl><hi rend=""bold"">Sinclair, S., Rucker, S. and Radzikowska, M.</hi> (2011). 
+                        <hi rend=""italic"">Visual Interface Design for Digital Cultural Heritage</hi>. Ashgate.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+",xml,This text is republished here with permission from the original rights holder.,,british romanticism;text analysis;textual criticism,English,english studies;text analysis
+2822,2016 - Kraków,Kraków,Digital Identities: the Past and the Future,2016-01-01T00:00:00Z,ADHO,ADHO,Jagiellonian University;Pedagogical University of Krakow,Kraków,,Poland,https://dh2016.adho.org/,"WordPress as a framework for automated data capture, filtering and structuring processes. The new order of the authors",,Antonio Cruces-Rodríguez;Nuria Rodríguez Ortega;Carmen Tenor Polo,"paper, specified ""short paper""","<text xmlns=""http://www.tei-c.org/ns/1.0"">
+        <body>
+            <p> The Exhibitium Project<note><p>Generation of knowledge about temporary art exhibitions for a multivalent reuse was the topic of the proposal presented to the 2014 competition organized by the BBVA Foundation for projects in the field of Digital Humanities, resulting selected from over 250 submissions. The project website is available at: http://exhibitium.com. The Exhibitium Project began in January 2015 and will end in December 2016, so currently we are completing the first phase.</p></note>, awarded by the BBVA Foundation, is a data-driven project developed by an international consortium of research groups.<note><p>They are: iArtHis_Lab (http://www.iarthislab.es) and Khaos (http://khaos.uma.es) at the University of Málaga; Techne, ingeniería del conocimiento y del producto (<ref target=""http://www.ugr.es/~tep028/quienes_somos_es.php"">http://www.ugr.es/~tep028/quienes_somos_es.php</ref>) at the University of Granada; and CulturePlex at the University of Western Ontario (http://www.cultureplex.ca).</p></note> One of its main objectives is to build a prototype that will serve as a base to produce a platform for the recording and exploitation of data about art-exhibitions available on the Internet.<note><p>Specifically, the ultimate Exhibition’s purpose is to extract unprecedented and strategic knowledge about temporary art exhibitions through the use of a variety of data mining techniques.</p></note> Therefore, our proposal aims to expose the methods, procedures and decision-making processes that have governed the technological implementation of this prototype, especially with regard to the reuse of WordPress (WP) as a development framework.</p>
+            <p>According to the project's purpose, it was necessary to create a device that, to the extent possible, could capture in automated way information on art exhibitions from any Internet source. Consequently, the inquiry into the possibilities of web mining strategies emerged as a priority from the early stages. Taking into account the high expressiveness and flexibility of linguistic structures usually used in the description of art exhibitions, our project opted for a mixed platform which combines the potential modeling system based on textual indicators, the heuristic means that characterize some methods -such as the Bayesian classification- and the human supervision provided by a well trained team of editors.</p>
+          <div type=""div1"" rend=""DH-Heading1"">
+          <head>1. General overview. WordPress as a framework of the Expofinder system </head>
+            <p>As Baumgartner et al. (2009: 1) established, the web data extraction task is usually divided into five different functions: (1) the web interaction, which mainly comprises the navigation through predetermined web pages containing the information sought; (2) the extraction of the searched data by means of a software that identifies, extracts and transforms them into a structured format; (3) the setting of a specific calendar that enable to perform automatically the extraction tasks in regular sequence; (4) the processing of the captured data, which includes filtering, transformation -if applicable-, refining and integration; and (5) the delivery of the resulting structured data to a variety of data analysis-based systems.</p>
+            <p>Assuming this distribution as the most convenient for our purposes, we decided to include them in the Exhibitium’s architecture grouped into two large blocks.</p>
+            <p>A. A block consisting of an automated capture system of information robust enough to ensure the reliability of the collected data.</p>
+            <p>B. A second block made up by the set of elements necessary to store the data, including functions for filtering, cleaning, management, structuring and description. This block also incorporates a system to export the collected data to those platforms that will process and analyze them during the second phase of the project.</p>
+            <p>Block A was called Beagle, and block B became known as ExpoFinder. Both blocks work in a coordinated manner, so that what is extracted by Beagle is put at the disposal of ExpoFinder. The two blocks are part of an unified system configured by a cyclic algorithm: Beagle captures, ExpoFinder analyzes and approves the captured information, the team of editors validates or discards what ExpoFinder has previously approved, and Beagle recaptures again (see figure 1).</p>
+            <figure>
+                <graphic url=""392/image1.png"" rend=""inline""/>
+                <head>Figure1. Beagle + ExpoFinder. Operating plan (simplified)</head>
+            </figure>
+            <p>Regarding the software, after preliminary versions based on own developments, it was decided that the most interesting option between the free software and open source solutions currently available (as the openness philosophy is a sine qua non requirement of this project) would be to use WP as framework of the system.<note><p>Although, in reality, according to the Tom McFarlin’s statement in his popular page «tuts +» (http://tutsplus.com/), it is more a foundation that a framework. And maybe he is right: a framework consists of a set of conventions as well as libraries and tools that allow us to easily start working on an application. In short, it provides the means by which an application can be built from scratch, from the database schema to the front end. However, a foundation allows to «extend» an existing application. WP has its own well-defined internal mechanisms, and the foundation simply expands its operation or takes advantage of it for their own benefit.</p></note> The main benefits that the use of WP as framework offers for our project can be synthesized in the following items: a database with a flexible and very solid organizational structure; a layer of a core application with numerous hooks which allow to maximize its functionality; and a high easy management system to carry out tasks on the two sides (server and client), assuming both administrator and user roles.<note><p>The advantages that a robust mechanism as such provided by WP offers for the maintenance of a security system (essential in any development accessible through Internet), or the substantial savings in time and resources involved in a CRUD structure records management -which is both sufficiently malleable to suit any need and rigid enough to follow canonical deployment patterns (such as the «nonce» safeguards in the capture forms), are weighty arguments when opting for the use of one framework or another.</p></note> Thus, for the implementation of the Beagle-ExpoFinder system we took advantages of the predefined data base, the available APIs and the set of data visualization templates to build solutions using an application that is already fully functional.</p>
+            <p>We used WP without adaptations, that is, as it can be downloaded from the Internet. All the functionality of our application lies, then, on the code itself that constitutes WP, so it is not supported on variant versions (forks) of the original program. Hence, any improvement provided by the computing community will be directly usable by our project without further adaptations. As part of the requirements of the development of the Beagle-ExpoFinder system (B + E), from the beginning it was considered that the programming work did not constitute a «tailored suit» for the Exhibitium project. On the contrary, we expect that this work can be useful in other projects with a small number of modifications or by using configuration files or other similar systems. For that reason, our choice was to implement B + E by means of a «WP theme», solution that easily allows us to readapt the software to different purposes.</p>
+          </div>
+          <div type=""div1"" rend=""DH-Heading1"">
+          <head>2. Beagle and Expofinder development and technical features </head>
+            <p>Beagle captures – as it has been said- by automated means web data concerning temporary art exhibitions from any source of information, and includes a filtering mechanism. The automated capture process uses the tools of WP API, particularly WPCron. Likewise, the frequency of the process is configured according with the options offered by ExpoFinder to the system administrator. Beagle employs two statistical complementary functions to «predict» the degree of the adequacy of the captured information to the ExpoFinder preconditions:<note><p>Even though this document is not largest enough to expose in detail the list of selected preconditions of significant terms used by Beagle in order to filter the captured information, we want to emphasize that this is a «weighted» relationship of lexemes in which each root term is assigned a total «weight» in the set (1 to 3). When the entire process is complete, the absolute amount of the sum corresponding to the found terms is weighted with the relative values (relating to the length of the text where they have been detected) to assign a positive or negative evaluation to the whole information.</p></note> 1. One of this is based on the intersection of a set of «positive» and «negative» keywords with a proportional weight assigned to each one, which is also based on the shortest path algorithm of Bellman-Ford;<note><p>The Bellman-Ford algorithm (or Bellman-Ford-Moore) calculates the shortest paths from a single source vertex to all other vertices in a weighted digraph. It is slower than Dijkstra's algorithm for the same problem, but more versatile, since it is suitable to deal with graphs using negative numbers for edge weights. ExpoFinder takes advantage of it in its weighting mechanism, useful for us because we work with lists of lexemes for words used as «positive» or «negative» markers.</p></note> 2. The other is defined by its heuristic nature; it employs a naive Bayesian classifier<note><p>In machine learning terminology, the «naive Bayesian» constitutes a family of simple probabilistic classifiers based on the application of Bayes’ theorem about the hypothesis of independence between variables. Widely studied since the 1950s, it began to be used since the beginning of the next decade as a taxonomy method capable of self-optimization in the recovery community text. We use the frequency of occurrence of a given lexeme as a trigger, so that ExpoFinder can contribute to the semi-automated selection of relevant information from the experience gained. It is not a pure discriminative mechanism, but an auxiliary tool that has proven to be useful for application operators.</p></note> to guide the «human» editor during the task of discriminating whether or not an information captured by Beagle is valid. The latter is able to improve their efficiency through continuous learning processes (each discarding or acceptance made by the «human» editor refines the system «perceptiveness» (see figures 2 and 3).</p>
+            <figure>
+                <graphic url=""392/image2.png"" rend=""inline""/>
+                <head>Figure 2. Screenshot. Exhibitions list (fragment). See the Bayesian classifier indicator</head>
+            </figure>
+            <p>ExpoFinder also includes a control system (QC) that identifies the mistakes and failures, which are also associated with the human editor who made them, so that he/she can perform the appropriate corrections (see figures 3 and 4).</p>
+            <figure>
+                <graphic url=""392/image3.png"" rend=""inline""/>
+                <head>Figure 3. Screenshot. Automated evaluation of efficiency</head>
+            </figure>
+            <figure>
+                <graphic url=""392/image4.png"" rend=""inline""/> 
+                <head>Figure 4. Screenshot. Quality control (QC). Resume</head>
+            </figure>
+            <p>In its current state of development, the Beagle-ExpoFinder system captures and selects daily about 100 references from more than 12,000 web sources of information. Its error rate during the recording and validation processes is about 3.9%, below the 5% initially considered as permissible.</p>
+          </div>
+        </body>
+        <back>
+            <div type=""bibliogr"">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl rend=""footnote text"">
+                        <hi rend=""bold"">Baumgartner, R. et al.</hi> (2009). Web Data Extraction System. In 
+                        <hi rend=""italic"">Encyclopedia of Database Systems</hi>. Springer-Verlag.
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Kokkoras, F. et al.</hi> (2013). DEiXTo: A Web Data Extraction Suite. 
+                        <hi rend=""italic"">Proceedings of 6th Balkan Conference in Informatics</hi> (BCI 2013), Nueva York: ACM, pp. 9-12. 
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Pree, W.</hi> (1994). 
+                        <hi rend=""italic"">Design Patterns for Object-Oriented Software Development</hi>. Reading, Massachussets, USA: Addison-Wesley, ACM Press Books. 
+                    </bibl>
+                    <bibl>
+                        <hi rend=""bold"">Raposo, J. et al.</hi> (2002). The Wargo System: Semi-Automatic Wrapper Generation in Presence of Complex Data Access Modes. 
+                        <hi rend=""italic"">Database and Expert Systems Applications</hi>. 
+                        <hi rend=""italic"">Proceedings</hi>, 13th International Workshop, IEEE, pp. 313-17.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+",xml,This text is republished here with permission from the original rights holder.,,historia del arte digital;open source;repositorios de datos;web mining;wordpress,English,art history;databases & dbms
+3879,2017 - Montréal,Montréal,Access/Accès,2017-01-01T00:00:00Z,ADHO,ADHO,McGill University;Université de Montréal,Montréal,,Canada,https://dh2017.adho.org/,Access to DH Pedagogy as the Norm: Introducing Students to DH Methods Across the Curriculum and at a Distance,https://dh2017.adho.org/abstracts/186/186.pdf,Dan Tracy;Elizabeth Massa Hoiem,poster / demo / art installation,"This poster presents research into integration and assessment of digital humanities pedagogy in a distance course on the History of Children's Literature, and provokes conversation about pedagogical approaches that expand student access to DH methods, tools, and dispositions. Much of the existing literature on DH pedagogy addresses methods courses or multimodal writing courses rather than integration of DH practices in particular topical contexts, or advanced topics courses that explore a narrow slice of disciplinary content through extended engagements with digital projects (Ball 2012; Mostern & Gainor 2013; Fyfe 2016; Nyhan, Mahony, and Terras 2016). This literature provides valuable lessons but raises questions about the feasibility of engaging with DH across the curriculum in small-to-medium scale engagements with new methods and technologies. Amy E. Earhart and Toniesha L. Taylor (2016), for example, respond to this situation by rejecting the idea that DH should be limited to advanced courses and propose broader integration of “embedded [DH] skills development” that students can take out of the environment of a specific institution. Similarly, we suggest that allowing for repeated and diverse engagement by students across methods-intensive and topic-intensive courses (as is now common for writing) is necessary for teaching deeper DH dispositions like collaboration, openness to failure, and creativity with technology.
+
+Simultaneously, the existing literature has focused on residential instruction with access to physical artifacts. This limit is problematic when at least one discipline with a heavy investment in DH, library and information science, is well past transition to a majority distance learning population. LIS programs have developed experience and expertise in teaching technology at a distance, and lessons from these programs may be useful to the DH community. While some teaching goals may only be met in person, others might be achieved through well-structured online learning.
+
+To ground this discussion, the authors, the course instructor, and a subject librarian will present their development, assessment, and rethinking of a multimodal publication assignment using the Scalar platform in a synchronous online course on the History of Children's Literature. Students worked in groups to create a multi-media web resource on “diverse history.” The class discussed what is included or omitted from historical narratives, whether they be children's historical fiction or history textbooks, before contemplating this selection process in children's literature itself. The librarian introduced students to the context of DH publishing and Scalar, and to issues related to responsible use of multimedia. Then each group chose an issue related to “diverse history” and built one section of the website. The long-term goal is for successive classes to edit, revise, and expand this project
+
+This collaborative project replaced an assignment from previous years, when students built individual websites about a children's book of their choice. This project maximized scaffolding, with detailed guidance on information students should locate about their books and the final website shape. This iteration of the class took place during a time when distance students came to campus one weekend each semester, and this time was used for in-depth introduction to the array of specialized library resources needed to complete the questions about their book's production and reception. The new assignment sought to re-imagine learning outcomes that would allow students to engage with a particular DH publishing technology, Scalar, and grapple with issues of collaboration and multimodal authoring in a context where the final product was less predetermined. Nonetheless, the elimination of the in person component, which occurred at the same time, removed an obvious “lab” opportunity for learning related technical issues. The pedagogical design involved making the best balance between asynchronous and synchronous activities to compensate for the absence of in person activities. Our evaluation of the success of the assignment relied on assessment
+
+of Scalar sample sites and final projects created by the students, as well as on reflective essays written by the students and observations made in the course of student consultations. This evaluation led to ideas for how to revise the course for future semesters to improve learning of collaborative behaviors, openness to failure, and creativity with technology. This includes, most notably, a re-envisioning of how synchronous class time is used in the future.
+
+By sharing our experiences in developing, teaching, assessing, and revising this course in successive iterations, we hope to explore with attendees the ways in which DH methods, tools, and dispositions can proliferate across the curriculum. We will promote discussion of what DH methods, tools, and dispositions can be taught well in different settings, whether that means varying scales of integration in DH classrooms, or exploring what can be taught virtually versus in person.
+
+Bibliography
+
+Ball, C. E. (2012). “Assessing Scholarly Multimedia: A Rhetorical Genre Studies Approach.” Technical Communication Quarterly 21: 61-77.
+
+Earhart, A. E., and Taylor, T L. (2016) “Pedagogies of Race: Digital Humanities in the Age of Ferguson.” Debates in the Digital Humanities 2016. Ed. Matthew K. Gold and Lauren F. Klein. U of Minnesota P, Minneapolis. 251-64.
+
+Fyfe, P. (2016). “Mid-Sized Digital Pedagogy.” Debates in the Digital Humanities 2016. Ed. Lauren F. Klein and Matthew K. Gold. University of Minnesota Press. 104-117.
+
+Mostern, R., and Gainor, E.. (2013). “Traveling the Silk
+
+Road on a Virtual Globe: Pedagogy, Technology and Evaluation for Spatial History.” Digital Humanities Quarterly
+
+7.
+
+Nyhan, J., Mahony, S., and Terras, M. (2015)“Digital Humanities and Integrative Learning.” Integrative Learning. Ed. Daniel Blackshields, James Cronin, Bettie Higgs, Shane Kilcommins, Marian McCarthy, and Anthony Ryan. London: Routledge. 235-47.",txt,Creative Commons Attribution 4.0 International,,children's literature;pedagogy;publishing;scalability;scalar,English,"audio, video, multimedia;copyright, licensing, and open access;cultural and/or institutional infrastructure;historical studies;library & information science;literary studies;project design, organization, management;rhetorical studies;teaching, pedagogy, and curriculum"
+6286,2018 - Mexico City,Mexico City,Puentes/Bridges,2018-01-01T00:00:00Z,ADHO,ADHO;EHD,El Colegio de México;Universidad Nacional Autónoma de México (UNAM) (National Autonomous University of Mexico),Mexico City,,Mexico,https://dh2018.adho.org/,Negentropic linguistic evolution: A comparison of seven languages,,Vincent Buntinx;Frédéric Kaplan,"paper, specified ""long paper""","<text>
+        
+            <p rend=""Plain Text"">Introduction</p>
+            <p rend=""Plain Text"">The relationship between the entropy of language and its complexity has been the subject of much speculation – some seeing the increase of linguistic entropy as a sign of linguistic complexification or interpreting entropy drop as a marker of greater regularity (Montemurro and Zanette 2011, Juola 2016, Bentz et al. 2017). Some evolutionary explanations, like the learning bottleneck hypothesis, argues that communication systems having more regular structures tend to have evolutionary advantages over more complex structures (Kirby 2001, Tamariz and Kirby 2016, Ferrer I Cancho 2017). Other structural effects of communication networks, like globalization of exchanges or algorithmic mediation, have been hypothesized to have a regularization effect on language (Kaplan 2014). </p>
+            <p rend=""Plain Text"">Longer-term studies are now possible thanks to the arrival of large-scale diachronic corpora, like newspaper archives or digitized libraries (Westin and Geisler 2002, Fries and Lehmann 2006, Lyse and Andersen 2012, Rochat et al. 2016). However, simple analyses of such datasets are prone to misinterpretations due to significant variations of corpus size over the years and the indirect effect this can have on various measures of language change and linguistic complexity (Buntinx et al. 2017). In particular, it is important not to misinterpret the arrival of new words as an increase in complexity as this variation is intrinsical, as is the variation of corpus size.</p>
+            <p rend=""Plain Text"">This paper is an attempt to conduct an unbiased diachronic study of linguistic complexity over seven different languages using the Google Books corpus (Michel et al. 2011). The paper uses a simple entropy measure on a closed, but nevertheless large, subset of words, called kernels (Buntinx et al. 2016). The kernel contains only the words that are present without interruption for the whole length of the study. This excludes all the words that arrived or disappeared during the period. We argue that this method is robust towards variations of corpus size and permits to study change in complexity despite possible (and in the case of Google Books unknown) change in the composition of the corpus. Indeed, the evolution observed on the seven different languages shows rather different patterns that are not directly correlated with the evolution of the size of the respective corpora. The rest of the paper presents the methods followed, the results obtained and the next steps we envision.</p>
+            <p rend=""Plain Text"">Method and Results</p>
+            <p rend=""Plain Text"">We use the concept of kernel entropy (Buntinx et al. 2017), defined as the Shannon entropy measure applied on word occurrences distribution normalized on the kernel of a given corpus. To calculate this measure, the corpus is subdivided into yearly sub-corpora. Next, we then calculate the word occurrences for the words that are present in each sub-corpus for each year. These words form a set, called a kernel. The word frequencies are normalized on the kernel 
+                <formula>
+                    <math xmlns:mml=""http://www.w3.org/1998/Math/MathML"">
+                        <mi xmlns=""http://www.w3.org/1998/Math/MathML"">K</mi>
+                    </math>
+                </formula> for each year 
+                <formula>
+                    <math xmlns:mml=""http://www.w3.org/1998/Math/MathML"">
+                        <mi xmlns=""http://www.w3.org/1998/Math/MathML"">y</mi>
+                    </math>
+                </formula> and the formula of Shannon entropy (using napierian logarithm) is applied on these distributions providing a measure that can be compared diachronically with robustness to corpus size evolution and to noises. The kernel entropy of a kernel 
+                <formula>
+                    <math xmlns:mml=""http://www.w3.org/1998/Math/MathML"">
+                        <mi xmlns=""http://www.w3.org/1998/Math/MathML"">K</mi>
+                    </math>
+                </formula> for the year 
+                <formula>
+                    <math xmlns:mml=""http://www.w3.org/1998/Math/MathML"">
+                        <mi xmlns=""http://www.w3.org/1998/Math/MathML"">y</mi>
+                    </math>
+                </formula> is given by the formula:
+            </p>
+            <figure>
+                <graphic n=""1001"" width=""5.2535694444444445cm"" height=""1.7991666666666666cm"" url=""Pictures/9382f9d785310041029d0a0f99312472.png"" rend=""inline""></graphic>
+            </figure>
+            <p rend=""No Spacing"">Where 
+                <formula>
+                    <math xmlns:mml=""http://www.w3.org/1998/Math/MathML"">
+                        <msup xmlns=""http://www.w3.org/1998/Math/MathML"">
+                            <mrow>
+                                <mi>N</mi>
+                            </mrow>
+                            <mrow>
+                                <mi>K</mi>
+                            </mrow>
+                        </msup>
+                    </math>
+                </formula> is the number of words composing the kernel and 
+                <formula>
+                    <math xmlns:mml=""http://www.w3.org/1998/Math/MathML"">
+                        <msubsup xmlns=""http://www.w3.org/1998/Math/MathML"">
+                            <mrow>
+                                <mi>f</mi>
+                            </mrow>
+                            <mrow>
+                                <mi>i</mi>
+                            </mrow>
+                            <mrow>
+                                <mi>K</mi>
+                                <mo>,</mo>
+                                <mi>y</mi>
+                            </mrow>
+                        </msubsup>
+                    </math>
+                </formula> the relative occurrence frequency of the word 
+                <formula>
+                    <math xmlns:mml=""http://www.w3.org/1998/Math/MathML"">
+                        <mi xmlns=""http://www.w3.org/1998/Math/MathML"">i</mi>
+                    </math>
+                </formula> normalized on the kernel 
+                <formula>
+                    <math xmlns:mml=""http://www.w3.org/1998/Math/MathML"">
+                        <mi xmlns=""http://www.w3.org/1998/Math/MathML"">K</mi>
+                    </math>
+                </formula> in the year 
+                <formula>
+                    <math xmlns:mml=""http://www.w3.org/1998/Math/MathML"">
+                        <mi xmlns=""http://www.w3.org/1998/Math/MathML"">y</mi>
+                    </math>
+                </formula>. The kernel entropy measure is computed for seven languages of Google Books corpora. 
+                <hi rend=""italic"">Figure 1</hi> shows the kernel entropy variations normalized with respect to the average value (which change over the languages because kernels of different corpus also have different sizes).
+            </p>
+            <figure>
+                <graphic n=""1002"" width=""16.59113888888889cm"" height=""10.851319444444444cm"" url=""Pictures/c82342d8bfd9d6f4d2aa53ca9b3e2c44.png"" rend=""inline""></graphic>
+            </figure>
+            <p rend=""No Spacing"">Figure 1: Normalized yearly kernel entropy evolution from 1800 to 2009 of seven Google Books corpora: British English, American English, French, German, Italian, Spanish and Russian.</p>
+            <p rend=""No Spacing"">We observe that even if all the seven language have different patterns and inflection points, they tend generally to show an effect of negentropy with increasing years. We note that most languages have a crosspoint in 1905, except for the Russian language, showing variations particularly from 1920 to 1930. We present in Figure 2 the kernel entropy evolution for each language in comparison to the corpus size.</p>
+            <table rend=""rules"">
+                <row>
+                    <cell rend=""No_Spacing"">
+                        <figure>
+                            <graphic n=""1003"" width=""8cm"" height=""5.23cm"" url=""Pictures/7b52952f7cacae749a03fa7476bc5823.png"" rend=""inline""></graphic>
+                        </figure>
+                    </cell>
+                    <cell rend=""No_Spacing"">
+                        <figure>
+                            <graphic n=""1004"" width=""8cm"" height=""5.23cm"" url=""Pictures/5d5242dd47387cc86d72fcbd120df78d.png"" rend=""inline""></graphic>
+                        </figure>
+                    </cell>
+                </row>
+                <row>
+                    <cell rend=""No_Spacing"">
+                        <figure>
+                            <graphic n=""1005"" width=""8cm"" height=""5.23cm"" url=""Pictures/44c2bb28b891812dd67889713eb09444.png"" rend=""inline""></graphic>
+                        </figure>
+                    </cell>
+                    <cell rend=""No_Spacing"">
+                        <figure>
+                            <graphic n=""1006"" width=""8cm"" height=""5.23cm"" url=""Pictures/a9231b34e46635f6c849b195b13ea640.png"" rend=""inline""></graphic>
+                        </figure>
+                    </cell>
+                </row>
+                <row>
+                    <cell rend=""No_Spacing"">
+                        <figure>
+                            <graphic n=""1007"" width=""8cm"" height=""5.23cm"" url=""Pictures/269c781015d6cc5c0781a55e16246a78.png"" rend=""inline""></graphic>
+                        </figure>
+                    </cell>
+                    <cell rend=""No_Spacing"">
+                        <figure>
+                            <graphic n=""1008"" width=""8cm"" height=""5.23cm"" url=""Pictures/8dbd3e0ba863083cc8823e3e2183b5ab.png"" rend=""inline""></graphic>
+                        </figure>
+                    </cell>
+                </row>
+                <row>
+                    <cell rend=""No_Spacing"">
+                        <p rend=""No Spacing""> Legend:</p>
+                        <p rend=""No Spacing"">
+                            <hi rend=""bold"">(1) British / American English</hi>
+                        </p>
+                        <p rend=""No Spacing"">
+                            <hi rend=""bold"">(2) French / Italian</hi>
+                        </p>
+                        <p rend=""No Spacing"">
+                            <hi rend=""bold"">(3) Spanish / German</hi>
+                        </p>
+                        <p rend=""No Spacing"">
+                            <hi rend=""bold"">(4) Russian</hi>
+                        </p>
+                        <p rend=""No Spacing"">
+                            <hi rend=""bold color(0070C0)"">Kernel Entropy: Blue</hi>
+                        </p>
+                        <p rend=""No Spacing"">
+                            <hi rend=""bold color(FF0000)"">Size: Red</hi>
+                        </p>
+                    </cell>
+                    <cell rend=""No_Spacing"">
+                        <figure>
+                            <graphic n=""1009"" width=""8cm"" height=""5.23cm"" url=""Pictures/d225ad506ffb4dc7f94c08c35db5a165.png"" rend=""inline""></graphic>
+                        </figure>
+                    </cell>
+                </row>
+            </table>
+            <p rend=""No Spacing"">Figure 2: Yearly kernel entropy evolution and size evolution from 1800 to 2009 of seven Google Books corpora: British English, American English, French, German, Italian, Spanish and Russian.</p>
+            <p>Google Books corpora may experience sudden changes in composition depending on the year. For example, the addition of scientific literature and medical journals (Pechenick et al., 2015). In this case, the words kernel distribution, even if it is robust because composed of the most stable words, can change for a year which is subject to a change of composition of the corpus. However, this effect is still reduced because the words appearing and disappearing during this transition phase are not taken into account. We observe that the entropy of the kernel seems not to be affected by the size variations of corpora and when it appear to be affected, the direction of variation is unpredictable.</p>
+            <p>The British English and American English are the least affected languages by the negentropic effect. Their kernel entropy increases over time until 1960 (British English) and 1940 (American English). However, American English kernel entropy decrease quickly from 1940 to 1985. We observe that the obtained curve for the French language is similar to the one corresponding to the study of language evolution through 200 years of newspapers written in French despite a different kernel size (Buntinx et al. 2017). </p>
+            <p>Interesting inflection points are detected and should be poignant to specialists of the targeted language. We present in 
+                <hi rend=""italic"">Figure 3</hi> the number of words in the kernel and inflections points for the seven languages.
+            </p>
+            <table rend=""rules"">
+                <row>
+                    <cell>Language</cell>
+                    <cell>Number of words in the kernel</cell>
+                    <cell>Inflection point 1</cell>
+                    <cell>Inflection point 2</cell>
+                </row>
+                <row>
+                    <cell>British English</cell>
+                    <cell>82’332</cell>
+                    <cell>1959</cell>
+                    <cell></cell>
+                </row>
+                <row>
+                    <cell>American English</cell>
+                    <cell>44’949</cell>
+                    <cell>1931</cell>
+                    <cell>1985</cell>
+                </row>
+                <row>
+                    <cell>French</cell>
+                    <cell>79’575</cell>
+                    <cell>1825</cell>
+                    <cell>1885</cell>
+                </row>
+                <row>
+                    <cell>German</cell>
+                    <cell>36’660</cell>
+                    <cell>1850</cell>
+                    <cell>1946</cell>
+                </row>
+                <row>
+                    <cell>Italian</cell>
+                    <cell>30’996</cell>
+                    <cell>1983</cell>
+                    <cell></cell>
+                </row>
+                <row>
+                    <cell>Spanish</cell>
+                    <cell>25’582</cell>
+                    <cell>1995</cell>
+                    <cell></cell>
+                </row>
+                <row>
+                    <cell>Russian</cell>
+                    <cell>5’123</cell>
+                    <cell>1920</cell>
+                    <cell>1988</cell>
+                </row>
+            </table>
+            <p rend=""No Spacing"">Figure 3: Number of words in the kernel and kernel entropy inflection points for the seven Google Books corpora: British English, American English, French, German, Italian, Spanish and Russian.</p>
+            <p>Furthermore, it is possible to show the languages proximity in terms of kernel entropy evolution behavior through the determination of a distance based on kernel entropy correlations. A projection of the resulting matrix distance using PCA is presented in Figure 4.</p>
+            <p rend=""Plain Text"">We observe that British English and American English are represented together to the left of the plan because they have a relative opposite pattern with respect to other languages. Russian is also particular because of the brutal effect of the negentropy observed between around 1920 and the sudden increase at the end of the 1980s. The last four languages, French, Spanish, German and Italian share a more similar behavior and are represented in the right-bottom part of the plan. </p>
+            <p rend=""Plain Text"">Although much more in-depth investigation must be done, it is reasonable to make the hypothesis of different internal and external factors for explaining these various patterns. The Russian case clearly invites to investigate correlations between linguistic policies during the Sovietic period and their actual effects of the Russian language.</p>
+            <p rend=""Plain Text"">The similarity between French, German, Italian and Spanish pushes in the direction for similar processes of standardization, potentially due to linguistic convergence at national levels suppressing some regional particularities. In contrast, American and British English evolution is likely to be explained through the particular histories of the respective English-speaking populations and their relation to the rest of world. The progressive rise of English as a global language, spoken and written by many non-native speakers, is certainly playing a role in the shaping these particular curves. </p>
+            <figure>
+                <graphic n=""10010"" width=""14.515041666666667cm"" height=""10.489847222222222cm"" url=""Pictures/20159d811a1630a94bf5b3e732e5273d.png"" rend=""inline""></graphic>
+            </figure>
+            <p rend=""No Spacing"">Figure 4: PCA projection of distance matrix using kernel entropy correlation-based distance for Google Books corpora: British English, US English, French, German, Italian, Spanish and Russian.</p>
+        
+        <back>
+            <div type=""bibliogr"">
+                <listbibl>
+                    Bibliography
+                    <bibl rend=""No Spacing"">C. Bentz, D. Alikaniotis, M. Cysouw and R. Ferrer-i-Cancho. The Entropy of Words—Learnability and Expressivity across More Than 1000 Languages. Entropy, 19(6), 275, 2017.</bibl>
+                    <bibl rend=""No Spacing"">V. Buntinx, C. Bornet and F. Kaplan. Studying Linguistic Changes on 200 Years of Newspapers. 
+                        <hi rend=""italic"">DH2016</hi>, Kraków, Poland, July 11-16, 2016. 
+                    </bibl>
+                    <bibl rend=""No Spacing"">V. Buntinx
+                        <hi rend=""infoscience_authors"" xml:space=""preserve"">, </hi>F. Kaplan 
+                        <hi rend=""infoscience_authors"" xml:space=""preserve"">and </hi>A. Xanthos 
+                        <hi rend=""infoscience_authors"">(Dirs.).</hi> Analyse multi-échelle de n-grammes sur 200 années d'archives de presse. Thèse EPFL, n° 8180, 2017.
+                    </bibl>
+                    <bibl rend=""No Spacing"">R. Ferrer-i-Cancho. Optimization models of natural communication. Journal of Quantitative Linguistics, 1-31, 2017.</bibl>
+                    <bibl rend=""No Spacing"">U. Fries and H. M. Lehmann. The style of 18th century english newspapers: Lexical diversity. News Discourse in Early Modern Britain, pages 91–104, 2006.</bibl>
+                    <bibl rend=""No Spacing"">P. Juola. Using the Google N-Gram corpus to measure cultural complexity. Literary and linguistic computing, 28(4), 668-675, 2013.</bibl>
+                    <bibl rend=""No Spacing"">F. Kaplan. Linguistic capitalism and algorithmic mediation. Representations, 127 (1):57–63, 2014.</bibl>
+                    <bibl rend=""No Spacing"">S. Kirby. Spontaneous evolution of linguistic structure-an iterated learning model of the emergence of regularity and irregularity. IEEE Transactions on Evolutionary Computation, vol. 5, no 2, p. 102-110, 2001.</bibl>
+                    <bibl rend=""No Spacing"">G. I. Lyse and G. Andersen. Collocations and statistical analysis of n-grams. Exploring Newspaper Language: Using the Web to Create and Investigate a Large Corpus of Modern Norwegian. Studies in Corpus Linguistics, John Benjamins Publishing, Amsterdam, pages 79–109, 2012.</bibl>
+                    <bibl rend=""No Spacing"">J. B. Michel, Y. K. Shen, A. P. Aiden, A. Veres, M. K. Gray, J. P. Pickett, 
+                        <name>D. Hoiberg, D. Clancy, P. Norvig, J. Orwant, S. Pinker, M. A. Nowak</name> and E. Lieberman-Aiden. Quantitative analysis of culture using millions of digitized books. 
+                        <hi rend=""italic"">science</hi>, 
+                        <hi rend=""italic"">331</hi>(6014), 176-182, 2011.
+                    </bibl>
+                    <bibl rend=""No Spacing"">M. A. Montemurro and D. H. Zanette. Universal entropy of word ordering across linguistic families. PLoS One, 6(5), e19875, 2011.</bibl>
+                    <bibl rend=""No Spacing"">E. A. Pechenick, C. M. Danforth and P. S. Dodds. Characterizing the Google Books corpus: Strong limits to inferences of socio-cultural and linguistic evolution. PloS one, 10(10), e0137041, 2015.</bibl>
+                    <bibl rend=""No Spacing"">Y. Rochat, M. Ehrmann, V. Buntinx, C. Bornet and F. Kaplan. Navigating through 200 years of historical newspapers. In iPRES 2016, numéro EPFL-CONF-218707, 2016.</bibl>
+                    <bibl rend=""No Spacing"">M. Tamariz and S. Kirby. The cultural evolution of language. Current Opinion in Psychology 8: 37-43, 2016.</bibl>
+                    <bibl rend=""No Spacing"">I. Westin and C. Geisler. A multi-dimensional study of diachronic variation in british newspaper editorials. International Computer Archive of Modern and Medieval English, (26):133–152, 2002.</bibl>
+                </listbibl>
+            </div>
+        </back>
+    </text>",xml,Creative Commons Attribution 4.0 International,,google books;kernel entropy;linguistic evolution,English,computer science;corpora and corpus activities;english;linguistics;multilingual / multicultural approaches;text analysis
+6358,2018 - Mexico City,Mexico City,Puentes/Bridges,2018-01-01T00:00:00Z,ADHO,ADHO;EHD,El Colegio de México;Universidad Nacional Autónoma de México (UNAM) (National Autonomous University of Mexico),Mexico City,,Mexico,https://dh2018.adho.org/,Digital Humanities Storytelling Heritage Lab,,Mariana Ruiz Gonzalez Renteria;Angélica Amezcua,poster / demo / art installation,"<text>
+        
+            <p rend=""Cuerpo"">We are proposing to develop a storytelling tool that integrates multimodal mapping for use in language classrooms. Through a Digital Humanities approach on Storytelling Labs, we will be integrating the App StoryMapJS in order to create a storymap of their cultural heritages. This DH tool is very accessible and it will allow the student to engage mapping narrative through images, videos, music, writing and maps; so the heritage learners will interpret space by their personal print, and it will let to other readers from the course or outside the course, to confront other sociopolitical contexts.</p>
+            <p rend=""Cuerpo"">The DH Storytelling Heritage Lab will reforge the spatial, and emotional relation from our heritage learners as individuals that can create their own mapping. In a pedagogical perspective the heritage learner will improve their writing, oral, listening and reading skills in Spanish. In a linguistic research approach we will analyze the outcome of the students, a qualitative discourse analysis. </p>
+            <p rend=""Cuerpo"">The workshop will be divided in two sections: the narrative without the DH tool: the student will engaged their narratives through family albums, objects, drawings, and recordings. The second part is to transform the storytelling into a digital narrative with the StoryMapJS. At the end of the Lab the student will have the opportunity to exhibit their narratives maps. The final stories will be compiled in a single web page for their distribution in different areas.</p>
+            <p rend=""Cuerpo"">The idea to expand the personal stories and experience in the US of the heritage learners is essential for the course; so the learners engaged Spanish in the sociopolitical context of bilingualism of their own families and community. Their narratives, our narratives, will enrich the course. </p>
+        
+    </text>",xml,Creative Commons Attribution 4.0 International,,mapping;spanish heritage teaching;storyteling,English,"audio, video, multimedia;creative and performing arts, including writing;english;linguistics;multilingual / multicultural approaches;spanish and spanish american studies;teaching, pedagogy, and curriculum"
+7848,2015 - Sydney,Sydney,Global Digital Humanities,2015-01-01T00:00:00Z,ADHO,ADHO,Western Sydney University,Sydney,,Australia,https://web.archive.org/web/20190121165412/http://dh2015.org/,TEI HackAThon: Building Tools for TEI Collections,https://github.com/ADHO/dh2015/blob/master/xml/CUMMINGS_James_C__TEI_HackAThon__Building_Tools_for_TEI.xml,James C. Cummings,workshop / tutorial,"<?xml version=""1.0"" encoding=""UTF-8""?>
+<TEI xmlns=""http://www.tei-c.org/ns/1.0"">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>TEI HackAThon: Building Tools for TEI Collections</title>
+                <author>
+                    <persName>
+                        <surname>Cummings</surname>
+                        <forename>James C.</forename>
+                    </persName>
+                    <affiliation>University of Oxford, United Kingdom</affiliation>
+                    <email>James.Cummings@it.ox.ac.uk</email>
+                </author>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+                    <date>2014-12-19T13:50:00Z</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Paul Arthur, University of Western Sidney</publisher>
+                <address>
+                    <addrLine>Locked Bag 1797</addrLine>
+                    <addrLine>Penrith NSW 2751</addrLine>
+                    <addrLine>Australia</addrLine>
+                    <addrLine>Paul Arthur</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Converted from a Word document </p>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <appInfo>
+                <application ident=""DHCONVALIDATOR"" version=""1.9"">
+                    <label>DHConvalidator</label>
+                </application>
+            </appInfo>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords scheme=""ConfTool"" n=""category"">
+                    <term>Paper</term>
+                </keywords>
+                <keywords scheme=""ConfTool"" n=""subcategory"">
+                    <term>Pre-Conference Workshop and Tutorial (Round 2)</term>
+                </keywords>
+                <keywords scheme=""ConfTool"" n=""keywords"">
+                    <term>TEI</term>
+                    <term>hacking</term>
+                    <term>text analysis</term>
+                    <term>encoding</term>
+                </keywords>
+                <keywords scheme=""ConfTool"" n=""topics"">
+                    <term>encoding - theory and practice</term>
+                    <term>information retrieval</term>
+                    <term>software design and development</term>
+                    <term>text analysis</term>
+                    <term>xml</term>
+                    <term>standards and interoperability</term>
+                    <term>English</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <p>The Guidelines of the Text Encoding Initiative Consortium (TEI) have been used throughout numerous disciplines of the field of digital humanities to mark up digital texts for many years. Doing so has produced huge numbers of TEI collections underlying leading digital editions, projects, and other resources. These digital texts are most often transformed for display as websites, camera-ready copy, or for import into other systems for processing, analysis, or visualization. While the TEI Consortium provides XSLT stylesheets for transformation to and from many formats, and both commercial and open-source software is TEI-aware, there is little standardisation across multiple projects in implementation of querying, searching, analysing, and visualising TEI-encoded texts. The proposals for documentation of intended processing models that forms part of the TEI Simple project should eventually help standardise the recording of this information. TEI encoding is taught frequently in the digital humanities, but the development of TEI processing systems is often approached by developers unfamiliar with the TEI either with trepidation or ignorance of its potential complications. This HackAThon is open to developers with very little experience with TEI (but with significant programming experience) and TEI also experts (with a little programming experience) as well as those who have experience in both. It is hoped that the developers and TEI experts will be able to share their expertise in a knowledge-exchange hacking event. It is intended to be both fun and fruitful. </p>
+            <p>
+                <hi rend=""bold"">Participants and Organisation</hi>
+            </p>
+            <p>The HackAThon will be organised as an unconference-style event. Applicants will be asked for basic details of their experience and possible contribution to the HackAThon. Decisions will be made by an international programme committee of TEI experts based on the criteria of getting both a sufficient and variety of expertise (technical and TEI), interest in challenges similar to those proposed, as well as geographical, cultural, disciplinary, and gender balance. </p>
+            <p>A mailing list for HackAThon participants will be created to discuss in advance the possible challenges that might be undertaken. This will allow some preseeding of ideas and potentially people to start work or familiarise themselves with particular aspects of the TEI or technical solutions. </p>
+            <p>
+                <hi rend=""bold"">Challenges</hi>
+            </p>
+            <p>Possible challenges that this HackAThon will focus on include: </p>
+            <p> • Development of a library of standard functions for the basic interrogation, analysis, or extracting of data from collections of TEI documents.</p>
+            <p> • A server platform that provides access to those functions through a RESTful interface.</p>
+            <p> • Integration of these with existing popular software (e.g., editors, processing infrastructures, etc.).</p>
+            <p>These are intended as a set of potential interlinking challenges suitable for a range of skill levels and familiarity with TEI. They also potentially coordinate well with developments in the TEI community such as the TEI Simple project and the TAPAS repository. The potential challenges and possible implementations of them will be openly discussed on the HackAThon’s mailing list. All outputs will be made freely available under open licenses. </p>
+            <p>
+                <hi rend=""bold"">HackAThon Outline</hi>
+            </p>
+            <p>The HackAThon will be organised with an unconference-style pre-DH2015 mailing list discussion, followed by finalising on the workshop day the precise groups of participants and challenges they want to work on. Most of the rest of the day is spent working in these groups, with a review midway through of what the groups are working on. The day concludes with reporting back, demonstrating the work they have done, and discussing next steps (potentially with TEIC support). </p>
+            <p>Morning</p>
+            <p> • 
+                <hi rend=""bold"">09:30–10:30—</hi>Introduction and coffee, finalise groups and challenges. 
+            </p>
+            <p> • 
+                <hi rend=""bold"">10:30–12:30—</hi>Groups start work (break-out sessions).
+            </p>
+            <p>Lunch</p>
+            <p> • 
+                <hi rend=""bold"">12:30–13:30—</hi>Lunch.
+            </p>
+            <p>Afternoon</p>
+            <p> • 
+                <hi rend=""bold"">13:30–14:00—</hi>Groups briefly report on work done so far.
+            </p>
+            <p> • 
+                <hi rend=""bold"">14:00–16:00—</hi>Group work continues (break-out sessions). 
+            </p>
+            <p> • 
+                <hi rend=""bold"">16:00–17:00—</hi>Regroup, report back and show work, plan for next steps, complete any DH2015 workshop evaluation form. 
+            </p>
+            <p>
+                <hi rend=""bold"">Programme Committee</hi>
+            </p>
+            <p>The programme committee will decide on submitted applications (trying to err on the side of inclusion) and will include all of the TEI experts mentioned below as well as Hugh Cayless (as TEI Technical Council chair), Marjorie Burghart (as a representative of the TEI board), and Magdalena Turska (as a representative of the TEI Simple project). </p>
+            <p>
+                <hi rend=""bold"">Organisers and TEI Experts</hi>
+            </p>
+            <p>The organisers of this proposal all have extensive experience in leading and coordinating hands-on workshops focused on TEI or related theories and technologies. They will be available during the workshop together with other TEI and DH experts who will be attending DH 2015 and confirmed their interest to take part in the HackAThon. These TEI experts (and developers in their own right) include:</p>
+            <p>
+                <hi rend=""italic"">James Cummings</hi> (james.cummings@it.ox.ac.uk), senior digital research specialist in Academic IT at University of Oxford’s IT Services, where he helps academics plan research projects with digital aspects, is the department’s liaison for digital humanities activities, and is a director of the annual Digital Humanities at Oxford Summer School. He has built many TEI-based websites, such as William Godwin’s Diary, which uses TEI XML served from an eXist XML database to power a datacentric view using jQuery DataTables of the information that this 48-year diary contains. He will be presenting a paper at DH2015 on the output of the TEI Simple project, which includes new proposals for documenting intended processing models. He is an elected member of the TEI Technical Council. 
+            </p>
+            <p>
+                <hi rend=""italic"">Syd Bauman</hi> (s.bauman@neu.edu) is the senior XML programmer analyst at Northeastern University Digital Scholarship Group, primarily focused on the Women Writers Project. He has been involved with structured text representation since before SGML, and TEI since 1990. Syd frequently teaches TEI encoding, TEI schema creation, and XSLT workshops. He is an elected member of the TEI Technical Council. 
+            </p>
+            <p>
+                <hi rend=""italic"">Martin Holmes</hi> (mholmes@uvic.ca) is a programmer and consultant for the Humanities Computing and Media Centre and the University of Victoria. He is an elected member of the TEI Technical Council. 
+            </p>
+            <p>
+                <hi rend=""italic"">Conal Tuohy</hi> (conal.tuohy@gmail.com) is an independent digital humanities software developer living in Brisbane, Australia. He has previously been an elected member of the TEI Technical Council. 
+            </p>
+            <p>Target Audience</p>
+            <p>DH practitioners and developers interested in experimenting with TEI, DH technical developers, experienced XML users, and TEI users with exciting ideas.</p>
+            <p>
+                <hi rend=""bold"">Expected Number of Participants</hi>
+            </p>
+            <p>10–20; ~25 max, including four TEI experts. </p>
+            <p>
+                <hi rend=""bold"">Rooms and Equipment</hi>
+            </p>
+            <p> • One room to host up to 25 people (ideally ability to break up into small groups with individual tables, or access to public space where small groups can work together quietly).</p>
+            <p> • Wifi.</p>
+            <p> • Projector.</p>
+            <p> • Lots of power sockets.</p>
+            <p>Programme Committee </p>
+            <p> • Hugh Cayless (TEI Technical Council chair).</p>
+            <p> • Marjorie Burghart (TEI board).</p>
+            <p> • James Cummings (TEI Technical Council). </p>
+            <p> • Martin Holmes (TEI Technical Council). </p>
+            <p> • Syd Bauman (TEI Technical Council). </p>
+            <p> • Conal Tuohy (independent consultant). </p>
+            <p> • Magdalena Turska (DiXiT Fellow; TEI Simple developer).</p>
+        </body>
+    </text>
+</TEI>",xml,Creative Commons Attribution 4.0 International,,encoding;hacking;tei;text analysis,English,encoding - theory and practice;english;information retrieval;software design and development;standards and interoperability;text analysis;xml
+9425,2020 - Ottawa,Ottawa,carrefours / intersections,2020-01-01T00:00:00Z,ADHO,ADHO,Carleton University;Université d'Ottawa (University of Ottawa),Ottawa,Ontario,Canada,https://dh2020.adho.org/,"Project Twitter Literature: Scraping, Analyzing, and Archiving Twitter Data in Literary Research",,Christian Howard-Sukhil,"paper, specified ""short paper""","Project Twitter Literature (TwitLit), seeks to address a growing gap in the literary-historical record by establishing a consistent, rigorous, and ethical method for scraping and cleaning up Twitter data for the use of humanities scholars. In particular, my project explores the growing community of amateur writers who are using Twitter as a means of publication and dissemination for their literary output. There are three parts to my project: the research findings related to the global literary community on Twitter, the tools and resources developed as part of the project and made openly available to other scholars, and partnership with a university library to ensure the long-term preservation of the collected data.The data that I have collected shows that social media is altering literary practices by providing a space for amateur writers to publish, disseminate, and receive feedback from a global community of writers. Preliminary figures put the number of active Anglophone writers using Twitter as a publication platform for their literary output at over 1 million users per year since 2015, and writers working in non-English languages on Twitter raise these numbers even higher. This practice is changing how literature is produced, published, and shared. Readerships too are changing, for rather than being tied to print subscriptions or access to physical books, audiences of social media literature are based on online communities and tied to the costs of physical devices and internet access.My presentation will showcase these research findings in order to highlight the importance and necessity of social media archival work. In so doing, I will discuss how I collected the data using a Python script (co-developed by myself and several other scholars), challenges of cleaning up and visualizing this data (using ArcGIS and tools developed by Documenting the Now), and ethical best-practices for using social media data in research. Information relating to this process – including detailed instructions, the Python scripts used to collect Twitter data, and a list of resources – are free and openly accessible on the project’s website (www.twit-lit.com) and GitHub repository (https://github.com/TwitLit/TwitLitSource). Other scholars are invited to use these scripts and other resources to collect their own social media data.Additionally, my project has attempted to plan for the long-term preservation of the over eight million tweets that I have collected. This preservation has been made difficult by Twitter’s strict Developer Policy and Agreement, which prevents individuals from keeping or disseminating large data sets for more than 30 days. The only exception to this policy is made on behalf of academic institutions, which may store Twitter data for unlimited amounts of time on behalf of academic research. The Project TwitLit project thus presents best-practices for establishing a working relationship with university libraries for storing and disseminating Twitter data in a way that is both in accord with Twitter’s legal restrictions and responsive to the needs of scholars. In short, Project TwitLit provides a case-study of a growing community on Twitter while simultaneously developing a set of tools and guidelines for other scholars seeking to engage in similar work. In December 2017, the Library of Congress, which began archiving Twitter in 2010, announced that it would no longer collect all Tweets; instead, Tweets produced after December 2017 would only be collected on a selective basis. There are no other ongoing, systematic efforts to collect and preserve this digital material. See Library of Congress, “Update on the Twitter Archive at the Library of Congress” (December 2017). For more information related to the challenges of collecting and storing Twitter data, please see Christian Howard, “Studying and Preserving the Global Networks of Twitter Literature,” in Post-45.",txt,This text is republished here with permission from the original rights holder.,,data curation;data preservation;globality;social media,English,contemporary;digital archiving;english;global;literary studies;media studies;social media analysis and methods
+11736,2022 - Tokyo,Tokyo,Responding to Asian Diversity,2022-01-01T00:00:00Z,ADHO,ADHO,,Tokyo,,Japan,https://dh2022.adho.org/,"Web Services for Voyant: LINCS, Voyant and NSSI: LINCS, Voyant and NSSI",,Geoffrey Martin Rockwell;Natalie Hervieux;Huma Zafar;Kaylin Land;Andrew MacDonald;Denilson Barbosa;Luciano Frizzera;Mihaela Ilovan;Susan Brown,"paper, specified ""long paper""","<text xmlns=""http://www.tei-c.org/ns/1.0"" xml:lang=""en"">
+        <body>
+            <div type=""div1"" rend=""DH-Heading1"">
+                <head>Introduction</head>
+                <p style=""text-align: left; "">It is difficult to identify named entities like people and places in long texts and even more difficult to connect the entities that you find to the rich network of information available on the web. In this paper we describe work supported by the LINCS (Linked Infrastructure for Networked Cultural Scholarship) project to make named entity recognition available to scholars through Voyant and its extension Spyral. In this talk we will:</p>
+                <p style=""text-align: left; "">First, describe the development of NSSI, a set of named entity recognition (NER) tools that are also available as web services for other tools like Voyant to use.</p>
+                <p style=""text-align: left; "">Second, describe how Voyant can use NSSI as a web service to process a text by adding named entity recognition.</p>
+                <p style=""text-align: left; "">Third, describe how Spyral, the notebook programming extension of Voyant, can be used for more sophisticated control of the process of named entity recognition, extraction, and use in Voyant. </p>
+                <p style=""text-align: left; "">Finally, we will conclude by discussing how NSSI and Spyral will be linked into the LINCS infrastructure to allow scholars to connect their enriched data to that of others.</p>
+                <p style=""text-align: left; "">Background on LINCS</p>
+                <p style=""text-align: left; "">Humanists tend to be interested in named people, named places and particular organizations over time. NER tools let humanists identify mentions in text referring to the people, places, organizations and other entities discussed in large collections without having to manually comb through them. Good tools like the Stanford Named Entity Recognizer (Finkel et al. 2005) have been available for some time, but are difficult to use if you are not familiar with command line tools and not connected with other resources.</p>
+                <p style=""text-align: left; "">The LINCS project, led by Susan Brown at the University of Guelph, is funded by the Canadian Foundation for Innovation to develop shared infrastructure for linked open data. To that end LINCS is working with teams at the University of Alberta and McGill University to develop new NER tools and to connect them to easy-to-use text analysis environments like Voyant.</p>
+            </div>
+            <div type=""div1"" rend=""DH-Heading1"">
+                <head>NSSI</head>
+                <p style=""text-align: left; "">NSSI, or NERVE Secure Scalable Infrastructure, is an application that bundles natural language processing tools, making them simple to use and combine into workflows common to the digital humanities (Zafar 2021). This framework was developed as part of the LINCS project, with the intent to decouple the backend NER tools from the existing Named Entity Recognition Vetting Environment (NERVE) user interface developed by the Canadian Writing Research Collaboratory. This separation allows us to continue using those NER services for NERVE, while making them accessible to other tools such as Voyant and Spyral.</p>
+                <p style=""text-align: left; "">NSSI’s design focuses on modularity, with each tool connected as a service that can be used individually or within a larger set of steps. For NER in particular, we have integrated Stanford NER which otherwise requires programming knowledge to use, since it does not come with its own API. With NSSI, a tool such as Spyral can make an API call that includes input text or XML and retrieve the named entities when processing completes. In the presentation we will briefly describe the NSSI infrastructure.</p>
+                <figure>
+                    <graphic n=""1001"" width=""16.002cm"" height=""10.100027777777777cm"" url=""Pictures/3f40d77e17c9bd0bbd421b51e7b72b5c.png"" rend=""inline""/>
+                    <head>Figure 1: Experimental RezoViz NER Interface in Voyant</head>
+                </figure>
+            </div>
+            <div type=""div1"" rend=""DH-Heading1"">
+                <head>Voyant and Spyral</head>
+                <p style=""text-align: left; "">Voyant Tools is a suite of text analysis and visualization tools that are widely used with over 100,000 users in the last six months. The tools are available in the browser so they don’t need to be installed, though you can download them and run them locally (Rockwell & Sinclair 2016). In the presentation we will show how Voyant can call the NER tools in NSSI and display the found entities as a list for further use. We will also describe the usability testing conducted on ResoViz through the LINCS project.</p>
+                <figure>
+                    <graphic n=""1002"" width=""16.002cm"" height=""10.100027777777777cm"" url=""Pictures/cd500b7e6df44dca3c7896f1864d715a.png"" rend=""inline""/>
+                    <head>Figure 2: ResoViz Social Network Visualization</head>
+                </figure>
+                <p style=""text-align: left; "">Voyant is also being extended with a notebook programming environment called Spyral (Land et al. 2021; Rockwell et al. 2021). Spyral is, like Observable, an in-browser notebook programming environment that uses JavaScript as the programming language. The difference between Spyral and other notebook environments like Mathematica or Google Colab is that a) the notebooks are maintained on the server so that, again, there is no installation needed and b) Spyral is an extension to Voyant. This means that you can save what you see in Voyant as a notebook with an interactive panel of results embedded in the notebook. Then you can document your results, add more interactive panels, and process the results. In the presentation we will show how Spyral can be used to extend the work with NSSI possible with Voyant and to edit and document results.</p>
+            </div>
+            <div type=""div1"" rend=""DH-Heading1"">
+                <head>Next Steps</head>
+                <p style=""text-align: left; "">The paper will conclude by describing the next steps in the larger project, and those are to allow users to connect named entities in their texts to other data about the entities available through the LINCS triple store and other open data resources like Wikidata (Vrandečić 2012). The ultimate goal is to provide scholars with linked infrastructure where data about entities like people or novels can be annotated and connected with that of other projects.</p>
+            </div>
+            <div type=""div1"" rend=""DH-Heading1"">
+                <head>Links</head>
+                <p style=""text-align: left; "">Google Colaboratory (Colab): https://colab.research.google.com/ </p>
+                <p style=""text-align: left; "">LINCS project: https://lincsproject.ca/</p>
+                <p style=""text-align: left; "">Stanford Named Entity Recognizer: https://nlp.stanford.edu/software/CRF-NER.html </p>
+                <p style=""text-align: left; "">Voyant Tools: https://voyant-tools.org and Spyral: https://voyant-tools.org/spyral</p>
+            </div>
+        </body>
+        <back>
+            <div type=""bibliogr"">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style=""text-align: left; "">Finkel, J. R., Grenager, T., and Manning C. (2005). Incorporating Non-local Information into Information Extraction Systems by Gibbs Sampling. Proceedings of the 43nd Annual Meeting of the Association for Computational Linguistics (ACL 2005), pp. 363-370. http://nlp.stanford.edu/~manning/papers/gibbscrf3.pdf (accessed 21 May 2022).</bibl>
+                    <bibl style=""text-align: left; "">Zafar, H. (2021). Linked Data Conversion using Microservices [video file]. Zenodo. https://doi.org/10.5281/zenodo.6551465 (accessed 21 May 2022).</bibl>
+                    <bibl style=""text-align: left; "">Land, K., MacDonald, A. and Rockwell, G. (2021). Spyral Notebooks as a Supplement to Voyant Tools. CSDH-SCHN 2021 conference online. http://dx.doi.org/10.17613/2bsr-xp53 (accessed 21 May 2022).</bibl>
+                    <bibl style=""text-align: left; "">Rockwell, G. and Sinclair, S. (2016). Hermeneutica: Computer-Assisted Interpretation in the Humanities. Cambridge, Massachusetts, MIT Press.</bibl>
+                    <bibl style=""text-align: left; "">Rockwell, G., Land, K., and MacDonald, A. (2021). Social Analytics Through Spyral. Pop! Public. Open. Participatory. no. 3 (2021-10-31). https://popjournal.ca/issue03/rockwell (accessed 21 May 2022).</bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""Subtle_Reference"" xml:space=""preserve"">Vrandečić, D. (2012). Wikidata: A new platform for collaborative data collection. In </hi>Proceedings of the 21st international conference on world wide web, pp. 1063-1064.
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+
+",xml,This text is republished here with permission from the original rights holder.,,infrastructure;named entity recognition;text analysis;text visualization;web services,English,"20th century;contemporary;english;humanities computing;literary studies;natural language processing;north america;software development, systems, analysis and methods"
+11841,2022 - Tokyo,Tokyo,Responding to Asian Diversity,2022-01-01T00:00:00Z,ADHO,ADHO,,Tokyo,,Japan,https://dh2022.adho.org/,A code for Murakami’s Tokyo: spatial diversity analyzed by digital means,,Simone Abbiati,"paper, specified ""short paper""","<text xmlns=""http://www.tei-c.org/ns/1.0"" xml:lang=""en"">
+        <body>
+            <p style=""text-align: left; "">From Shibuya ward with its intense nightlife in 
+                <hi rend=""italic"" xml:space=""preserve"">After Dark </hi>and the commercial area of Kichijōji in 
+                <hi rend=""italic"">Sputnik Sweetheart</hi>, to Setagaya’s highway in 
+                <hi rend=""italic"">1Q84</hi>, Bunkyo's Rikugien Garden in 
+                <hi rend=""italic"">Norwegian Wood</hi>, Aoyama Cemetery in 
+                <hi rend=""italic"">South of the Border, West of the Sun</hi>, and the Pacific Hotel near Shinagawa station in 
+                <hi rend=""italic"" xml:space=""preserve"">The Wind-Up Bird Chronicle – </hi>Haruki Murakami, arguably the most famous Japanese contemporary writer, has left his mark on the capital of Japan both within and outside of fiction. In his fourteen novels, Tokyo’s thousand faces appear in great detail, even though they are filtered through a wide variety of characters’ perspectives and reconceptualized by magical realism. Regardless of the literary space abstraction, Seymour Chatman’s theory affirms that literary characters are cognitively experienced in the same way a reader would get to know a person in real life; and Akhil Gupta’s research argues the existence of a link between spatial perception and cultural identity. This would suggest that the spatial conceptualization performed by literary characters entail a 
+                <hi rend=""italic"" xml:space=""preserve"">forma vivendi </hi>ascribable to a certain cultural environment. But is it really that simple? Does an identifiable Tokyo's 
+                <hi rend=""italic"">genius loci</hi> emerge from Murakami’s novels? In the wake of Computational Criticism, we will use code-writing to help us get a glimpse of the characters’ cognitive mapping processes and thus delve into a literary-cultural analysis, bearing in mind that imaginative literature is the result of layers of mediation and re-presentation causing straightforward cultural seeping-through to be questioned. In order to do this, we present a Python script able to extract spatial data concerning the cognitive mapping of Murakami’s fictional figures. 
+            </p>
+            <p style=""text-align: left; ""> In fact, in the last few years, literary spatiality has emerged both from a theoretical and a digital perspective. In light of this, the results given by the software application will be discussed in order to reflect on Tokyo as an example of Japanese urbanisation, and to identify pros and cons of digitally-assisted interpretive acts regarding spatiality. Lastly, in treating Murakami’s fictional spatiality with digital tools, particular attention will be given to recent criticism of distant reading and corpus selection. </p>
+            <p style=""text-align: left; ""> From a technical perspective, the presented script will use Natural Language Processing to tokenize, tag, and parse a selected corpus from of Murakami's novels to eventually perform Named Entity Recognition. The script will identify when movement verbs present fictional characters as subjects, leading to the extraction of the starting points and destinations of some of their itineraries. Thus, it will be possible to identify meaningful landmarks and itineraries of some characters, leading to the schematization of their cognitive maps. </p>
+            <p style=""text-align: left; ""> The spatial structures extracted by digital means will be interpreted in view of cultural differences that Eastern and Western societies present as far as living in metropolitan areas is concerned. Spurious results (counterfactual spatial indications, and phraseological expressions, among others) will also be considered from a technical perspective. Lastly, with respect to the multilingual DH approach, the analysis will be conducted onto the English corpus but a few observations the original text in Japanese language will be presented, thus suggesting new possible research paths.</p>
+        </body>
+        <back>
+            <div type=""bibliogr"">
+                <listBibl>
+                    <head>Bibliography</head>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Algee-Hewitt, M.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2017). Canon/Archive: Studies in Quantitative Formalism from the Stanford Literary Lab, N+1 Foundation</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Bode K.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2018). A World of Fiction: Digital Collections and the Future of Literary History, University of Michigan Press.</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Bode, K.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2020). </hi>
+                        <hi rend=""italic"" style=""font-family:Helvetica Neue;font-size:9pt"">«Why You Can</hi>
+                        <hi rend=""italic"" style=""font-family:Arial Unicode MS;font-size:9pt"">’</hi>
+                        <hi rend=""italic"" style=""font-family:Helvetica Neue;font-size:9pt"">t Model Away Bias»</hi>
+                        , Modern Language Quarterly, 81, 95-124
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Bushell, S.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2020). Reading and Mapping Fiction: Spatialising the Literary Text, Cambridge University Press</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Chatman, S.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2019). Story and Discourse: Narrative Structure in Fiction and Film, Cornell University Press</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Cooper, D. and Gregory, I.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2011) «</hi>
+                        <hi rend=""italic"" style=""font-family:Helvetica Neue;font-size:9pt"">Mapping the English Lake District: A Literary GIS»</hi>
+                        , Transactions of the Institute of British Geographers 36, no. 1, 89–108
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Cooper, D., Donaldson, C., and Murrieta-Flores, P.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2016). Literary Mapping in the Digital Age, Burlington</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Gitelman L.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2013). Raw Data Is an Oxymoron, MIT Press</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Gupta, A. and Ferguson, J.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (1992). «</hi>
+                        <hi rend=""italic"" style=""font-family:Helvetica Neue;font-size:9pt"">Space, Identity, and the Politics of Difference»</hi>
+                        , in Cultural Anthropology, Vol. 7, No. 1, pp. 6-23
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Herman, D.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2002). Story logic. Problems and possibilities of narrative, University of Nebraska Press.</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Heuser, R., Moretti, M., and Steiner, E.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2016). </hi>
+                        <hi rend=""italic"" style=""font-family:Helvetica Neue;font-size:9pt"">«The Emotions of London»</hi>
+                        , Pamphlets of the Stan- ford Literary Lab
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve"">Hillman, J. </hi>
+                        (1992). The Thought of the Heart and the Soul of the World, Spring
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Loper, E., Klein, E., Bird, S</hi>
+                        . (2009). Natural Language Processing with Python, O’Reilly Media
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Marie-Laure Ryan, et al.</hi>
+                        (2016). Narrating Space/spatializing Narrative: Where Narrative Theory and Geography Meet, Ohio State University Press
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Moretti F.</hi>
+                        (1997). Atlas of the European Novel, Einaudi
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Moretti, F.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2013). Distant Reading, Verso</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Nan Z, D.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2019).</hi>
+                        <hi rend=""italic"" style=""font-family:Helvetica Neue;font-size:9pt"">«The Computational Case against Computational Literary Studies»</hi>
+                        , in Critical Inquiry, 45
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve"">Schmid, C., Karaman, O., Hanakata, N. C., Kallenberger, P., Kockelkorn, A., Sawyer, L., Streule, M., & Wong, K. P. </hi>
+                        (2018). Towards a new vocabulary of urbanisation processes: A comparative approach, Urban Studies, 55(1), 19–52
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Sorensen, A.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (1999). </hi>
+                        <hi rend=""italic"" style=""font-family:Helvetica Neue;font-size:9pt"">«Land Readjustment, Urban Planning and Urban Sprawl in the Tokyo Metropolitan Area»</hi>
+                        , Urban Studies, 36(13), 2333–2360
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Strecher, M. C.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (1999). </hi>
+                        <hi rend=""italic"" style=""font-family:Helvetica Neue;font-size:9pt"">«Magical Realism and the Search for Identity in the Fiction of Murakami Haruki»</hi>
+                        , The Journal of Japanese Studies , Vol. 25, No. 2, pp. 263-298
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Strecher, M. C.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2021). Dances with Sheep: The Quest for Identity in the Fiction of Murakami Haruki, University of Michigan Press</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Suter, R.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2008). The Japanization of modernity: Murakami Haruki between Japan and the United States, Harvard University Asia Center</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Tally, R.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2013). Spatiality, Routledge</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Underwood, T.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2019). Distant Horizons: Digital Evidence and Literary Change, University of Chicago Press</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Vasiliev, Y</hi>
+                        . (2020). Natural Language Processing with Python and SpaCy: A Practical Intro- duction, No Starch Pres
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Westphal B.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2009). Geocriticism: Real and Fictional Spaces, Armando editore</hi>
+                    </bibl>
+                    <bibl style=""text-align: left; "">
+                        <hi rend=""bold"" style=""font-family:Helvetica Neue;font-size:9pt"">Wilkens, M.</hi>
+                        <hi style=""font-family:Helvetica Neue;font-size:9pt"" xml:space=""preserve""> (2021). «</hi>
+                        <hi rend=""italic"" style=""font-family:Helvetica Neue;font-size:9pt"">“Too isolated, too insular”: American Literature and the World»</hi>
+                        , The journal of Cultural analytics
+                    </bibl>
+                </listBibl>
+            </div>
+        </back>
+    </text>
+
+",xml,This text is republished here with permission from the original rights holder.,,geocriticism;murakami;named entity recognition;nlp;text mining,English,"asia;contemporary;english;europe;geography and geo-humanities;literary studies;north america;spatial & spatio-temporal analysis, modeling and visualization;text mining and analysis"
+11970,2022 - Tokyo,Tokyo,Responding to Asian Diversity,2022-01-01T00:00:00Z,ADHO,ADHO,,Tokyo,,Japan,https://dh2022.adho.org/,Architectura Sinica and Collaborative Digital Database Development,,Tracy Miller;Yuh-Fen Benda;Jing Zhuge;Lala Zuo,"paper, specified ""short paper""","<text xmlns=""http://www.tei-c.org/ns/1.0"" xml:lang=""en"">
+        <body>
+            <p>Initially made available in 2019, Architectura Sinica (
+                <ref target=""http://www.architecturasinica.org"">www.architecturasinica.org</ref>) is the first open-source, publicly accessible research database focusing on the timber-frame tradition of pre-modern China. Developed using the codebase of the Srophé app, and eXist DB application developed by David Michaelson (Vanderbilt University) and Dan Schwartz (Texas A&M) written in TEI, as it stands today Architectura Sinica consists of three important elements: 1. A Dynamic Site Archive of more than 140 historic (mostly religious) sites containing at least one timber-frame building thought to date from the 8
+                <hi rend=""superscript"">th</hi> – 13
+                <hi rend=""superscript"">th</hi> centuries; 2. a Chinese-English thesaurus of technical architecture terminology used by craftsmen and bureaucrats in pre-modern China; and 3. a bibliography of sources used in individual entries for historic sites, individual structures, and technical terminology. A fourth module dedicated to epigraphy preserved at these historic sites is planned for future development. Critical to this project is the display of public-domain images of historic sites and artifacts located within them. Curation of these images presents ongoing challenges as we seek to find a nimble platform for expanding our collection of digital photographs donated by researchers and students.
+            </p>
+            <p>Over the past two years we have successfully made Architectura Sinica work as an international, collaborative, research and teaching platform. With support from the Vanderbilt University libraries, we have established a system of developing, reviewing, and publishing new data on traditional Chinese architecture in a single calendar year. This collaboration includes faculty, librarians, and students (both undergraduate and graduate) from Vanderbilt, Southeast University <hi rend=""Chinese"">東南大學</hi> in Nanjing, and NYU Shanghai, who work together to explore essential DH tools such as GitHub and TEI while also learning about the architectural heritage of China. We have found that this process is extremely satisfying for students and can make a seemingly esoteric topic accessible and compelling, thus sparking interest in further work in the field. </p>
+            <p>Our challenges currently revolve around the desire to keep the application open-source, while making it efficient to maintain. Securing storage for the code and data remains a problem. Our institution requires AWS hosting, and our current IT staff finds integrating our open-source XML codebase with AWS difficult. Additionally, although we currently house our high-resolution image files in FlickrPro, we have concerns about the long-term viability of using this commercial product. Yet other options, including JSTOR Forum (aka Artstor), which have a more sophisticated metadata structure, present challenges in cost and accessibility for international collaboration.</p>
+            <p>Our purpose for presenting Architectura Sinica at DH 2022 in Tokyo is two-fold. First, we would like to give a short presentation of the results of our research as an example of a collaborative DH project addressing Asian material for analysis in a global context. Second, we seek feedback on the functionality of the site. We aspire to integrate GIS data, object-based, site-specific research, and philological exploration of technical terminology into a single platform to create a useful starting point for advanced research in the history of sacred sites and the built environment in East Asia. Although our current results are satisfactory, are there ways of making the process more efficient? Are eXist DB and TEI our best tools for developing cultural heritage metadata for the future? Are there better tools available for archiving and presenting visual data in an open-source environment?</p>
+        </body>
+    </text>
+
+",xml,This text is republished here with permission from the original rights holder.,,chinese architecture;digital cultural heritage,English,"5th-14th century;art history;asia;curricular and pedagogical development and analysis;database creation, management, and analysis;english;theology and religious studies"
