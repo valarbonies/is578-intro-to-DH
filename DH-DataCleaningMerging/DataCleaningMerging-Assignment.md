@@ -2,7 +2,7 @@
 
 There are two datasets tied to this assignment. 
 
-For the first csv I text filtered the full_text column to find all entries that used geospatial analysis. I wanted to look not just at one DH tool but at the type of analysis you could do with it. In this case, geospatial analysis. 
+For the first csv, I text filtered the full_text column to find all entries that used geospatial analysis. I wanted to look not just at one DH tool but at the type of analysis you could do with it. In this case, geospatial analysis. 
 
 I experimented a bit more with the second csv by filtering the results first by country (Mexico), languages (Spanish), and work_type (poster / demo / art installation).
 
